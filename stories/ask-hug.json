@@ -1,0 +1,126 @@
+{
+  "id": "ask-hug",
+  "title": "Ask before a hug",
+  "icon": "hug",
+  "prompt": "a story about not wanting a hug (my body, my choice)",
+  "lesson": "Ask before a hug, and 'No thank you' means stop.",
+  "place": "classroom",
+  "cast": ["frank", "zoe", "ola", "msRosa"],
+  "props": [],
+  "scenes": {
+    "start": [
+      { "do": "place", "who": "frank", "at": "door", "feel": "happy" },
+      { "do": "place", "who": "ola", "at": "reading", "act": "sit", "feel": "happy" },
+      { "do": "place", "who": "zoe", "at": "rug.b", "act": "play" },
+      { "do": "place", "who": "msRosa", "at": "table.2" },
+      { "do": "cam", "shot": "wide", "cut": true },
+      { "do": "walk", "who": "frank", "to": "rug.c" },
+      { "do": "say", "who": "narrator", "text": "This is Frank. He's just got to kindergarten.", "with": "prev" },
+      { "do": "act", "who": "zoe", "anim": "idle" },
+      { "do": "face", "who": "zoe", "feel": "joy", "with": "prev" },
+      { "do": "walk", "who": "zoe", "to": { "near": "frank", "gap": 0.5 } },
+      { "do": "say", "who": "narrator", "text": "Zoe is so happy to see Frank.", "with": "prev" },
+      { "do": "cam", "shot": "group", "on": ["frank", "zoe"] },
+      { "do": "say", "who": "zoe", "text": "Frank! Good morning!" },
+      { "do": "act", "who": "zoe", "anim": "hug" },
+      { "do": "say", "who": "narrator", "text": "Zoe gives Frank a big, tight hug.", "with": "prev" },
+      { "do": "cam", "shot": "close", "on": "frank" },
+      { "do": "face", "who": "frank", "feel": "worried" },
+      { "do": "say", "who": "narrator", "text": "Frank doesn't want a hug right now. He feels squashed." },
+      { "do": "choice", "question": "What should Frank do?", "options": [
+        { "id": "still", "icon": "sulk", "say": "Stay still and say nothing", "kind": "feeling", "goto": "still" },
+        { "id": "notthanks", "icon": "stop", "say": "Say, 'No thank you'", "kind": "good", "goto": "good" },
+        { "id": "push", "icon": "push", "say": "Push Zoe away", "kind": "hurtful", "goto": "push" }
+      ] }
+    ],
+
+    "still": [
+      { "do": "cam", "shot": "group", "on": ["frank", "zoe"] },
+      { "do": "face", "who": "frank", "feel": "sad" },
+      { "do": "say", "who": "narrator", "text": "Frank stays very still. He says nothing." },
+      { "do": "say", "who": "narrator", "text": "His tummy feels funny. That's his body saying, 'I don't like this.'" },
+      { "do": "say", "who": "zoe", "text": "Yay! Hugs every morning!" },
+      { "do": "say", "who": "narrator", "text": "Zoe can't tell how Frank feels." },
+      { "do": "act", "who": "zoe", "anim": "idle" },
+      { "do": "walk", "who": "frank", "to": "window" },
+      { "do": "say", "who": "narrator", "text": "Frank keeps away from Zoe. He still feels funny inside.", "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "Frank didn't do anything wrong. Zoe didn't ask first." },
+      { "do": "say", "who": "narrator", "text": "It's hard to say no. Frank can tell Ms Rosa, any time." },
+      { "do": "goto", "scene": "rewind" }
+    ],
+
+    "push": [
+      { "do": "cam", "shot": "group", "on": ["frank", "zoe"] },
+      { "do": "act", "who": "frank", "anim": "reach" },
+      { "do": "act", "who": "zoe", "anim": "crySit", "with": "prev" },
+      { "do": "face", "who": "zoe", "feel": "cry", "with": "prev" },
+      { "do": "fx", "type": "bump", "on": "zoe", "with": "prev" },
+      { "do": "say", "who": "zoe", "text": "Ow! I only wanted a hug!" },
+      { "do": "act", "who": "frank", "anim": "idle" },
+      { "do": "face", "who": "frank", "feel": "worried", "with": "prev" },
+      { "do": "walk", "who": "msRosa", "to": { "near": "zoe", "gap": 0.9 } },
+      { "do": "cam", "shot": "group", "on": ["frank", "zoe", "msRosa"], "with": "prev" },
+      { "do": "face", "who": "msRosa", "feel": "worried" },
+      { "do": "say", "who": "msRosa", "text": "Zoe, are you OK? Frank, stop. Pushing hurts." },
+      { "do": "say", "who": "msRosa", "text": "You didn't want a hug, and that's OK." },
+      { "do": "say", "who": "msRosa", "text": "Say no with words, or come to me." },
+      { "do": "say", "who": "msRosa", "text": "Zoe, next time, ask before a hug." },
+      { "do": "say", "who": "narrator", "text": "Now Zoe is sad, and Frank still feels squashed." },
+      { "do": "goto", "scene": "rewind" }
+    ],
+
+    "rewind": [
+      { "do": "fx", "type": "rewind" },
+      { "do": "cam", "shot": "group", "on": ["frank", "zoe"] },
+      { "do": "say", "who": "narrator", "text": "Let's think. What else could Frank do?" },
+      { "do": "goto", "scene": "good" }
+    ],
+
+    "good": [
+      { "do": "cam", "shot": "group", "on": ["frank", "zoe"] },
+      { "do": "act", "who": "frank", "anim": "breathe" },
+      { "do": "say", "who": "narrator", "text": "Frank takes a big breath and says...", "with": "prev" },
+      { "do": "face", "who": "frank", "feel": "neutral" },
+      { "do": "act", "who": "frank", "anim": "stop", "with": "prev" },
+      { "do": "say", "who": "frank", "text": "No thank you, Zoe. I don't want a hug.", "with": "prev" },
+      { "do": "act", "who": "zoe", "anim": "idle" },
+      { "do": "face", "who": "zoe", "feel": "surprised", "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "Zoe lets go straight away.", "with": "prev" },
+      { "do": "act", "who": "frank", "anim": "idle" },
+      { "do": "face", "who": "zoe", "feel": "sad" },
+      { "do": "say", "who": "zoe", "text": "Oh. But I love hugs." },
+      { "do": "act", "who": "frank", "anim": "wave" },
+      { "do": "say", "who": "frank", "text": "We can wave instead!", "with": "prev" },
+      { "do": "act", "who": "zoe", "anim": "wave" },
+      { "do": "face", "who": ["frank", "zoe"], "feel": "happy", "with": "prev" },
+      { "do": "act", "who": ["frank", "zoe"], "anim": "idle" },
+      { "do": "walk", "who": "msRosa", "to": { "near": "zoe", "gap": 1.0 } },
+      { "do": "cam", "shot": "group", "on": ["frank", "zoe", "msRosa"], "with": "prev" },
+      { "do": "face", "who": "msRosa", "feel": "happy" },
+      { "do": "say", "who": "msRosa", "text": "Zoe, you love hugs. You felt sad when Frank said no." },
+      { "do": "say", "who": "msRosa", "text": "Frank felt squashed. He still likes you!" },
+      { "do": "say", "who": "msRosa", "text": "Everyone's body belongs to them." },
+      { "do": "say", "who": "msRosa", "text": "Ask before a hug. 'No thank you' means stop." },
+      { "do": "say", "who": "msRosa", "text": "Frank, you said no with kind words. Zoe, you stopped straight away." },
+      { "do": "look", "who": "zoe", "at": "ola" },
+      { "do": "say", "who": "zoe", "text": "Ola, can I have a hug?" },
+      { "do": "act", "who": "ola", "anim": "idle" },
+      { "do": "face", "who": "ola", "feel": "joy", "with": "prev" },
+      { "do": "say", "who": "ola", "text": "Yes please!", "with": "prev" },
+      { "do": "walk", "who": "zoe", "to": { "near": "ola", "gap": 0.5 } },
+      { "do": "act", "who": ["zoe", "ola"], "anim": "hug" },
+      { "do": "fx", "type": "hearts", "on": ["zoe", "ola"], "with": "prev" },
+      { "do": "goto", "scene": "end" }
+    ],
+
+    "end": [
+      { "do": "cam", "shot": "group", "on": ["frank", "zoe", "ola"] },
+      { "do": "face", "who": ["frank", "zoe", "ola"], "feel": "joy" },
+      { "do": "act", "who": "frank", "anim": "wave", "with": "prev" },
+      { "do": "fx", "type": "stars", "on": ["frank"], "with": "prev" },
+      { "do": "say", "who": "frank", "text": "Good morning, everyone!", "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "Ask before a hug, and 'No thank you' means stop." },
+      { "do": "end" }
+    ]
+  }
+}

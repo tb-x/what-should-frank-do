@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "what-to-do",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "5228"],
+      "port": 5228
+    }
+  ]
+}

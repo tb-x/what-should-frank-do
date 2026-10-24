@@ -1,0 +1,132 @@
+{
+  "id": "wee-accident",
+  "title": "Accidents happen",
+  "icon": "clothes",
+  "prompt": "a story about having a wee accident at kindergarten",
+  "lesson": "Accidents happen. Tell a grown-up, and they will help.",
+  "place": "classroom",
+  "cast": ["frank", "leo", "zoe", "msRosa"],
+  "props": [
+    { "id": "car", "at": "rug.middle", "yaw": 0.5 }
+  ],
+  "scenes": {
+    "start": [
+      { "do": "place", "who": "frank", "at": "rug.a", "act": "play", "feel": "joy" },
+      { "do": "place", "who": "leo", "at": "rug.b", "act": "play", "feel": "happy" },
+      { "do": "place", "who": "zoe", "at": "reading", "act": "sit" },
+      { "do": "place", "who": "msRosa", "at": "table.2" },
+      { "do": "cam", "shot": "wide", "cut": true },
+      { "do": "say", "who": "narrator", "text": "This is Frank. Frank and Leo are playing cars." },
+      { "do": "cam", "shot": "group", "on": ["frank", "leo"] },
+      { "do": "say", "who": "leo", "text": "Vroom! Now it's your turn to drive!" },
+      { "do": "act", "who": "frank", "anim": "wriggle" },
+      { "do": "face", "who": "frank", "feel": "worried", "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "Frank needs a wee. But he doesn't want to stop playing.", "with": "prev" },
+      { "do": "say", "who": "frank", "text": "Just one more minute..." },
+      { "do": "act", "who": "frank", "anim": "play" },
+      { "do": "wait", "s": 1 },
+      { "do": "face", "who": "frank", "feel": "surprised" },
+      { "do": "act", "who": "frank", "anim": "sit", "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "Oh no. Frank can't hold it. He has an accident." },
+      { "do": "cam", "shot": "close", "on": "frank" },
+      { "do": "face", "who": "frank", "feel": "embarrassed" },
+      { "do": "say", "who": "narrator", "text": "His trousers are wet. Frank feels embarrassed." },
+      { "do": "act", "who": "zoe", "anim": "idle" },
+      { "do": "walk", "who": "zoe", "to": { "near": "frank", "gap": 0.9 } },
+      { "do": "cam", "shot": "group", "on": ["frank", "zoe"], "with": "prev" },
+      { "do": "say", "who": "zoe", "text": "Frank, are you OK?" },
+      { "do": "choice", "question": "What should Frank do?", "options": [
+        { "id": "hide", "icon": "hide", "say": "Hide and say nothing", "kind": "feeling", "goto": "hide" },
+        { "id": "tell", "icon": "teacher", "say": "Tell Ms Rosa", "kind": "good", "goto": "tell" },
+        { "id": "shout", "icon": "shout", "say": "Shout at Zoe", "kind": "hurtful", "goto": "shout" }
+      ] }
+    ],
+
+    "hide": [
+      { "do": "cam", "shot": "wide" },
+      { "do": "act", "who": "frank", "anim": "idle" },
+      { "do": "walk", "who": "frank", "to": "window" },
+      { "do": "say", "who": "narrator", "text": "Frank hides in the corner. He says nothing.", "with": "prev" },
+      { "do": "act", "who": "frank", "anim": "sit" },
+      { "do": "face", "who": "frank", "feel": "sad", "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "It's OK to feel embarrassed." },
+      { "do": "say", "who": "narrator", "text": "But wet trousers feel cold and itchy." },
+      { "do": "say", "who": "narrator", "text": "And nobody can help, because nobody knows." },
+      { "do": "goto", "scene": "rewind" }
+    ],
+
+    "shout": [
+      { "do": "cam", "shot": "group", "on": ["frank", "zoe"] },
+      { "do": "face", "who": "frank", "feel": "angry" },
+      { "do": "act", "who": "frank", "anim": "angry", "with": "prev" },
+      { "do": "say", "who": "frank", "text": "Go away! Don't look at me!", "with": "prev" },
+      { "do": "act", "who": "frank", "anim": "idle" },
+      { "do": "face", "who": "zoe", "feel": "sad" },
+      { "do": "say", "who": "zoe", "text": "I only wanted to help." },
+      { "do": "walk", "who": "zoe", "to": "reading" },
+      { "do": "say", "who": "narrator", "text": "Frank feels embarrassed. But shouting makes Zoe sad.", "with": "prev" },
+      { "do": "face", "who": "frank", "feel": "sad" },
+      { "do": "say", "who": "narrator", "text": "And his trousers are still wet." },
+      { "do": "goto", "scene": "rewind" }
+    ],
+
+    "rewind": [
+      { "do": "fx", "type": "rewind" },
+      { "do": "cam", "shot": "group", "on": ["frank", "zoe"] },
+      { "do": "say", "who": "narrator", "text": "Let's think. What else could Frank do?" },
+      { "do": "goto", "scene": "tell" }
+    ],
+
+    "tell": [
+      { "do": "cam", "shot": "group", "on": ["frank", "zoe"] },
+      { "do": "act", "who": "frank", "anim": "breathe" },
+      { "do": "say", "who": "narrator", "text": "Frank takes a big breath.", "with": "prev" },
+      { "do": "act", "who": "frank", "anim": "idle" },
+      { "do": "look", "who": "frank", "at": "zoe" },
+      { "do": "say", "who": "frank", "text": "I need Ms Rosa." },
+      { "do": "face", "who": "zoe", "feel": "happy" },
+      { "do": "say", "who": "zoe", "text": "I'll come with you." },
+      { "do": "walk", "who": "frank", "to": { "near": "msRosa", "gap": 0.9 } },
+      { "do": "walk", "who": "zoe", "to": { "near": "msRosa", "gap": 1.5 }, "with": "prev" },
+      { "do": "cam", "shot": "group", "on": ["frank", "msRosa"], "with": "prev" },
+      { "do": "look", "who": "msRosa", "at": "frank" },
+      { "do": "say", "who": "narrator", "text": "Frank tells Ms Rosa quietly." },
+      { "do": "say", "who": "frank", "text": "Ms Rosa, I had an accident." },
+      { "do": "face", "who": "msRosa", "feel": "happy" },
+      { "do": "say", "who": "msRosa", "text": "Thank you for telling me, Frank." },
+      { "do": "say", "who": "msRosa", "text": "You feel embarrassed. That's OK. Accidents happen to everyone." },
+      { "do": "say", "who": "msRosa", "text": "Zoe, you asked if Frank was OK. That was kind." },
+      { "do": "say", "who": "msRosa", "text": "Let's get your spare clothes, Frank." },
+      { "do": "walk", "who": "msRosa", "to": "door" },
+      { "do": "walk", "who": "frank", "to": { "near": "msRosa", "gap": 0.8 }, "with": "prev" },
+      { "do": "cam", "shot": "wide", "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "They go to the toilets to change.", "with": "prev" },
+      { "do": "leave", "who": "frank" },
+      { "do": "leave", "who": "msRosa", "with": "prev" },
+      { "do": "clothes", "who": "frank", "pants": "#5bd16b" },
+      { "do": "face", "who": "frank", "feel": "happy" },
+      { "do": "wait", "s": 1 },
+      { "do": "say", "who": "narrator", "text": "Frank puts on clean, dry clothes." },
+      { "do": "place", "who": "msRosa", "at": "door" },
+      { "do": "place", "who": "frank", "at": { "near": "msRosa", "gap": 0.9 } },
+      { "do": "look", "who": "msRosa", "at": "frank" },
+      { "do": "cam", "shot": "group", "on": ["frank", "msRosa"], "cut": true },
+      { "do": "say", "who": "msRosa", "text": "Next time your body says 'wee', go straight away." },
+      { "do": "say", "who": "msRosa", "text": "The game will wait for you." },
+      { "do": "say", "who": "msRosa", "text": "Frank, you told me. That was brave." },
+      { "do": "walk", "who": "frank", "to": "rug.a" },
+      { "do": "walk", "who": "msRosa", "to": "table.2", "with": "prev" },
+      { "do": "cam", "shot": "group", "on": ["frank", "leo"], "with": "prev" },
+      { "do": "goto", "scene": "end" }
+    ],
+
+    "end": [
+      { "do": "say", "who": "leo", "text": "Come on, Frank! Your turn to drive!" },
+      { "do": "act", "who": ["frank", "leo"], "anim": "play" },
+      { "do": "face", "who": "frank", "feel": "joy", "with": "prev" },
+      { "do": "fx", "type": "stars", "on": ["frank"], "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "Accidents happen. Tell a grown-up, and they will help." },
+      { "do": "end" }
+    ]
+  }
+}

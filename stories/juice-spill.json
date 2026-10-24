@@ -1,0 +1,112 @@
+{
+  "id": "juice-spill",
+  "title": "Was it an accident?",
+  "icon": "juice",
+  "prompt": "a story about someone bumping into you by accident",
+  "lesson": "If someone bumps you, ask, 'Was it an accident?'",
+  "place": "classroom",
+  "cast": ["frank", "maya", "ola", "msRosa"],
+  "props": [
+    { "id": "cup", "at": "table.1.place3" },
+    { "id": "apple", "at": "table.1.place4" }
+  ],
+  "scenes": {
+    "start": [
+      { "do": "place", "who": "frank", "at": "table.1.seat3", "act": "sitChair", "feel": "happy" },
+      { "do": "place", "who": "ola", "at": "table.1.seat4", "act": "sitChair", "feel": "happy" },
+      { "do": "place", "who": "maya", "at": "rug.a" },
+      { "do": "place", "who": "msRosa", "at": "table.2" },
+      { "do": "cam", "shot": "wide", "cut": true },
+      { "do": "say", "who": "narrator", "text": "This is Frank. It's snack time." },
+      { "do": "cam", "shot": "group", "on": ["frank", "ola"] },
+      { "do": "face", "who": "frank", "feel": "joy" },
+      { "do": "say", "who": "frank", "text": "Yum! I love orange juice." },
+      { "do": "say", "who": "ola", "text": "Me too!" },
+      { "do": "walk", "who": "maya", "to": "table.1" },
+      { "do": "say", "who": "narrator", "text": "Maya comes to the table. Her elbow bumps the cup.", "with": "prev" },
+      { "do": "spill", "item": "cup" },
+      { "do": "face", "who": ["frank", "maya", "ola"], "feel": "surprised", "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "Bump! The juice spills all over the table." },
+      { "do": "cam", "shot": "close", "on": "frank" },
+      { "do": "face", "who": "frank", "feel": "angry" },
+      { "do": "say", "who": "frank", "text": "Hey! You spilled my juice!" },
+      { "do": "say", "who": "narrator", "text": "Frank feels cross. Did Maya do it on purpose?" },
+      { "do": "choice", "question": "What should Frank do?", "options": [
+        { "id": "ask", "icon": "ask", "say": "Ask, 'Was it an accident?'", "kind": "good", "goto": "ask" },
+        { "id": "cry", "icon": "cry", "say": "Cry", "kind": "feeling", "goto": "cry" },
+        { "id": "push", "icon": "push", "say": "Push Maya", "kind": "hurtful", "goto": "push" }
+      ] }
+    ],
+
+    "cry": [
+      { "do": "cam", "shot": "close", "on": "frank" },
+      { "do": "face", "who": "frank", "feel": "cry" },
+      { "do": "act", "who": "frank", "anim": "cry", "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "Frank cries.", "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "It's OK to feel sad when things go wrong." },
+      { "do": "cam", "shot": "wide" },
+      { "do": "walk", "who": "maya", "to": "rug.b" },
+      { "do": "say", "who": "narrator", "text": "Maya feels bad, but she doesn't know what to say.", "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "The juice is still spilled, and nobody helps." },
+      { "do": "goto", "scene": "rewind" }
+    ],
+
+    "push": [
+      { "do": "act", "who": "frank", "anim": "idle" },
+      { "do": "walk", "who": "frank", "to": { "near": "maya", "gap": 0.65 } },
+      { "do": "cam", "shot": "group", "on": ["frank", "maya"], "with": "prev" },
+      { "do": "act", "who": "frank", "anim": "reach" },
+      { "do": "act", "who": "maya", "anim": "crySit", "with": "prev" },
+      { "do": "face", "who": "maya", "feel": "cry", "with": "prev" },
+      { "do": "fx", "type": "bump", "on": "maya", "with": "prev" },
+      { "do": "say", "who": "maya", "text": "Ow! It was an accident!" },
+      { "do": "act", "who": "frank", "anim": "idle" },
+      { "do": "face", "who": "frank", "feel": "worried", "with": "prev" },
+      { "do": "walk", "who": "msRosa", "to": { "near": "maya", "gap": 0.9 } },
+      { "do": "cam", "shot": "group", "on": ["frank", "maya", "msRosa"], "with": "prev" },
+      { "do": "face", "who": "msRosa", "feel": "worried" },
+      { "do": "say", "who": "msRosa", "text": "Let's check that Maya is OK. Frank, pushing hurts." },
+      { "do": "say", "who": "narrator", "text": "Now two friends are sad, and the table is still wet." },
+      { "do": "goto", "scene": "rewind" }
+    ],
+
+    "rewind": [
+      { "do": "fx", "type": "rewind" },
+      { "do": "cam", "shot": "group", "on": ["frank", "maya"] },
+      { "do": "say", "who": "narrator", "text": "Let's think. What else could Frank do?" },
+      { "do": "goto", "scene": "ask" }
+    ],
+
+    "ask": [
+      { "do": "cam", "shot": "group", "on": ["frank", "maya"] },
+      { "do": "act", "who": "frank", "anim": "breathe" },
+      { "do": "say", "who": "narrator", "text": "Frank takes a big breath.", "with": "prev" },
+      { "do": "face", "who": "frank", "feel": "neutral" },
+      { "do": "act", "who": "frank", "anim": "sitChair", "with": "prev" },
+      { "do": "look", "who": "maya", "at": "frank" },
+      { "do": "say", "who": "frank", "text": "Maya, was it an accident?" },
+      { "do": "face", "who": "maya", "feel": "sad" },
+      { "do": "say", "who": "maya", "text": "Yes. I'm sorry, Frank. I didn't see the cup." },
+      { "do": "say", "who": "maya", "text": "I can help wipe it up." },
+      { "do": "wipe", "who": "maya", "item": "cup" },
+      { "do": "say", "who": "narrator", "text": "Maya wipes up the juice.", "with": "prev" },
+      { "do": "face", "who": "frank", "feel": "happy" },
+      { "do": "say", "who": "frank", "text": "Thank you, Maya." },
+      { "do": "walk", "who": "msRosa", "to": { "near": "maya", "gap": 1.0 } },
+      { "do": "cam", "shot": "group", "on": ["frank", "maya", "msRosa"], "with": "prev" },
+      { "do": "face", "who": "msRosa", "feel": "happy" },
+      { "do": "say", "who": "msRosa", "text": "Frank, you felt cross, and you asked first. Maya, you said sorry and helped." },
+      { "do": "say", "who": "msRosa", "text": "Accidents happen. Let's get Frank some more juice." },
+      { "do": "goto", "scene": "end" }
+    ],
+
+    "end": [
+      { "do": "cam", "shot": "group", "on": ["frank", "maya", "ola"] },
+      { "do": "face", "who": ["frank", "maya", "ola"], "feel": "joy" },
+      { "do": "fx", "type": "stars", "on": ["frank", "maya"], "with": "prev" },
+      { "do": "say", "who": "ola", "text": "Snack time together!", "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "If someone bumps you, ask, 'Was it an accident?'" },
+      { "do": "end" }
+    ]
+  }
+}

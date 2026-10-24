@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>What Should Frank Do? · model viewer</title>
+<style>
+  /* Layout: model viewer. A full-screen 3D canvas; tabs along the top, the tab's controls in a strip at the bottom, a caption and choice cards over the picture in the story test. */
+  :root{
+    --ink:#2a2140; --cream:#fff7e6; --accent:#ff8a1f; --chip:#ffffffd9;
+    --read:Verdana,Tahoma,sans-serif;
+    color-scheme: light;
+  }
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  html,body{height:100%;margin:0;overflow:hidden;background:#bfe6ff;color:var(--ink);font-family:var(--read);
+    -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+  button{font:inherit;color:inherit;border:0;cursor:pointer;touch-action:manipulation}
+  #c{position:fixed;inset:0;width:100%;height:100%;display:block;touch-action:none}
+
+  #tabs{position:fixed;top:calc(8px + env(safe-area-inset-top,0px));left:0;right:0;display:flex;gap:6px;justify-content:center;flex-wrap:wrap;padding:0 64px}
+  #tabs button{background:var(--chip);border-radius:20px;padding:8px 14px;font-weight:bold;font-size:14px;box-shadow:0 2px 0 rgba(0,0,0,.15)}
+  #tabs button.on{background:var(--accent);color:#fff}
+
+  #panel{position:fixed;left:0;right:0;bottom:calc(8px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:6px;align-items:center;padding:0 10px;pointer-events:none}
+  #panel .row{display:flex;gap:5px;flex-wrap:wrap;justify-content:center;pointer-events:auto}
+  #panel button{background:var(--chip);border-radius:16px;padding:6px 11px;font-size:13px;box-shadow:0 2px 0 rgba(0,0,0,.15)}
+  #panel button.on{background:var(--ink);color:#fff}
+  #panel .hint{font-size:12px;background:var(--chip);border-radius:10px;padding:3px 9px}
+
+  #caption{position:fixed;left:50%;bottom:calc(70px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);max-width:min(90vw,640px);
+    background:var(--cream);border-radius:18px;padding:10px 18px;font-weight:bold;font-size:clamp(16px,3.6vmin,24px);text-align:center;box-shadow:0 4px 0 rgba(0,0,0,.15)}
+  #caption b{color:var(--accent)}
+
+  #choices{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:rgba(42,33,64,.35)}
+  #choices h2{margin:0;background:var(--cream);border-radius:18px;padding:8px 18px;font-size:clamp(18px,4vmin,28px)}
+  #choices .opts{display:flex;gap:clamp(12px,3vmin,28px);flex-wrap:wrap;justify-content:center}
+  #choices .opts button{width:clamp(110px,24vmin,170px);aspect-ratio:1;border-radius:50%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    font-weight:bold;font-size:clamp(13px,2.4vmin,17px);box-shadow:0 6px 0 rgba(0,0,0,.2)}
+  #choices .opts span{font-size:clamp(44px,10vmin,72px);line-height:1.1}
+  #choices .opts button:active{transform:translateY(3px)}
+</style>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<canvas id="c"></canvas>
+<nav id="tabs"></nav>
+<div id="panel"></div>
+<div id="caption" hidden></div>
+<div id="choices" hidden><h2>What should Frank do?</h2><div class="opts"></div></div>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { CAST, KIDS, GROWNUPS, makePerson } from '../js/models/cast.js';
+import { FEELING_NAMES } from '../js/models/person.js';
+import { ACTION_NAMES } from '../js/anim.js';
+import { PROPS, makeProp } from '../js/models/props.js';
+import { PLACES } from '../js/models/places.js';
+import { part, cyl } from '../js/toon.js';
+
+/* ======== renderer, camera, lights ======== */
+
+const canvas = document.getElementById('c');
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(38, 1, 0.05, 80);
+const controls = new OrbitControls(camera, canvas);
+controls.enableDamping = true;
+controls.maxPolarAngle = Math.PI * 0.49;
+
+scene.add(new THREE.HemisphereLight(0xffffff, 0xc9a982, 1.6));
+const sun = new THREE.DirectionalLight(0xfff4e0, 2.2);
+sun.position.set(-4, 9, 6);
+sun.castShadow = true;
+sun.shadow.mapSize.set(2048, 2048);
+Object.assign(sun.shadow.camera, { left: -8, right: 8, top: 8, bottom: -8, near: 1, far: 30 });
+sun.shadow.bias = -0.0005;
+sun.shadow.normalBias = 0.02;
+scene.add(sun);
+
+function resize() {
+  const w = innerWidth, h = innerHeight;
+  renderer.setSize(w, h, false);
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+}
+addEventListener('resize', resize);
+resize();
+
+/* ======== world ======== */
+
+const panel = document.getElementById('panel');
+const caption = document.getElementById('caption');
+const choices = document.getElementById('choices');
+let world = new THREE.Group();
+let people = [], spinners = [], run = 0, camGoal = null, selected = new Set();
+scene.add(world);
+
+function clear() {
+  scene.remove(world);
+  world = new THREE.Group();
+  scene.add(world);
+  people = []; spinners = []; selected = new Set(); camGoal = null;
+  run++;
+  panel.innerHTML = '';
+  caption.hidden = choices.hidden = true;
+  controls.enabled = true;
+}
+
+// Shots are framed for a 3:2 screen; on narrower screens the camera backs off along the same line.
+function fit(pos, look) {
+  const k = Math.max(1, 1.5 / camera.aspect) ** 0.9;
+  return pos.map((v, i) => look[i] + (v - look[i]) * k);
+}
+
+function view(pos, look) {
+  camera.position.set(...fit(pos, look));
+  controls.target.set(...look);
+  controls.update();
+}
+
+function label(text, size = 0.11) {
+  const c = document.createElement('canvas');
+  const ctx = c.getContext('2d');
+  ctx.font = 'bold 44px Verdana';
+  c.width = Math.ceil(ctx.measureText(text).width) + 36; c.height = 64;
+  ctx.font = 'bold 44px Verdana';
+  ctx.fillStyle = 'rgba(255,255,255,.85)';
+  ctx.beginPath(); ctx.roundRect(0, 0, c.width, c.height, 30); ctx.fill();
+  ctx.fillStyle = '#2a2140'; ctx.textBaseline = 'middle'; ctx.fillText(text, 18, 34);
+  const tex = new THREE.CanvasTexture(c);
+  tex.colorSpace = THREE.SRGBColorSpace;
+  const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex, depthTest: false }));
+  s.scale.set(size * c.width / c.height, size, 1);
+  s.renderOrder = 10;
+  return s;
+}
+
+function addPerson(id, at, yaw = 0, action = 'idle', extra = {}) {
+  const p = makePerson(id, extra);
+  p.object.position.copy(at);
+  p.object.rotation.y = yaw;
+  p.play(action);
+  world.add(p.object);
+  people.push(p);
+  return p;
+}
+
+function atMark(place, id, name, action = 'idle', dy = 0) {
+  const m = place.marks[name];
+  return addPerson(id, m.pos.clone().setY(dy), m.yaw, action);
+}
+
+function button(row, text, onClick, on = false) {
+  const b = document.createElement('button');
+  b.textContent = text;
+  b.classList.toggle('on', on);
+  b.onclick = () => onClick(b);
+  row.appendChild(b);
+  return b;
+}
+
+function row(hint) {
+  const r = document.createElement('div');
+  r.className = 'row';
+  if (hint) { const h = document.createElement('span'); h.className = 'hint'; h.textContent = hint; r.appendChild(h); }
+  panel.appendChild(r);
+  return r;
+}
+
+function ground(r, color) {
+  const g = part(new THREE.CircleGeometry(r, 48), color);
+  g.rotation.x = -Math.PI / 2;
+  g.castShadow = false;
+  world.add(g);
+}
+
+function showMarks(place, on) {
+  const old = world.getObjectByName('marks');
+  if (old) world.remove(old);
+  if (!on) return;
+  const g = new THREE.Group();
+  g.name = 'marks';
+  for (const [name, m] of Object.entries(place.marks)) {
+    const disc = part(cyl(0.12, 0.12, 0.01, 20), 0xff3d7f, m.pos.x, m.pos.y + 0.01, m.pos.z);
+    const arrow = part(new THREE.ConeGeometry(0.05, 0.14, 8), 0xff3d7f);
+    arrow.rotation.x = Math.PI / 2;
+    const holder = new THREE.Group();
+    holder.position.copy(m.pos).setY(m.pos.y + 0.03);
+    holder.rotation.y = m.yaw;
+    arrow.position.z = 0.17;
+    holder.add(arrow);
+    const l = label(name, 0.09);
+    l.position.copy(m.pos).setY(m.pos.y + 0.3);
+    g.add(disc, holder, l);
+  }
+  world.add(g);
+}
+
+/* ======== tabs ======== */
+
+const TABS = {
+  People() {
+    scene.background = new THREE.Color(0xcfeaff);
+    ground(6, 0xf3e3c3);
+    const ids = [...KIDS, ...GROWNUPS];
+    let x = -((KIDS.length - 1) * 0.75 + GROWNUPS.length * 0.95) / 2;
+    for (const id of ids) {
+      const p = addPerson(id, new THREE.Vector3(x, 0, 0));
+      const l = label(CAST[id].name);
+      l.position.y = CAST[id].adult ? 1.95 : 1.4;
+      p.object.add(l);
+      x += CAST[id].adult ? 0.95 : 0.75;
+    }
+    view([0, 1.4, 6.2], [0, 0.75, 0]);
+
+    const feelRow = row('feel');
+    FEELING_NAMES.forEach((f) => button(feelRow, f, () => { targets().forEach((p) => p.setFeel(f)); }));
+    const actRow = row('do');
+    ACTION_NAMES.forEach((a) => button(actRow, a, () => targets().forEach((p) => p.play(a))));
+    const extra = row('tap a person to pick them (none picked = everyone)');
+    let toy = 0;
+    const holdable = Object.keys(PROPS).filter((k) => PROPS[k].hold);
+    button(extra, 'hold a toy', () => targets().forEach((p) => {
+      if (p.held.R) p.release('R'); else p.hold(makeProp(holdable[toy++ % holdable.length]), 'R');
+    }));
+    button(extra, 'talk', (b) => { b.classList.toggle('on'); targets().forEach((p) => p.talk(b.classList.contains('on'))); });
+    button(extra, 'spin', (b) => { b.classList.toggle('on'); controls.autoRotate = b.classList.contains('on'); });
+  },
+
+  // the old 3D faces (left of each pair) next to the painted faces everyone now has (right)
+  Faces() {
+    scene.background = new THREE.Color(0xcfeaff);
+    ground(8, 0xf3e3c3);
+    const ids = ['frank', 'leo', 'maya', 'zoe', 'sam', 'ola', 'max', 'msRosa'];
+    const pairs = ids.map((id, i) => {
+      const x = (i - (ids.length - 1) / 2) * 1.4;
+      const a = addPerson(id, new THREE.Vector3(x - 0.32, 0, 0), 0, 'idle', { face: '3d' });
+      const b = addPerson(id, new THREE.Vector3(x + 0.32, 0, 0));
+      const top = CAST[id].adult ? 1.95 : 1.42;
+      for (const [p, text] of [[a, 'old 3D'], [b, 'painted']]) {
+        const l = label(text, 0.06);
+        l.position.y = top;
+        p.object.add(l);
+      }
+      return { x, top: top - 0.35 };
+    });
+    let at = 0;
+    const frame = () => {
+      const pr = pairs[at];
+      view([pr.x, pr.top + 0.05, 1.9], [pr.x, pr.top - 0.05, 0]);
+    };
+    const turn = (y) => { for (const p of people) { p.turn = null; p.object.rotation.y = y; } };
+    frame();
+    const nav = row('pair');
+    button(nav, '◀', () => { at = (at + pairs.length - 1) % pairs.length; frame(); });
+    button(nav, '▶', () => { at = (at + 1) % pairs.length; frame(); });
+    const views = row('heads face');
+    button(views, 'front', () => turn(0));
+    button(views, '¾', () => turn(0.75));
+    button(views, 'side', () => turn(Math.PI / 2));
+    button(views, 'other side', () => turn(-Math.PI / 2));
+    button(views, 'from above', () => { const pr = pairs[at]; view([pr.x, pr.top + 1.0, 1.4], [pr.x, pr.top - 0.05, 0]); });
+    const feelRow = row('feel');
+    FEELING_NAMES.forEach((f) => button(feelRow, f, () => people.forEach((p) => p.setFeel(f))));
+    button(row(), 'talk', (b) => { b.classList.toggle('on'); people.forEach((p) => p.talk(b.classList.contains('on'))); });
+  },
+
+  Toys() {
+    scene.background = new THREE.Color(0xfff1d6);
+    ground(5, 0xf3e3c3);
+    const ids = Object.keys(PROPS), cols = 5;
+    ids.forEach((id, i) => {
+      const x = ((i % cols) - (cols - 1) / 2) * 0.6, z = (Math.floor(i / cols) - 1) * 0.7;
+      const base = part(cyl(0.2, 0.22, 0.06, 24), 0xffffff, x, 0.03, z);
+      world.add(base);
+      const prop = makeProp(id);
+      prop.position.set(x, 0.06, z);
+      world.add(prop);
+      spinners.push(prop);
+      const l = label(PROPS[id].name, 0.07);
+      l.position.set(x, 0.5, z);
+      world.add(l);
+    });
+    view([0, 1.9, 3.4], [0, 0.1, 0]);
+    button(row(), 'spin', (b) => { b.classList.toggle('on'); controls.autoRotate = b.classList.contains('on'); });
+  },
+
+  Classroom() {
+    const place = PLACES.classroom();
+    scene.background = new THREE.Color(place.sky);
+    world.add(place.object);
+    atMark(place, 'frank', 'rug.a', 'play');
+    const truck = makeProp('truck');
+    truck.position.copy(place.marks['rug.frontA'].pos);
+    truck.rotation.y = 0.4;
+    world.add(truck);
+    atMark(place, 'leo', 'shelf', 'idle');
+    atMark(place, 'maya', 'table.1.seat1', 'sitChair');
+    atMark(place, 'zoe', 'table.1.seat4', 'sitChair').setFeel('happy');
+    atMark(place, 'sam', 'reading', 'sit').hold(makeProp('book'), 'R');
+    atMark(place, 'ola', 'easel', 'talk');
+    atMark(place, 'msRosa', 'teacherChair', 'sitChair').setFeel('happy');
+    atMark(place, 'mrBen', 'door', 'wave');
+    view(place.cam.pos, place.cam.look);
+    button(row(), 'show marks', (b) => { b.classList.toggle('on'); showMarks(place, b.classList.contains('on')); });
+  },
+
+  Playground() {
+    const place = PLACES.playground();
+    scene.background = new THREE.Color(place.sky);
+    world.add(place.object);
+    atMark(place, 'maya', 'slide.bottom', 'jump').setFeel('joy');
+    atMark(place, 'sam', 'sandbox.a', 'play').setFeel('happy');
+    atMark(place, 'zoe', 'sandbox.b', 'play');
+    atMark(place, 'frank', 'swing.1', 'wave').setFeel('happy');
+    atMark(place, 'ola', 'middle', 'run');
+    atMark(place, 'leo', 'slide.ladder', 'idle');
+    const ben = atMark(place, 'mrBen', 'bench', 'sitChair');
+    ben.object.position.x -= 0.05;
+    view(place.cam.pos, place.cam.look);
+    button(row(), 'show marks', (b) => { b.classList.toggle('on'); showMarks(place, b.classList.contains('on')); });
+  },
+
+  'Story test'() { storyTest(); },
+};
+
+/* ======== story test: a rough hand-written run of the toy story's first half ======== */
+
+async function storyTest() {
+  const token = run;
+  const alive = () => { if (token !== run) throw new Error('stopped'); };
+  const wait = (s) => new Promise((r) => setTimeout(r, s * 1000)).then(alive);
+  const place = PLACES.classroom();
+  scene.background = new THREE.Color(place.sky);
+  world.add(place.object);
+  controls.enabled = false;
+  const M = place.marks;
+  const say = async (who, text, s) => {
+    caption.innerHTML = (who ? `<b>${who}:</b> ` : '') + text;
+    caption.hidden = false;
+    await wait(s);
+  };
+  const shot = (pos, look) => { camGoal = { pos: new THREE.Vector3(...fit(pos, look)), look: new THREE.Vector3(...look) }; };
+  const close = (p, side = 1) => {
+    const head = p.object.localToWorld(new THREE.Vector3(0, p.P.hipY + p.P.torsoH + 0.1, 0));
+    const fwd = new THREE.Vector3(Math.sin(p.object.rotation.y + side * 0.5), 0, Math.cos(p.object.rotation.y + side * 0.5));
+    shot(head.clone().addScaledVector(fwd, 1.5).add(new THREE.Vector3(0, 0.25, 0)).toArray(), head.toArray());
+  };
+
+  const frank = atMark(place, 'frank', 'rug.a', 'play');
+  const leo = atMark(place, 'leo', 'door', 'idle');
+  atMark(place, 'maya', 'table.1.seat1', 'sitChair');
+  atMark(place, 'zoe', 'table.1.seat4', 'sitChair');
+  const rosa = atMark(place, 'msRosa', 'easel', 'idle');
+  const truck = makeProp('truck');
+  truck.position.copy(M['rug.frontA'].pos);
+  truck.rotation.y = Math.PI / 2;
+  world.add(truck);
+  camera.position.set(...fit(place.cam.pos, place.cam.look));
+  camera.lookAt(...place.cam.look);
+  camGoal = { pos: camera.position.clone(), look: new THREE.Vector3(...place.cam.look) };
+
+  try {
+    shot([0, 2.2, 5.2], [-0.2, 0.5, 0.4]);
+    frank.setFeel('happy');
+    await say('', 'This is Frank. Frank is five.', 2.6);
+    frank.setFeel('joy');
+    await say('', 'Frank loves the red truck. Vroom, vroom!', 2.6);
+    frank.setFeel('happy');
+    shot([1.6, 2.0, 5.0], [0.8, 0.6, 0.8]);
+    caption.hidden = true;
+    await leo.walkTo(new THREE.Vector3(0.22, 0, 0.6), -Math.PI / 2);
+    alive();
+    await say('', 'Here comes Leo.', 1.2);
+    leo.play('pickup');
+    await wait(0.8);
+    leo.hold(truck, 'R');
+    leo.play('hold');
+    leo.setFeel('happy');
+    frank.setFeel('surprised');
+    frank.play('sit');
+    await wait(0.5);
+    const off = leo.walkTo(M['table.2'].pos, M['table.2'].yaw);
+    close(frank, 1);
+    frank.talk(true);
+    await say('Frank', 'Hey! I was playing with that!', 2.2);
+    frank.talk(false);
+    await off;
+    alive();
+    frank.setFeel('cry');
+    frank.play('cry');
+    rosa.object.rotation.y = Math.PI / 2;
+    await wait(1.5);
+    caption.hidden = true;
+    shot([0, 2.6, 6.2], [0.3, 0.6, 0]);
+    await wait(0.6);
+    showChoices(token);
+  } catch (e) {
+    if (e.message !== 'stopped') throw e;
+  }
+}
+
+function showChoices(token) {
+  const opts = choices.querySelector('.opts');
+  opts.innerHTML = '';
+  const list = [['😭', 'Cry'], ['✊', 'Take it back'], ['🧑‍🏫', 'Tell the teacher']];
+  for (const [icon, text] of list) {
+    const b = document.createElement('button');
+    b.innerHTML = `<span>${icon}</span>${text}`;
+    b.onclick = () => {
+      if (token !== run) return;
+      choices.hidden = true;
+      caption.innerHTML = `“${text}” → the director (step 2) plays this branch. Restarting…`;
+      caption.hidden = false;
+      setTimeout(() => { if (token === run) open('Story test'); }, 2500);
+    };
+    opts.appendChild(b);
+  }
+  choices.hidden = false;
+}
+
+/* ======== tab bar, picking, loop ======== */
+
+const tabBar = document.getElementById('tabs');
+function open(name) {
+  clear();
+  controls.autoRotate = false;
+  for (const b of tabBar.children) b.classList.toggle('on', b.textContent === name);
+  TABS[name]();
+  try { localStorage.setItem('whattodo.viewerTab', name); } catch {}
+}
+for (const name of Object.keys(TABS)) button(tabBar, name, () => open(name));
+
+function targets() {
+  return selected.size ? [...selected] : people;
+}
+
+const ray = new THREE.Raycaster();
+let downAt = null;
+canvas.addEventListener('pointerdown', (e) => { downAt = [e.clientX, e.clientY]; });
+canvas.addEventListener('pointerup', (e) => {
+  if (!downAt || Math.hypot(e.clientX - downAt[0], e.clientY - downAt[1]) > 6) return;
+  ray.setFromCamera(new THREE.Vector2((e.clientX / innerWidth) * 2 - 1, -(e.clientY / innerHeight) * 2 + 1), camera);
+  const hit = ray.intersectObjects(people.map((p) => p.object), true)[0];
+  let o = hit && hit.object;
+  while (o && !o.userData.person) o = o.parent;
+  if (!o) return;
+  const p = o.userData.person;
+  if (selected.has(p)) { selected.delete(p); p.object.getObjectByName('ring')?.removeFromParent(); }
+  else {
+    selected.add(p);
+    const ring = part(new THREE.TorusGeometry(p.spec.adult ? 0.32 : 0.26, 0.018, 6, 32), 0xff3d7f, 0, 0.02, 0);
+    ring.rotation.x = Math.PI / 2;
+    ring.name = 'ring';
+    p.object.add(ring);
+  }
+});
+
+const clock = new THREE.Clock();
+renderer.setAnimationLoop(() => {
+  // catch up in small steps when frames are slow, so walks and waits stay in real time
+  const frame = Math.min(clock.getDelta(), 1);
+  for (let left = frame; left > 0;) {
+    const dt = Math.min(left, 0.05);
+    left -= dt;
+    for (const p of people) p.update(dt);
+    for (const s of spinners) s.rotation.y += dt * 0.6;
+  }
+  if (camGoal) {
+    const a = 1 - Math.exp(-frame * 2.2);
+    camera.position.lerp(camGoal.pos, a);
+    camGoal.look0 = (camGoal.look0 || controls.target.clone()).lerp(camGoal.look, a);
+    camera.lookAt(camGoal.look0);
+  } else {
+    controls.update();
+  }
+  renderer.render(scene, camera);
+});
+window.viewer = { camera, controls, scene, renderer, people: () => people };   // for poking at from the console
+
+let first = 'People';
+try { first = TABS[localStorage.getItem('whattodo.viewerTab')] ? localStorage.getItem('whattodo.viewerTab') : first; } catch {}
+const q = new URLSearchParams(location.search).get('tab');
+open(q && TABS[q] ? q : first);
+</script>
+</body>
+</html>

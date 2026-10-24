@@ -1,0 +1,117 @@
+{
+  "id": "left-out",
+  "title": "Can I play too?",
+  "icon": "blocks",
+  "prompt": "a story about wanting to join other kids' game",
+  "lesson": "Walk over and ask, 'Can I play too?'",
+  "place": "classroom",
+  "cast": ["frank", "maya", "zoe", "sam", "msRosa"],
+  "props": [
+    { "id": "blocks", "at": "rug.middle" }
+  ],
+  "scenes": {
+    "start": [
+      { "do": "place", "who": "maya", "at": "rug.a", "act": "play", "feel": "joy" },
+      { "do": "place", "who": "zoe", "at": "rug.b", "act": "play", "feel": "happy" },
+      { "do": "place", "who": "sam", "at": "reading", "act": "sit" },
+      { "do": "place", "who": "msRosa", "at": "table.2" },
+      { "do": "place", "who": "frank", "at": "table.1.seat1", "act": "sitChair", "feel": "happy" },
+      { "do": "cam", "shot": "wide", "cut": true },
+      { "do": "say", "who": "narrator", "text": "This is Frank. Frank is five." },
+      { "do": "say", "who": "narrator", "text": "Frank has finished his drawing." },
+      { "do": "cam", "shot": "group", "on": ["maya", "zoe"] },
+      { "do": "say", "who": "narrator", "text": "Maya and Zoe are building a tall tower." },
+      { "do": "say", "who": "zoe", "text": "One more block! It's so tall!" },
+      { "do": "act", "who": "frank", "anim": "idle" },
+      { "do": "walk", "who": "frank", "to": { "near": "blocks", "gap": 1.3 } },
+      { "do": "cam", "shot": "group", "on": ["frank", "maya", "zoe"], "with": "prev" },
+      { "do": "face", "who": "frank", "feel": "worried" },
+      { "do": "say", "who": "narrator", "text": "Frank wants to play too. But he feels shy." },
+      { "do": "cam", "shot": "close", "on": "frank" },
+      { "do": "say", "who": "frank", "text": "I want to build too..." },
+      { "do": "choice", "question": "What should Frank do?", "options": [
+        { "id": "sulk", "icon": "sulk", "say": "Walk away sad", "kind": "feeling", "goto": "sulk" },
+        { "id": "shout", "icon": "shout", "say": "Shout at them", "kind": "hurtful", "goto": "shout" },
+        { "id": "ask", "icon": "ask", "say": "Ask to play", "kind": "good", "goto": "ask" }
+      ] }
+    ],
+
+    "sulk": [
+      { "do": "face", "who": "frank", "feel": "sad" },
+      { "do": "cam", "shot": "wide" },
+      { "do": "walk", "who": "frank", "to": "window" },
+      { "do": "say", "who": "narrator", "text": "Frank goes away and sits all alone.", "with": "prev" },
+      { "do": "act", "who": "frank", "anim": "sit" },
+      { "do": "say", "who": "narrator", "text": "Maya and Zoe don't know he wants to play." },
+      { "do": "act", "who": "maya", "anim": "jump" },
+      { "do": "say", "who": "maya", "text": "Look! Our tower is finished!", "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "Frank still feels sad and lonely." },
+      { "do": "goto", "scene": "rewind" }
+    ],
+
+    "shout": [
+      { "do": "cam", "shot": "group", "on": ["frank", "maya", "zoe"] },
+      { "do": "face", "who": "frank", "feel": "angry" },
+      { "do": "act", "who": "frank", "anim": "angry", "with": "prev" },
+      { "do": "say", "who": "frank", "text": "You never let me play!" },
+      { "do": "cam", "shot": "group", "on": ["frank", "maya", "zoe"] },
+      { "do": "face", "who": ["maya", "zoe"], "feel": "surprised" },
+      { "do": "act", "who": ["maya", "zoe"], "anim": "sit", "with": "prev" },
+      { "do": "wait", "s": 0.6 },
+      { "do": "face", "who": "maya", "feel": "sad" },
+      { "do": "say", "who": "maya", "text": "But you didn't ask us!" },
+      { "do": "face", "who": "zoe", "feel": "worried" },
+      { "do": "say", "who": "zoe", "text": "That's too loud. Now I feel sad." },
+      { "do": "say", "who": "narrator", "text": "Now nobody feels happy." },
+      { "do": "goto", "scene": "rewind" }
+    ],
+
+    "rewind": [
+      { "do": "fx", "type": "rewind" },
+      { "do": "cam", "shot": "group", "on": ["frank", "maya", "zoe"] },
+      { "do": "say", "who": "narrator", "text": "Let's think. What else could Frank do?" },
+      { "do": "goto", "scene": "ask" }
+    ],
+
+    "ask": [
+      { "do": "cam", "shot": "group", "on": ["frank", "maya", "zoe"] },
+      { "do": "face", "who": "frank", "feel": "neutral" },
+      { "do": "act", "who": "frank", "anim": "breathe" },
+      { "do": "say", "who": "narrator", "text": "Frank takes a big breath. Then he walks over.", "with": "prev" },
+      { "do": "walk", "who": "frank", "to": "rug.c" },
+      { "do": "look", "who": "frank", "at": "maya" },
+      { "do": "look", "who": ["maya"], "at": "frank", "with": "prev" },
+      { "do": "act", "who": "frank", "anim": "talk" },
+      { "do": "say", "who": "frank", "text": "Can I play too? I can help.", "with": "prev" },
+      { "do": "face", "who": ["maya", "zoe"], "feel": "happy" },
+      { "do": "say", "who": "zoe", "text": "Yes! You can put the top block on!" },
+      { "do": "look", "who": "frank", "at": "blocks" },
+      { "do": "act", "who": "frank", "anim": "play" },
+      { "do": "face", "who": "frank", "feel": "joy", "with": "prev" },
+      { "do": "act", "who": "maya", "anim": "play", "with": "prev" },
+      { "do": "say", "who": "maya", "text": "Three builders! Hooray!" },
+      { "do": "fx", "type": "stars", "on": ["frank", "maya", "zoe"] },
+      { "do": "goto", "scene": "end" }
+    ],
+
+    "end": [
+      { "do": "cam", "shot": "group", "on": ["frank", "sam"] },
+      { "do": "act", "who": "sam", "anim": "idle" },
+      { "do": "walk", "who": "sam", "to": { "near": "frank", "gap": 1.0 } },
+      { "do": "say", "who": "sam", "text": "Can I play too?" },
+      { "do": "face", "who": "frank", "feel": "happy" },
+      { "do": "look", "who": "frank", "at": "sam" },
+      { "do": "say", "who": "frank", "text": "Yes! Come and help us, Sam!" },
+      { "do": "walk", "who": "sam", "to": "rug.frontB" },
+      { "do": "look", "who": "sam", "at": "blocks" },
+      { "do": "look", "who": "frank", "at": "blocks", "with": "prev" },
+      { "do": "act", "who": ["sam", "frank"], "anim": "play" },
+      { "do": "face", "who": "sam", "feel": "joy", "with": "prev" },
+      { "do": "cam", "shot": "group", "on": ["frank", "maya", "zoe", "sam"] },
+      { "do": "fx", "type": "hearts", "on": ["sam"], "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "Now four friends build together." },
+      { "do": "say", "who": "narrator", "text": "Walk over and ask, 'Can I play too?'" },
+      { "do": "end" }
+    ]
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "id": "sad-friend",
+  "title": "Zoe feels sad",
+  "icon": "teddy",
+  "prompt": "a story about helping a friend who is sad",
+  "lesson": "If a friend is sad, ask, 'Are you OK?'",
+  "place": "classroom",
+  "cast": ["frank", "zoe", "leo", "msRosa"],
+  "props": [
+    { "id": "car", "at": "rug.middle", "yaw": 0.5 },
+    { "id": "teddy", "at": "rug.frontB", "yaw": 0.3 }
+  ],
+  "scenes": {
+    "start": [
+      { "do": "place", "who": "frank", "at": "rug.a", "act": "play", "feel": "joy" },
+      { "do": "place", "who": "leo", "at": "rug.b", "act": "play", "feel": "happy" },
+      { "do": "place", "who": "zoe", "at": "reading", "act": "crySit", "feel": "sad" },
+      { "do": "place", "who": "msRosa", "at": "cubbies" },
+      { "do": "cam", "shot": "wide", "cut": true },
+      { "do": "say", "who": "narrator", "text": "It's morning at kindergarten." },
+      { "do": "cam", "shot": "group", "on": ["frank", "leo"] },
+      { "do": "say", "who": "narrator", "text": "This is Frank. He plays cars with Leo." },
+      { "do": "say", "who": "frank", "text": "Beep, beep! This car is super fast!" },
+      { "do": "cam", "shot": "close", "on": "zoe" },
+      { "do": "face", "who": "zoe", "feel": "cry" },
+      { "do": "say", "who": "narrator", "text": "But Zoe is sad. She misses her mum.", "with": "prev" },
+      { "do": "say", "who": "zoe", "text": "I want my mum..." },
+      { "do": "cam", "shot": "group", "on": ["frank", "zoe"] },
+      { "do": "act", "who": "frank", "anim": "sit" },
+      { "do": "look", "who": "frank", "at": "zoe", "with": "prev" },
+      { "do": "face", "who": "frank", "feel": "worried" },
+      { "do": "say", "who": "narrator", "text": "Frank sees Zoe crying. He feels worried." },
+      { "do": "choice", "question": "What should Frank do?", "options": [
+        { "id": "play", "icon": "play", "say": "Keep playing", "kind": "feeling", "goto": "play" },
+        { "id": "hush", "icon": "hush", "say": "Tell her to stop", "kind": "hurtful", "goto": "hush" },
+        { "id": "kind", "icon": "heart", "say": "Ask, 'Are you OK?'", "kind": "good", "goto": "kind" }
+      ] }
+    ],
+
+    "play": [
+      { "do": "look", "who": "frank", "at": "leo" },
+      { "do": "act", "who": "frank", "anim": "play" },
+      { "do": "face", "who": "frank", "feel": "happy", "with": "prev" },
+      { "do": "say", "who": "frank", "text": "Vroom! Let's keep playing, Leo." },
+      { "do": "cam", "shot": "close", "on": "zoe" },
+      { "do": "say", "who": "narrator", "text": "Zoe cries and cries. Nobody helps her." },
+      { "do": "cam", "shot": "wide" },
+      { "do": "say", "who": "narrator", "text": "Zoe still feels sad and all alone." },
+      { "do": "goto", "scene": "rewind" }
+    ],
+
+    "hush": [
+      { "do": "face", "who": "frank", "feel": "angry" },
+      { "do": "act", "who": "frank", "anim": "stop", "with": "prev" },
+      { "do": "say", "who": "frank", "text": "Stop crying, Zoe! It's too loud!", "with": "prev" },
+      { "do": "face", "who": "leo", "feel": "worried" },
+      { "do": "look", "who": "leo", "at": "frank", "with": "prev" },
+      { "do": "say", "who": "leo", "text": "Frank, she's sad. She misses her mum." },
+      { "do": "cam", "shot": "close", "on": "zoe" },
+      { "do": "say", "who": "narrator", "text": "Now Zoe feels even worse." },
+      { "do": "act", "who": "frank", "anim": "sit" },
+      { "do": "face", "who": "frank", "feel": "worried", "with": "prev" },
+      { "do": "cam", "shot": "close", "on": "frank" },
+      { "do": "say", "who": "narrator", "text": "And Frank doesn't feel good either." },
+      { "do": "goto", "scene": "rewind" }
+    ],
+
+    "rewind": [
+      { "do": "fx", "type": "rewind" },
+      { "do": "cam", "shot": "group", "on": ["frank", "zoe"] },
+      { "do": "say", "who": "narrator", "text": "Let's think. What else could Frank do?" },
+      { "do": "goto", "scene": "kind" }
+    ],
+
+    "kind": [
+      { "do": "face", "who": "frank", "feel": "neutral" },
+      { "do": "take", "who": "frank", "item": "teddy" },
+      { "do": "walk", "who": "frank", "to": { "near": "zoe", "gap": 0.75 } },
+      { "do": "cam", "shot": "group", "on": ["frank", "zoe"], "with": "prev" },
+      { "do": "say", "who": "frank", "text": "Are you OK, Zoe?" },
+      { "do": "face", "who": "zoe", "feel": "sad" },
+      { "do": "act", "who": "zoe", "anim": "sit", "with": "prev" },
+      { "do": "say", "who": "zoe", "text": "I miss my mum." },
+      { "do": "say", "who": "frank", "text": "Do you want to hold the teddy?" },
+      { "do": "say", "who": "zoe", "text": "Yes, please." },
+      { "do": "give", "who": "frank", "item": "teddy", "to": "zoe" },
+      { "do": "face", "who": "zoe", "feel": "happy" },
+      { "do": "act", "who": "zoe", "anim": "hold", "with": "prev" },
+      { "do": "fx", "type": "hearts", "on": ["zoe"], "with": "prev" },
+      { "do": "look", "who": "frank", "at": "msRosa" },
+      { "do": "say", "who": "frank", "text": "Ms Rosa! Zoe is sad.", "with": "prev" },
+      { "do": "look", "who": "msRosa", "at": "frank" },
+      { "do": "walk", "who": "msRosa", "to": { "near": "zoe", "gap": 1.0 } },
+      { "do": "cam", "shot": "group", "on": ["frank", "zoe", "msRosa"], "with": "prev" },
+      { "do": "face", "who": "msRosa", "feel": "happy" },
+      { "do": "say", "who": "msRosa", "text": "Thank you, Frank. That was very kind." },
+      { "do": "say", "who": "msRosa", "text": "You miss your mum, Zoe. That's a big feeling." },
+      { "do": "say", "who": "msRosa", "text": "Mum comes back at home time." },
+      { "do": "say", "who": "frank", "text": "Do you want to play cars with us?" },
+      { "do": "face", "who": "zoe", "feel": "joy" },
+      { "do": "say", "who": "zoe", "text": "Yes! I like cars." },
+      { "do": "goto", "scene": "end" }
+    ],
+
+    "end": [
+      { "do": "walk", "who": "frank", "to": "rug.a" },
+      { "do": "walk", "who": "zoe", "to": "rug.c", "with": "prev" },
+      { "do": "cam", "shot": "group", "on": ["frank", "zoe", "leo"], "with": "prev" },
+      { "do": "look", "who": ["frank", "zoe", "leo"], "at": "car" },
+      { "do": "act", "who": ["frank", "zoe", "leo"], "anim": "play" },
+      { "do": "face", "who": ["frank", "zoe", "leo"], "feel": "joy", "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "Now Zoe is smiling again." },
+      { "do": "fx", "type": "stars", "on": ["frank", "zoe"] },
+      { "do": "say", "who": "narrator", "text": "If a friend is sad, ask, 'Are you OK?'" },
+      { "do": "end" }
+    ]
+  }
+}

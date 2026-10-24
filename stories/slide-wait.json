@@ -1,0 +1,115 @@
+{
+  "id": "slide-wait",
+  "title": "Waiting for the slide",
+  "icon": "slide",
+  "prompt": "a story about waiting for a turn on the slide",
+  "lesson": "Ask, 'Can I go after you?' Then wait and count.",
+  "place": "playground",
+  "cast": ["frank", "sam", "maya", "ola", "mrBen"],
+  "props": [],
+  "scenes": {
+    "start": [
+      { "do": "place", "who": "mrBen", "at": "bench", "act": "sitChair" },
+      { "do": "place", "who": "ola", "at": "sandbox.a", "act": "play" },
+      { "do": "place", "who": "maya", "at": "slide.ladder", "feel": "happy" },
+      { "do": "place", "who": "sam", "at": "slide.queue1", "feel": "happy" },
+      { "do": "place", "who": "frank", "at": "middle", "feel": "happy" },
+      { "do": "cam", "shot": "wide", "cut": true },
+      { "do": "say", "who": "narrator", "text": "This is Frank. Frank loves the big slide." },
+      { "do": "cam", "shot": "group", "on": ["maya", "sam"] },
+      { "do": "slide", "who": "maya" },
+      { "do": "say", "who": "narrator", "text": "Maya goes down first.", "with": "prev" },
+      { "do": "say", "who": "maya", "text": "Wheee!" },
+      { "do": "walk", "who": "maya", "to": "sandbox.b" },
+      { "do": "walk", "who": "sam", "to": "slide.ladder", "with": "prev" },
+      { "do": "walk", "who": "frank", "to": "slide.queue1", "speed": "run", "with": "prev" },
+      { "do": "cam", "shot": "group", "on": ["frank", "sam"] },
+      { "do": "say", "who": "narrator", "text": "Sam is next. Frank has to wait." },
+      { "do": "face", "who": "frank", "feel": "angry" },
+      { "do": "act", "who": "frank", "anim": "angry", "with": "prev" },
+      { "do": "say", "who": "frank", "text": "Hurry up, Sam! I want a turn now!", "with": "prev" },
+      { "do": "act", "who": "frank", "anim": "idle" },
+      { "do": "say", "who": "narrator", "text": "Waiting is hard. Frank feels cross." },
+      { "do": "choice", "question": "What should Frank do?", "options": [
+        { "id": "giveup", "icon": "sulk", "say": "Give up and walk away", "kind": "feeling", "goto": "giveup" },
+        { "id": "wait", "icon": "wait", "say": "Ask, then wait", "kind": "good", "goto": "wait" },
+        { "id": "push", "icon": "push", "say": "Push in front", "kind": "hurtful", "goto": "push" }
+      ] }
+    ],
+
+    "giveup": [
+      { "do": "face", "who": "frank", "feel": "sad" },
+      { "do": "cam", "shot": "wide" },
+      { "do": "walk", "who": "frank", "to": { "near": "mrBen", "gap": 1.0 } },
+      { "do": "say", "who": "narrator", "text": "Frank gives up and walks away.", "with": "prev" },
+      { "do": "act", "who": "frank", "anim": "sit" },
+      { "do": "slide", "who": "sam" },
+      { "do": "say", "who": "narrator", "text": "It's OK to feel cross when you wait.", "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "But now Frank doesn't get a turn at all." },
+      { "do": "goto", "scene": "rewind" }
+    ],
+
+    "push": [
+      { "do": "face", "who": "frank", "feel": "angry" },
+      { "do": "walk", "who": "frank", "to": { "near": "sam", "gap": 0.6 } },
+      { "do": "act", "who": "frank", "anim": "reach" },
+      { "do": "face", "who": "sam", "feel": "cry", "with": "prev" },
+      { "do": "act", "who": "sam", "anim": "crySit", "with": "prev" },
+      { "do": "fx", "type": "bump", "on": "sam", "with": "prev" },
+      { "do": "say", "who": "sam", "text": "Ow! You pushed me!" },
+      { "do": "act", "who": "frank", "anim": "idle" },
+      { "do": "face", "who": "frank", "feel": "worried", "with": "prev" },
+      { "do": "act", "who": "mrBen", "anim": "idle" },
+      { "do": "walk", "who": "mrBen", "to": { "near": "sam", "gap": 0.9 } },
+      { "do": "cam", "shot": "group", "on": ["frank", "sam", "mrBen"], "with": "prev" },
+      { "do": "face", "who": "mrBen", "feel": "worried" },
+      { "do": "say", "who": "mrBen", "text": "Are you OK, Sam? Frank, pushing hurts. It was Sam's turn." },
+      { "do": "say", "who": "narrator", "text": "Now Sam is hurt, and nobody is on the slide." },
+      { "do": "goto", "scene": "rewind" }
+    ],
+
+    "rewind": [
+      { "do": "fx", "type": "rewind" },
+      { "do": "cam", "shot": "group", "on": ["frank", "sam"] },
+      { "do": "say", "who": "narrator", "text": "Let's think. What else could Frank do?" },
+      { "do": "goto", "scene": "wait" }
+    ],
+
+    "wait": [
+      { "do": "cam", "shot": "group", "on": ["frank", "sam"] },
+      { "do": "face", "who": "frank", "feel": "neutral" },
+      { "do": "act", "who": "frank", "anim": "breathe", "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "Frank takes a big breath.", "with": "prev" },
+      { "do": "act", "who": "frank", "anim": "idle" },
+      { "do": "look", "who": "sam", "at": "frank" },
+      { "do": "act", "who": "frank", "anim": "talk" },
+      { "do": "say", "who": "frank", "text": "Sam, can I go after you?", "with": "prev" },
+      { "do": "act", "who": "frank", "anim": "idle" },
+      { "do": "face", "who": "sam", "feel": "happy" },
+      { "do": "say", "who": "sam", "text": "Yes! After me, it's your turn." },
+      { "do": "say", "who": "narrator", "text": "Frank counts while he waits." },
+      { "do": "slide", "who": "sam" },
+      { "do": "say", "who": "frank", "text": "One, two, three, four, five!", "with": "prev" },
+      { "do": "cam", "shot": "group", "on": ["frank", "sam"] },
+      { "do": "face", "who": "frank", "feel": "joy" },
+      { "do": "say", "who": "narrator", "text": "Now it's Frank's turn!" },
+      { "do": "slide", "who": "frank" },
+      { "do": "say", "who": "frank", "text": "Wheee!" },
+      { "do": "act", "who": "mrBen", "anim": "idle" },
+      { "do": "walk", "who": "mrBen", "to": { "near": "frank", "gap": 1.1 } },
+      { "do": "cam", "shot": "group", "on": ["frank", "sam", "mrBen"], "with": "prev" },
+      { "do": "face", "who": "mrBen", "feel": "happy" },
+      { "do": "say", "who": "mrBen", "text": "Frank, you asked and you waited. That was hard!" },
+      { "do": "say", "who": "mrBen", "text": "Sam, you told Frank when. That was kind." },
+      { "do": "goto", "scene": "end" }
+    ],
+
+    "end": [
+      { "do": "face", "who": ["frank", "sam"], "feel": "joy" },
+      { "do": "act", "who": ["frank", "sam"], "anim": "jump", "with": "prev" },
+      { "do": "fx", "type": "stars", "on": ["frank", "sam"], "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "Ask, 'Can I go after you?' Then wait and count." },
+      { "do": "end" }
+    ]
+  }
+}

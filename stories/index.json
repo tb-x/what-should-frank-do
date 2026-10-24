@@ -1,0 +1,16 @@
+[
+  {"id": "toy-taken", "title": "The red truck", "icon": "truck"},
+  {"id": "left-out", "title": "Can I play too?", "icon": "blocks"},
+  {"id": "lost-race", "title": "The big race", "icon": "race"},
+  {"id": "sad-friend", "title": "Zoe feels sad", "icon": "teddy"},
+  {"id": "oops-tower", "title": "Oops, the tower!", "icon": "oops"},
+  {"id": "juice-spill", "title": "Was it an accident?", "icon": "juice"},
+  {"id": "slide-wait", "title": "Waiting for the slide", "icon": "slide"},
+  {"id": "wee-accident", "title": "Accidents happen", "icon": "clothes"},
+  {"id": "loud-toilet", "title": "The loud toilet", "icon": "toilet"},
+  {"id": "stop-walk-talk", "title": "Stop, walk, talk", "icon": "ball"},
+  {"id": "ask-hug", "title": "Ask before a hug", "icon": "hug"},
+  {"id": "unkind-words", "title": "Unkind words", "icon": "dino"},
+  {"id": "tidy-up", "title": "Tidy-up time", "icon": "tidy"},
+  {"id": "tricky-castle", "title": "The tricky castle", "icon": "castle"}
+]

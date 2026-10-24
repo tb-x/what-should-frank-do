@@ -1,0 +1,122 @@
+{
+  "id": "oops-tower",
+  "title": "Oops, the tower!",
+  "icon": "oops",
+  "prompt": "a story about saying sorry after an accident",
+  "lesson": "Say sorry, then help fix it.",
+  "place": "classroom",
+  "cast": ["frank", "sam", "leo", "msRosa"],
+  "props": [
+    { "id": "blocks", "at": "rug.middle" },
+    { "id": "drawing", "at": "table.1.place1" }
+  ],
+  "scenes": {
+    "start": [
+      { "do": "place", "who": "frank", "at": "table.1.seat1", "act": "sitChair", "feel": "happy" },
+      { "do": "place", "who": "sam", "at": "rug.a", "act": "play", "feel": "joy" },
+      { "do": "place", "who": "leo", "at": "rug.c", "act": "sit" },
+      { "do": "place", "who": "msRosa", "at": "teacherChair", "act": "sitChair" },
+      { "do": "cam", "shot": "wide", "cut": true },
+      { "do": "say", "who": "narrator", "text": "This is Frank. Frank is drawing a rocket." },
+      { "do": "face", "who": "frank", "feel": "joy" },
+      { "do": "say", "who": "frank", "text": "Done! I want to show Ms Rosa!" },
+      { "do": "cam", "shot": "group", "on": ["sam", "leo"] },
+      { "do": "say", "who": "narrator", "text": "Sam is building a tall tower." },
+      { "do": "say", "who": "sam", "text": "Look how tall it is!" },
+      { "do": "act", "who": "frank", "anim": "idle" },
+      { "do": "take", "who": "frank", "item": "drawing" },
+      { "do": "cam", "shot": "group", "on": ["frank", "sam"] },
+      { "do": "walk", "who": "frank", "to": { "near": "blocks", "gap": 0.3 }, "speed": "run" },
+      { "do": "say", "who": "narrator", "text": "Frank runs across the rug. He is in a hurry.", "with": "prev" },
+      { "do": "knock", "item": "blocks" },
+      { "do": "face", "who": ["frank", "sam"], "feel": "surprised", "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "Oops! Bump! The tower falls down." },
+      { "do": "face", "who": "sam", "feel": "cry" },
+      { "do": "act", "who": "sam", "anim": "crySit", "with": "prev" },
+      { "do": "say", "who": "sam", "text": "My tower! It's all broken!", "with": "prev" },
+      { "do": "cam", "shot": "close", "on": "frank" },
+      { "do": "face", "who": "frank", "feel": "worried" },
+      { "do": "say", "who": "narrator", "text": "It was an accident. Frank feels worried." },
+      { "do": "choice", "question": "What should Frank do?", "options": [
+        { "id": "hide", "icon": "hide", "say": "Run and hide", "kind": "feeling", "goto": "hide" },
+        { "id": "sorry", "icon": "sorry", "say": "Say sorry and help", "kind": "good", "goto": "sorry" },
+        { "id": "blame", "icon": "blame", "say": "Say it was Leo", "kind": "hurtful", "goto": "blame" }
+      ] }
+    ],
+
+    "hide": [
+      { "do": "cam", "shot": "wide" },
+      { "do": "face", "who": "frank", "feel": "sad" },
+      { "do": "walk", "who": "frank", "to": "reading", "speed": "run" },
+      { "do": "say", "who": "narrator", "text": "Frank runs away and hides.", "with": "prev" },
+      { "do": "act", "who": "frank", "anim": "sit" },
+      { "do": "say", "who": "narrator", "text": "Sam doesn't know it was an accident." },
+      { "do": "cam", "shot": "close", "on": "sam" },
+      { "do": "say", "who": "sam", "text": "Who broke my tower?" },
+      { "do": "cam", "shot": "wide" },
+      { "do": "say", "who": "narrator", "text": "It's OK to feel worried. But hiding doesn't fix the tower." },
+      { "do": "say", "who": "narrator", "text": "Sam is still sad. Frank feels worried and alone." },
+      { "do": "goto", "scene": "rewind" }
+    ],
+
+    "blame": [
+      { "do": "cam", "shot": "group", "on": ["frank", "leo", "sam"] },
+      { "do": "act", "who": "frank", "anim": "point" },
+      { "do": "say", "who": "frank", "text": "Leo did it!", "with": "prev" },
+      { "do": "face", "who": "leo", "feel": "surprised" },
+      { "do": "act", "who": "leo", "anim": "idle", "with": "prev" },
+      { "do": "act", "who": "frank", "anim": "idle" },
+      { "do": "say", "who": "leo", "text": "No, I didn't! I was sitting here." },
+      { "do": "face", "who": "leo", "feel": "angry" },
+      { "do": "say", "who": "narrator", "text": "Now Leo is cross, and Sam is still sad." },
+      { "do": "say", "who": "narrator", "text": "Leo didn't do it. That isn't fair to Leo." },
+      { "do": "face", "who": "frank", "feel": "sad" },
+      { "do": "say", "who": "narrator", "text": "And the tower is still broken." },
+      { "do": "goto", "scene": "rewind" }
+    ],
+
+    "rewind": [
+      { "do": "fx", "type": "rewind" },
+      { "do": "cam", "shot": "group", "on": ["frank", "sam"] },
+      { "do": "say", "who": "narrator", "text": "Let's think. What else could Frank do?" },
+      { "do": "goto", "scene": "sorry" }
+    ],
+
+    "sorry": [
+      { "do": "cam", "shot": "group", "on": ["frank", "sam"] },
+      { "do": "act", "who": "frank", "anim": "breathe" },
+      { "do": "say", "who": "narrator", "text": "Frank takes a big breath.", "with": "prev" },
+      { "do": "act", "who": "frank", "anim": "hold" },
+      { "do": "look", "who": "frank", "at": "sam" },
+      { "do": "say", "who": "frank", "text": "Sorry, Sam. I knocked your tower down by accident." },
+      { "do": "face", "who": "sam", "feel": "sad" },
+      { "do": "act", "who": "sam", "anim": "sit", "with": "prev" },
+      { "do": "say", "who": "sam", "text": "But my tower fell down." },
+      { "do": "say", "who": "frank", "text": "Can I help you fix it?" },
+      { "do": "face", "who": "sam", "feel": "happy" },
+      { "do": "say", "who": "sam", "text": "OK. You can do the top!" },
+      { "do": "drop", "who": "frank", "item": "drawing", "at": "rug.frontB" },
+      { "do": "walk", "who": "frank", "to": "rug.b" },
+      { "do": "rebuild", "who": ["frank", "sam"], "item": "blocks" },
+      { "do": "say", "who": "narrator", "text": "They build it again, block by block.", "with": "prev" },
+      { "do": "face", "who": ["frank", "sam"], "feel": "joy" },
+      { "do": "act", "who": "msRosa", "anim": "idle" },
+      { "do": "walk", "who": "msRosa", "to": "rug.c" },
+      { "do": "cam", "shot": "group", "on": ["frank", "sam", "msRosa"], "with": "prev" },
+      { "do": "face", "who": "msRosa", "feel": "happy" },
+      { "do": "say", "who": "msRosa", "text": "Frank, you said sorry and you helped." },
+      { "do": "say", "who": "msRosa", "text": "Sam, you felt sad, and you let Frank help. That was kind." },
+      { "do": "goto", "scene": "end" }
+    ],
+
+    "end": [
+      { "do": "act", "who": ["frank", "sam"], "anim": "play" },
+      { "do": "fx", "type": "stars", "on": ["frank", "sam"], "with": "prev" },
+      { "do": "say", "who": "sam", "text": "Now it's even taller!", "with": "prev" },
+      { "do": "look", "who": "frank", "at": "msRosa" },
+      { "do": "say", "who": "frank", "text": "And look, Ms Rosa, my rocket!", "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "Say sorry, then help fix it." },
+      { "do": "end" }
+    ]
+  }
+}

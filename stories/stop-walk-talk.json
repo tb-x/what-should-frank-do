@@ -1,0 +1,126 @@
+{
+  "id": "stop-walk-talk",
+  "title": "Stop, walk, talk",
+  "icon": "ball",
+  "prompt": "a story about a kid who keeps being unkind (bullying)",
+  "lesson": "Say, 'Stop, I don't like that.' Walk away. Tell a grown-up.",
+  "place": "playground",
+  "cast": ["frank", "max", "maya", "mrBen"],
+  "props": [
+    { "id": "ball", "at": "middle" }
+  ],
+  "scenes": {
+    "start": [
+      { "do": "place", "who": "mrBen", "at": "bench", "act": "sitChair" },
+      { "do": "place", "who": "maya", "at": "sandbox.a", "act": "play" },
+      { "do": "place", "who": "max", "at": "slide.bottom" },
+      { "do": "place", "who": "frank", "at": "gate", "feel": "happy" },
+      { "do": "cam", "shot": "wide", "cut": true },
+      { "do": "say", "who": "narrator", "text": "This is Frank. Frank loves playing ball." },
+      { "do": "take", "who": "frank", "item": "ball" },
+      { "do": "face", "who": "frank", "feel": "joy" },
+      { "do": "say", "who": "frank", "text": "Bounce, bounce, bounce!", "with": "prev" },
+      { "do": "cam", "shot": "group", "on": ["frank", "max"] },
+      { "do": "walk", "who": "max", "to": { "near": "frank", "gap": 0.85 } },
+      { "do": "say", "who": "narrator", "text": "Here comes Max. Max is bigger than Frank.", "with": "prev" },
+      { "do": "face", "who": "max", "feel": "angry" },
+      { "do": "take", "who": "max", "item": "ball" },
+      { "do": "face", "who": "frank", "feel": "surprised", "with": "prev" },
+      { "do": "say", "who": "max", "text": "Go away! You can't play here." },
+      { "do": "face", "who": "frank", "feel": "sad" },
+      { "do": "say", "who": "narrator", "text": "Max does this every day. Frank feels sad and scared." },
+      { "do": "cam", "shot": "close", "on": "frank" },
+      { "do": "say", "who": "frank", "text": "Not again..." },
+      { "do": "choice", "question": "What should Frank do?", "options": [
+        { "id": "stop", "icon": "stop", "say": "Say stop, walk, tell", "kind": "good", "goto": "stop" },
+        { "id": "quiet", "icon": "sulk", "say": "Say nothing and go", "kind": "feeling", "goto": "quiet" },
+        { "id": "push", "icon": "push", "say": "Push Max", "kind": "hurtful", "goto": "push" }
+      ] }
+    ],
+
+    "quiet": [
+      { "do": "cam", "shot": "wide" },
+      { "do": "walk", "who": "frank", "to": "slide.side" },
+      { "do": "say", "who": "narrator", "text": "Frank walks away and says nothing.", "with": "prev" },
+      { "do": "act", "who": "frank", "anim": "sit" },
+      { "do": "say", "who": "narrator", "text": "It's OK to feel scared." },
+      { "do": "say", "who": "narrator", "text": "But nobody knows, so nobody can help." },
+      { "do": "say", "who": "narrator", "text": "And tomorrow, Max might do it again." },
+      { "do": "goto", "scene": "rewind" }
+    ],
+
+    "push": [
+      { "do": "cam", "shot": "group", "on": ["frank", "max"] },
+      { "do": "face", "who": "frank", "feel": "angry" },
+      { "do": "act", "who": "frank", "anim": "reach", "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "Frank pushes Max.", "with": "prev" },
+      { "do": "act", "who": "max", "anim": "reach" },
+      { "do": "act", "who": "frank", "anim": "crySit", "with": "prev" },
+      { "do": "face", "who": "frank", "feel": "cry", "with": "prev" },
+      { "do": "fx", "type": "bump", "on": "frank", "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "Max pushes back, harder. Now Frank is hurt." },
+      { "do": "act", "who": "max", "anim": "idle" },
+      { "do": "act", "who": "mrBen", "anim": "idle" },
+      { "do": "walk", "who": "mrBen", "to": { "near": "frank", "gap": 0.9 } },
+      { "do": "cam", "shot": "group", "on": ["frank", "max", "mrBen"], "with": "prev" },
+      { "do": "face", "who": "mrBen", "feel": "worried" },
+      { "do": "say", "who": "mrBen", "text": "Are you OK, Frank? Max, pushing is not OK." },
+      { "do": "say", "who": "mrBen", "text": "Frank, pushing can get you hurt. Come and tell me." },
+      { "do": "goto", "scene": "rewind" }
+    ],
+
+    "rewind": [
+      { "do": "fx", "type": "rewind" },
+      { "do": "cam", "shot": "group", "on": ["frank", "max"] },
+      { "do": "say", "who": "narrator", "text": "Let's think. What else could Frank do?" },
+      { "do": "goto", "scene": "stop" }
+    ],
+
+    "stop": [
+      { "do": "cam", "shot": "group", "on": ["frank", "max"] },
+      { "do": "face", "who": "frank", "feel": "worried" },
+      { "do": "act", "who": "frank", "anim": "breathe", "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "Frank takes a big breath. He stands tall.", "with": "prev" },
+      { "do": "face", "who": "frank", "feel": "neutral" },
+      { "do": "act", "who": "frank", "anim": "stop", "with": "prev" },
+      { "do": "say", "who": "frank", "text": "Stop! I don't like that.", "with": "prev" },
+      { "do": "face", "who": "max", "feel": "surprised" },
+      { "do": "act", "who": "frank", "anim": "idle" },
+      { "do": "walk", "who": "frank", "to": { "near": "mrBen", "gap": 1.0 } },
+      { "do": "say", "who": "narrator", "text": "Then Frank walks away, to Mr Ben.", "with": "prev" },
+      { "do": "cam", "shot": "group", "on": ["frank", "mrBen"], "with": "prev" },
+      { "do": "say", "who": "frank", "text": "Mr Ben, Max took the ball again. He does it every day." },
+      { "do": "act", "who": "mrBen", "anim": "idle" },
+      { "do": "say", "who": "mrBen", "text": "Thank you for telling me, Frank." },
+      { "do": "say", "who": "mrBen", "text": "Telling a grown-up is the right thing to do." },
+      { "do": "say", "who": "mrBen", "text": "If saying stop feels scary, come straight to me." },
+      { "do": "walk", "who": "mrBen", "to": { "near": "max", "gap": 1.0 } },
+      { "do": "walk", "who": "frank", "to": { "near": "max", "gap": 1.4 }, "with": "prev" },
+      { "do": "cam", "shot": "group", "on": ["frank", "max", "mrBen"], "with": "prev" },
+      { "do": "say", "who": "mrBen", "text": "Max, taking the ball and saying go away isn't kind." },
+      { "do": "say", "who": "mrBen", "text": "Frank feels sad and scared." },
+      { "do": "face", "who": "max", "feel": "sad" },
+      { "do": "say", "who": "max", "text": "I wanted to play ball too." },
+      { "do": "say", "who": "mrBen", "text": "Then ask, 'Can I play too?' And say sorry to Frank." },
+      { "do": "say", "who": "max", "text": "Sorry, Frank. I took the ball and said go away." },
+      { "do": "give", "who": "max", "item": "ball", "to": "frank" },
+      { "do": "say", "who": "max", "text": "Can I play too?" },
+      { "do": "say", "who": "mrBen", "text": "Frank, do you want to play with Max? You can choose." },
+      { "do": "face", "who": "frank", "feel": "happy" },
+      { "do": "say", "who": "frank", "text": "OK. Let's take turns!" },
+      { "do": "face", "who": "max", "feel": "happy" },
+      { "do": "say", "who": "mrBen", "text": "Frank, you said stop and told me. Max, you said sorry." },
+      { "do": "say", "who": "mrBen", "text": "I'll be watching. If it happens again, tell me again." },
+      { "do": "goto", "scene": "end" }
+    ],
+
+    "end": [
+      { "do": "cam", "shot": "group", "on": ["frank", "max", "mrBen"] },
+      { "do": "face", "who": ["frank", "max"], "feel": "joy" },
+      { "do": "act", "who": ["frank", "max"], "anim": "jump", "with": "prev" },
+      { "do": "fx", "type": "stars", "on": ["frank", "max"], "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "Say, 'Stop, I don't like that.' Walk away. Tell a grown-up." },
+      { "do": "end" }
+    ]
+  }
+}

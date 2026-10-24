@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>What Should Frank Do?</title>
+<meta name="theme-color" content="#ff8a1f">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-180.png">
+<!-- a session loads hundreds of voice clips; keep them all in the resource list sw.js caches from -->
+<script>performance.setResourceTimingBufferSize?.(1000);</script>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Frank">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" crossorigin="anonymous" href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap">
+<style>
+  /* Layout: the 3D stage fills the screen and is only watched, not touched. Home sits top-left, sound and words-on-screen top-right, the caption bubble at the bottom; the story picker, the choice screen, the rewind and the end card cover the stage in turn. */
+  :root{
+    --ink:#2a2140; --cream:#fff7e6; --orange:#ff8a1f; --green:#43b05c; --pink:#ff5a8a; --sky:#bfe6ff;
+    --title:'Luckiest Guy','Arial Rounded MT Bold','Trebuchet MS',system-ui,sans-serif;
+    --read:Verdana,Tahoma,sans-serif;
+    --opt:clamp(104px, 26vmin, 190px);
+    color-scheme: light;
+  }
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  html,body{height:100%;margin:0;overflow:hidden;background:var(--sky);color:var(--ink);font-family:var(--read);
+    touch-action:none;overscroll-behavior:none;-webkit-user-select:none;user-select:none;
+    -webkit-touch-callout:none;-webkit-tap-highlight-color:transparent}
+  button{font:inherit;color:inherit;border:0;cursor:pointer;touch-action:manipulation;padding:0}
+  svg{display:block;width:100%;height:100%}
+  #stage{position:fixed;inset:0;width:100%;height:100%;display:block;touch-action:none;transition:filter .3s}
+
+  /* ---------- home, sound, words ---------- */
+  #home{position:fixed;top:calc(10px + env(safe-area-inset-top,0px));left:calc(10px + env(safe-area-inset-left,0px));z-index:50;
+    width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:#2a2140;background:rgba(255,255,255,.82);
+    box-shadow:0 3px 0 rgba(0,0,0,.18);touch-action:manipulation;-webkit-tap-highlight-color:transparent;text-decoration:none}
+  #home svg{width:24px;height:24px}
+  #home:active{transform:translateY(2px);box-shadow:0 1px 0 rgba(0,0,0,.18)}
+  .corner{position:fixed;top:calc(10px + env(safe-area-inset-top,0px));right:calc(10px + env(safe-area-inset-right,0px));z-index:50;display:flex;gap:8px}
+  .round{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.82);box-shadow:0 3px 0 rgba(0,0,0,.18);padding:10px;color:var(--ink)}
+  .round.off{opacity:.45}
+  .round:active{transform:translateY(2px)}
+
+  /* ---------- story picker ---------- */
+  #start{position:fixed;inset:0;z-index:20;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(14px,4vmin,30px);
+    background:rgba(255,247,230,.55);padding:20px}
+  #start h1{margin:0;font-family:var(--title);font-weight:normal;color:var(--orange);font-size:clamp(34px,9vmin,72px);text-align:center;line-height:1;
+    text-shadow:0 4px 0 var(--ink)}
+  #start .cards{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+  .card{width:clamp(150px,34vmin,230px);background:#fff;border-radius:26px;padding:14px 14px 12px;box-shadow:0 6px 0 rgba(0,0,0,.18);
+    display:flex;flex-direction:column;align-items:center;gap:6px;font-weight:bold;font-size:clamp(15px,3vmin,20px)}
+  .card svg{width:70%;height:auto}
+  .card:active{transform:translateY(3px);box-shadow:0 3px 0 rgba(0,0,0,.18)}
+
+  /* ---------- caption ---------- */
+  .caption{position:fixed;z-index:10;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom,0px));
+    max-width:min(92vw,680px);background:var(--cream);border-radius:20px;padding:10px 18px;box-shadow:0 4px 0 rgba(0,0,0,.15);
+    font-weight:bold;font-size:clamp(17px,3.8vmin,26px);line-height:1.3;text-align:center;pointer-events:none}
+  .caption b{display:block;font-size:.7em;color:var(--orange)}
+  .caption.narrator{background:#fff}
+
+  /* ---------- choice ---------- */
+  .choice{position:fixed;inset:0;z-index:30;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(14px,4vmin,30px);
+    background:rgba(42,33,64,.4);padding:60px 12px calc(16px + env(safe-area-inset-bottom,0px))}
+  .question{display:flex;align-items:center;gap:10px;background:var(--cream);border-radius:22px;padding:8px 10px 8px 20px;
+    font-weight:bold;font-size:clamp(20px,4.6vmin,32px);box-shadow:0 4px 0 rgba(0,0,0,.2);transition:transform .2s}
+  .question.now{transform:scale(1.06)}
+  .hear{width:46px;height:46px;border-radius:50%;background:#fff;padding:10px;flex:none}
+  .opts{display:flex;gap:clamp(12px,3.5vmin,32px);justify-content:center;flex-wrap:wrap}
+  .opt{position:relative;width:var(--opt);height:var(--opt);border-radius:50%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:2px;font-weight:bold;font-size:calc(var(--opt) * .1);box-shadow:0 7px 0 rgba(0,0,0,.25);transition:transform .15s, box-shadow .15s;animation:pop .35s backwards}
+  .opt:nth-child(2){animation-delay:.08s}.opt:nth-child(3){animation-delay:.16s}
+  .opt i{width:58%;height:58%}
+  .opt span{max-width:86%;text-align:center;line-height:1.1}
+  .opt.now{transform:scale(1.12);box-shadow:0 0 0 8px var(--orange),0 7px 0 rgba(0,0,0,.25)}
+  .opt.picked{transform:scale(1.2);box-shadow:0 0 0 10px var(--green)}
+  .opt:active{transform:translateY(4px)}
+  .seen{position:absolute;top:2%;right:2%;width:24%;height:24%}
+  @keyframes pop{from{transform:scale(.3);opacity:0}}
+  /* tall phone: the choices stack */
+  @media (max-aspect-ratio: 3/4){ .opts{flex-direction:column} :root{--opt:clamp(104px,22vh,170px)} }
+
+  /* ---------- rewind ---------- */
+  body.rewinding #stage{filter:sepia(.7) saturate(1.5) hue-rotate(-15deg) contrast(1.05)}
+  .rewind{position:fixed;inset:0;z-index:25;pointer-events:none;overflow:hidden;
+    background:repeating-linear-gradient(0deg,rgba(255,255,255,.07) 0 3px,transparent 3px 7px)}
+  .rewind .arrows{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);
+    font-family:var(--title);font-size:clamp(40px,10vmin,80px);color:#fff;text-shadow:0 4px 0 var(--ink);animation:blink .5s steps(2) infinite;letter-spacing:-.1em}
+  .rewind .tape span{position:absolute;left:0;right:0;height:14%;background:rgba(255,255,255,.12);animation:roll .9s linear infinite}
+  .rewind .tape span:nth-child(2){animation-delay:-.45s}
+  @keyframes roll{from{top:110%}to{top:-20%}}
+  @keyframes blink{50%{opacity:.35}}
+
+  /* ---------- end card ---------- */
+  .end{position:fixed;inset:0;z-index:30;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(12px,3.5vmin,26px);
+    background:rgba(255,247,230,.45)}
+  .bigstar{font-size:clamp(90px,26vmin,190px);line-height:1;color:#ffcf33;text-shadow:0 6px 0 var(--orange);animation:spin 1s ease-out}
+  @keyframes spin{from{transform:scale(.2) rotate(-200deg)}}
+  .tried{display:flex;gap:14px}
+  .mini{position:relative;width:clamp(56px,12vmin,84px);height:clamp(56px,12vmin,84px);border-radius:50%;background:#fff;padding:10%;box-shadow:0 4px 0 rgba(0,0,0,.18);opacity:.6}
+  .mini.done{opacity:1}
+  .mini .seen{top:-8%;right:-8%;width:42%;height:42%}
+  .endbtns{display:flex;gap:clamp(18px,5vmin,40px)}
+  .big{width:clamp(84px,20vmin,130px);height:clamp(84px,20vmin,130px);border-radius:50%;box-shadow:0 6px 0 rgba(0,0,0,.22);padding:14%}
+  .big.again{background:#fff;animation:pulse 1.2s ease-in-out infinite;padding:6%}
+  .big.restart{background:var(--green)}
+  .big:active{transform:translateY(3px)}
+  @keyframes pulse{50%{transform:scale(1.1)}}
+</style>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<canvas id="stage"></canvas>
+<a id="home" href="../index.html" aria-label="All games" title="All games"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 11 12 4l8.5 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 9.8V20h12V9.8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/><path d="M10 20v-5.5h4V20" fill="currentColor"/></svg></a>
+<div id="start" hidden><h1>What Should<br>Frank Do?</h1><div class="cards"></div></div>
+
+<script type="module">
+import { createStage } from './js/stage.js';
+import { Director } from './js/director.js';
+import { Voice } from './js/voice.js';
+import { UI } from './js/ui.js';
+
+/* ======== setup ======== */
+
+const params = new URLSearchParams(location.search);
+const test = params.has('tbxtest') || navigator.webdriver;    // test runs are silent
+const stage = createStage(document.getElementById('stage'));
+const voice = new Voice({ silent: test });
+const ui = new UI(voice);
+const director = new Director(stage, voice, ui);
+voice.sleep = (s) => director.tween(s, () => {});           // silent lines pause with the story
+
+// for poking at from the console; fastForward(s) runs the story s seconds ahead (tests)
+window.whatToDo = {
+  director, voice, ui,
+  async fastForward(s) {
+    for (let i = 0; i < s / 0.05; i++) {
+      director.update(0.05);
+      for (let k = 0; k < 30; k++) await null;
+    }
+    stage.render();
+  },
+};
+let story = null;
+
+async function fetchJSON(url) {
+  const r = await fetch(url);
+  if (!r.ok) throw new Error(`Couldn't load ${url} (${r.status})`);
+  return r.json();
+}
+
+ui.onStart = async (id) => {
+  voice.unlock();
+  story = await fetchJSON(`stories/${id}.json`);
+  director.load(story);
+  director.play();
+  setTimeout(() => window.tbxCacheNow?.(), 8000);   // the story's clips, once fetched, work offline too
+};
+ui.onAgain = () => director.again();
+ui.onRestart = () => { director.load(story); director.play(); };
+
+/* ======== frame loop ======== */
+
+let last = performance.now();
+stage.renderer.setAnimationLoop((now) => {
+  // catch up in small steps when frames are slow, so walks and waits keep their pace
+  const frame = Math.min((now - last) / 1000, 1);
+  last = now;
+  for (let left = frame; left > 0;) {
+    const dt = Math.min(left, 0.05);
+    left -= dt;
+    director.update(dt);
+  }
+  stage.render();
+});
+
+/* ======== start: the picker over the first story's set, or ?story=<id> straight in ======== */
+
+const [stories, shared] = await Promise.all([fetchJSON('stories/index.json'), fetchJSON('stories/shared.json'), voice.loadClips()]);
+ui.lines = shared;
+const direct = params.get('story');
+if (direct) {
+  ui.onStart(direct);
+} else {
+  director.load(await fetchJSON(`stories/${stories[0].id}.json`));
+  ui.picker(stories);
+}
+
+/* ======== offline (sw.js, as in every tb-x game) ======== */
+
+// sw.js caches this page; once it has loaded, send it every file the page used (three.js, the font, story
+// files, voice clips) so those work offline too, again after each story starts. Fails quietly where
+// unsupported, e.g. on file://.
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').then(() => navigator.serviceWorker.ready).then((reg) => {
+    const send = () => reg.active && reg.active.postMessage({ cache: [location.href, ...performance.getEntriesByType('resource').map((r) => r.name)] });
+    window.tbxCacheNow = send;
+    send(); setTimeout(send, 5000); setTimeout(send, 20000);
+  }).catch(() => {});
+  // When sw.js says a newer version of this page has just been downloaded, reload once to show it: straight away if
+  // nobody has tapped yet, otherwise when the page comes back after 5+ minutes away, so a story in progress is never
+  // lost. A timestamp in sessionStorage stops a second reload within 30 s.
+  let started = false, newer = false, hiddenAt = 0;
+  addEventListener('pointerdown', () => { started = true; }, true);
+  addEventListener('keydown', () => { started = true; }, true);
+  const reload = () => {
+    const key = 'tbx-sw-reload:' + location.pathname;
+    try { if (Date.now() - (+sessionStorage.getItem(key) || 0) < 30000) return; sessionStorage.setItem(key, Date.now()); } catch { return; }
+    location.reload();
+  };
+  navigator.serviceWorker.addEventListener('message', (e) => { if (e.data && e.data.updated) { newer = true; if (!started) reload(); } });
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) hiddenAt = Date.now();
+    else if (newer && hiddenAt && Date.now() - hiddenAt >= 5 * 60 * 1000) reload();
+  });
+}
+</script>
+</body>
+</html>
