@@ -105,5 +105,5 @@ its text, voice, pitch and the date it was made.
 - Frank `af_bella` ×1.28, Leo `af_sarah` ×1.32, Maya `af_heart` ×1.26, Zoe `af_aoede` ×1.4, Sam a blend
   of `af_bella` and `am_puck` ×1.32, Ola a blend of `af_heart` and `af_nova` ×1.32 (×n = pitch raised).
 - Max (a bigger kid) a blend of `af_sarah` and `am_puck` ×1.3, a little lower than the others.
-- All the kids speed 0.88; Ms. Rosa `af_nicole`, Mr. Ben `am_michael`, both speed 0.85. Everyone
+- All the kids speed 0.88; Ms. Rosa `af_river`, Mr. Ben `am_michael`, both speed 0.85. Everyone
   speaks American English.

@@ -51,7 +51,7 @@ VOICES = {
     'sam':      {'voice': [('af_bella', 0.75), ('am_puck', 0.25)], 'speed': 0.88, 'pitch': 1.32},  # ~254 Hz
     'ola':      {'voice': [('af_heart', 0.6), ('af_nova', 0.4)], 'speed': 0.88, 'pitch': 1.32},    # ~261 Hz
     'max':      {'voice': [('af_sarah', 0.8), ('am_puck', 0.2)], 'speed': 0.88, 'pitch': 1.3},    # ~242 Hz, a bigger kid
-    'msRosa':   {'voice': 'af_nicole', 'speed': 0.85, 'pitch': 1.0},   # American English (was bf_emma)
+    'msRosa':   {'voice': 'af_river', 'speed': 0.85, 'pitch': 1.0},    # American English (was bf_emma, then af_nicole)
     'mrBen':    {'voice': 'am_michael', 'speed': 0.85, 'pitch': 1.0},
 }
 
