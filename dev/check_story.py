@@ -25,7 +25,16 @@ PATH_S = (35, 130)        # a path (start to the end card) should take this long
 SHOTS = {'wide', 'group', 'two', 'close', 'over'}
 SPEEDS = {'walk', 'run', 'tiptoe'}
 NOT_GOOD = {'feeling', 'hurtful', 'avoid'}   # one good choice plus two different ones of these
-UPSET = {'sad', 'angry', 'cry'}    # worried can be empathy, which needs no calming down
+UPSET = {'sad', 'angry', 'cry'}
+# Words a story must not use: British English (the app speaks American English) and words too hard for
+# a 5-year-old. word -> what to say instead.
+NOT_THESE = {
+    'wee': 'pee', 'mum': 'Mom', 'mummy': 'Mom', 'trousers': 'pants', 'cross': 'mad', 'tidy': 'clean up',
+    'tidying': 'cleaning up', 'tidied': 'cleaned up', 'sulk': 'go away sad', 'toilets': 'the bathroom',
+    'rubbish': 'trash', 'jumper': 'sweater', 'nappy': 'diaper', 'colour': 'color', 'favourite': 'favorite',
+    'flump': 'oops / plop', 'squashed': 'squeezed', 'home time': 'pick-up time', 'queue': 'line',
+    'brilliant': 'great', 'lovely': 'nice', 'shan\'t': 'won\'t',
+}    # worried can be empathy, which needs no calming down
 
 BEATS = {   # beat: (required fields, optional fields)
     'place': ({'at'}, {'who', 'item', 'act', 'feel', 'hold', 'with'}),
@@ -292,6 +301,14 @@ def check(story, cat, file_id):
                 for o in [b['on']] if isinstance(b.get('on'), str) else b.get('on', []):
                     if o not in cast and o not in props:
                         r.error(where, f'fx on unknown "{o}"')
+            if d in ('say', 'choice'):
+                texts = [b['text']] if d == 'say' else [b['question']] + [o.get('say', '') for o in b['options']]
+                for t in texts:
+                    for bad, good in NOT_THESE.items():
+                        if re.search(r'\b' + re.escape(bad) + r'\b', t, re.I):
+                            r.error(where, f'"{bad}" in "{t}": say "{good}" (American English, simple words)')
+                    if re.search(r'\b(Ms|Mr|Mrs)\b(?!\.)', t):
+                        r.error(where, f'"Ms"/"Mr" need a period in American English: "{t}"')
             if d == 'say':
                 n = words(b['text'])
                 if n > MAX_WORDS:

@@ -44,6 +44,7 @@
   .corner{position:fixed;top:calc(10px + env(safe-area-inset-top,0px));right:calc(10px + env(safe-area-inset-right,0px));z-index:50;display:flex;gap:8px}
   .round{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.82);box-shadow:0 3px 0 rgba(0,0,0,.18);padding:10px;color:var(--ink)}
   .round.off{opacity:.45}
+  .round.back{position:fixed;z-index:50;top:calc(10px + env(safe-area-inset-top,0px));left:calc(62px + env(safe-area-inset-left,0px));padding:12px}
   .round:active{transform:translateY(2px)}
 
   /* ---------- story picker ---------- */
@@ -79,6 +80,9 @@
   .opt span{max-width:86%;text-align:center;line-height:1.1}
   .opt.now{transform:scale(1.12);box-shadow:0 0 0 8px var(--orange),0 7px 0 rgba(0,0,0,.25)}
   .opt.picked{transform:scale(1.2);box-shadow:0 0 0 10px var(--green)}
+  /* first tap: lit up and read aloud; tap again to pick it */
+  .opt.armed{transform:scale(1.14);box-shadow:0 0 0 8px var(--green),0 7px 0 rgba(0,0,0,.25);animation:armed 0.9s ease-in-out infinite}
+  @keyframes armed{50%{box-shadow:0 0 0 14px rgba(67,176,92,.45),0 7px 0 rgba(0,0,0,.25)}}
   .opt:active{transform:translateY(4px)}
   .seen{position:absolute;top:2%;right:2%;width:24%;height:24%}
   @keyframes pop{from{transform:scale(.3);opacity:0}}
@@ -161,6 +165,7 @@ async function fetchJSON(url) {
 
 ui.onStart = async (id) => {
   voice.unlock();
+  ui.backBtn.hidden = false;
   story = await fetchJSON(`stories/${id}.json`);
   director.load(story);
   director.play();
@@ -188,6 +193,12 @@ stage.renderer.setAnimationLoop((now) => {
 
 const [stories, shared] = await Promise.all([fetchJSON('stories/index.json'), fetchJSON('stories/shared.json'), voice.loadClips()]);
 ui.lines = shared;
+// the stories button during a story: stop it and show the picker over the set where it stopped
+ui.onPicker = () => {
+  if (director.story) window.tbxEvent?.('story-quit', { story: director.story.id, scene: director.sceneName, path: director.path.join('>') });
+  director.stop();
+  ui.picker(stories);
+};
 const direct = params.get('story');
 if (direct) {
   ui.onStart(direct);

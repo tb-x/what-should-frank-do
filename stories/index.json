@@ -10,7 +10,7 @@
   {"id": "loud-toilet", "title": "The loud toilet", "icon": "toilet"},
   {"id": "stop-walk-talk", "title": "Stop, walk, talk", "icon": "ball"},
   {"id": "ask-hug", "title": "Ask before a hug", "icon": "hug"},
-  {"id": "unkind-words", "title": "Unkind words", "icon": "dino"},
-  {"id": "tidy-up", "title": "Tidy-up time", "icon": "tidy"},
+  {"id": "unkind-words", "title": "Words that hurt", "icon": "dino"},
+  {"id": "tidy-up", "title": "Clean-up time", "icon": "tidy"},
   {"id": "tricky-castle", "title": "The tricky castle", "icon": "castle"}
 ]

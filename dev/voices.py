@@ -51,7 +51,7 @@ VOICES = {
     'sam':      {'voice': [('af_bella', 0.75), ('am_puck', 0.25)], 'speed': 0.88, 'pitch': 1.32},  # ~254 Hz
     'ola':      {'voice': [('af_heart', 0.6), ('af_nova', 0.4)], 'speed': 0.88, 'pitch': 1.32},    # ~261 Hz
     'max':      {'voice': [('af_sarah', 0.8), ('am_puck', 0.2)], 'speed': 0.88, 'pitch': 1.3},    # ~242 Hz, a bigger kid
-    'msRosa':   {'voice': 'bf_emma', 'speed': 0.85, 'pitch': 1.0},
+    'msRosa':   {'voice': 'af_nicole', 'speed': 0.85, 'pitch': 1.0},   # American English (was bf_emma)
     'mrBen':    {'voice': 'am_michael', 'speed': 0.85, 'pitch': 1.0},
 }
 
@@ -133,7 +133,7 @@ RENDER_V = 2
 SAY_PHONEMES = {}
 
 # Captions keep the text as written; the voice gets a version that's easier to say.
-SAY_AS = [(re.compile(r'\bMs\b'), 'Miz'), (re.compile(r'\bMr\b'), 'Mister'), (re.compile(r'\bOK\b'), 'okay')]
+SAY_AS = [(re.compile(r'\bMs\b\.?'), 'Miz'), (re.compile(r'\bMr\b\.?'), 'Mister'), (re.compile(r'\bOK\b'), 'okay')]
 
 
 def speakable(text):

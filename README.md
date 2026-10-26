@@ -16,17 +16,18 @@ story files work.
 - Pick a story: **The red truck** (someone takes your toy), **Can I play too?** (joining a game),
   **The big race** (losing), **Zoe feels sad** (helping a sad friend), **Oops, the tower!** (saying
   sorry after an accident), **Was it an accident?** (when someone bumps into you), **Waiting for the
-  slide** (waiting your turn), **Accidents happen** (a wee accident), **The loud toilet** (being scared
-  of the kindergarten toilet), **Stop, walk, talk** (a bigger child who keeps being unkind), **Ask
-  before a hug** (my body, my choice), **Unkind words** ("you're not my friend"), **Tidy-up time**
+  slide** (waiting your turn), **Accidents happen** (a pee accident), **The loud toilet** (being scared
+  of the kindergarten bathroom), **Stop, walk, talk** (a bigger child who keeps being unkind), **Ask
+  before a hug** (my body, my choice), **Words that hurt** ("you're not my friend"), **Clean-up time**
   (stopping when it's fun), **The tricky castle** (when something is hard).
 - The story plays by itself: people walk, talk, feel things; every line is spoken, and the words show
   in a bubble at the bottom (the 💬 button turns the words off).
 - At the problem the picture dims and three big round buttons appear (in the red truck: *Cry*, *Grab it
-  back*, *Say STOP*). The question and each choice are read aloud one by one; tap one any time.
+  back*, *Say STOP*). The question and each choice are read aloud one by one. Tapping a choice lights it
+  up and reads it again; tapping it a second time picks it, so a stray tap never chooses.
 - The two not-so-good choices play out gently (the truck stays gone; the truck falls and both boys
   cry), then the picture spins back like a tape and the narrator says "Let's think. What else could Frank do?".
-- Every path ends with the good way (in the red truck: Frank says "Stop!", tells Ms Rosa, gets the
+- Every path ends with the good way (in the red truck: Frank says "Stop!", tells Ms. Rosa, gets the
   truck back and takes turns) and the lesson in one sentence.
 - At the end: **?** goes back to the question to try another choice (choices already tried get a tick),
   the green arrow starts the story again. 🏠 goes back to all the games, the speaker turns sound off.
@@ -104,4 +105,5 @@ its text, voice, pitch and the date it was made.
 - Frank `af_bella` ×1.28, Leo `af_sarah` ×1.32, Maya `af_heart` ×1.26, Zoe `af_aoede` ×1.4, Sam a blend
   of `af_bella` and `am_puck` ×1.32, Ola a blend of `af_heart` and `af_nova` ×1.32 (×n = pitch raised).
 - Max (a bigger kid) a blend of `af_sarah` and `am_puck` ×1.3, a little lower than the others.
-- All the kids speed 0.88; Ms Rosa `bf_emma`, Mr Ben `am_michael`, both speed 0.85.
+- All the kids speed 0.88; Ms. Rosa `af_nicole`, Mr. Ben `am_michael`, both speed 0.85. Everyone
+  speaks American English.

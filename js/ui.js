@@ -114,6 +114,8 @@ export const ICONS = {
   castle: svg(`<path d="M8 88h84" stroke="#e9c46a" stroke-width="8" stroke-linecap="round"/>
     <path d="M20 86v-26h60v26z" fill="#e9c46a" stroke="${INK}" stroke-width="3"/><path d="M32 60v-18h36v18" fill="#d4a94e" stroke="${INK}" stroke-width="3"/>
     <path d="M40 42v-14h20v14" fill="#e9c46a" stroke="${INK}" stroke-width="3"/><path d="M50 28v-18" stroke="${INK}" stroke-width="3"/><path d="M50 10l14 5-14 5z" fill="#e8433f"/>`),
+  stories: svg(`<g fill="currentColor"><rect x="14" y="14" width="30" height="30" rx="7"/><rect x="56" y="14" width="30" height="30" rx="7"/>
+    <rect x="14" y="56" width="30" height="30" rx="7"/><rect x="56" y="56" width="30" height="30" rx="7"/></g>`),
   truck: svg(truckArt(50, 52, 1.25)),
   blocks: svg(`<g stroke="${INK}" stroke-width="3" font-family="Verdana" font-weight="bold" font-size="20" text-anchor="middle">
     <rect x="16" y="62" width="30" height="30" rx="4" fill="#e8433f"/><rect x="50" y="62" width="30" height="30" rx="4" fill="#3fa7ff"/>
@@ -147,7 +149,7 @@ function save(key, v) { try { localStorage.setItem(key, v); } catch {} }
 export class UI {
   constructor(voice) {
     this.voice = voice;
-    this.onAgain = this.onRestart = this.onStart = () => {};
+    this.onAgain = this.onRestart = this.onStart = this.onPicker = () => {};
     this.lines = {};                            // stories/shared.json: the end card's spoken lines
     this.captionsOn = load(CC_KEY) !== '0';
 
@@ -159,6 +161,13 @@ export class UI {
     this.rewindEl.hidden = true;
     this.endEl = document.body.appendChild(el('div', 'end'));
     this.endEl.hidden = true;
+
+    // back to the stories, next to the home button (only while a story is on)
+    this.backBtn = document.body.appendChild(el('button', 'round back', ICONS.stories));
+    this.backBtn.setAttribute('aria-label', 'All stories');
+    this.backBtn.title = 'All stories';
+    this.backBtn.hidden = true;
+    this.backBtn.onclick = (e) => { e.stopPropagation(); this.voice.stop(); this.onPicker(); };
 
     // sound and captions buttons, top right
     const corner = document.body.appendChild(el('div', 'corner'));
@@ -180,12 +189,14 @@ export class UI {
   /* ---------- the story picker ---------- */
 
   picker(stories) {
+    this.cancel();
+    this.backBtn.hidden = true;
     const start = document.getElementById('start');
     const cards = start.querySelector('.cards');
     cards.innerHTML = '';
     for (const s of stories) {
       const b = cards.appendChild(el('button', 'card', `${ICONS[s.icon] || ICONS.truck}<span>${s.title}</span>`));
-      b.onclick = () => { start.hidden = true; this.onStart(s.id); };
+      b.onclick = () => { start.hidden = true; this.backBtn.hidden = false; this.onStart(s.id); };
     }
     start.hidden = false;
   }
@@ -219,7 +230,7 @@ export class UI {
     this.capEl.hidden = true;
 
     return new Promise((resolve) => {
-      let picked = false, reading = 0;
+      let picked = false, reading = 0, armed = -1;
       const read = async () => {
         const mine = ++reading;
         const live = () => !picked && mine === reading && !box.hidden;
@@ -232,16 +243,28 @@ export class UI {
           buttons[i].classList.remove('now');
         }
       };
+      // Two taps: the first lights the button up and reads it aloud again, the second picks it,
+      // so a stray tap never chooses for a child who can't read the labels yet.
       buttons.forEach((b, i) => {
         b.onclick = () => {
           if (picked) return;
+          if (armed !== i) {
+            armed = i;
+            reading++;   // stops the read-through
+            buttons.forEach((x) => x.classList.remove('now', 'armed'));
+            q.classList.remove('now');
+            b.classList.add('armed');
+            this.voice.say(options[i].say, NARRATOR);
+            return;
+          }
           picked = true;
           this.voice.stop();
+          b.classList.remove('armed');
           b.classList.add('picked');
           setTimeout(() => { box.hidden = true; resolve(options[i]); }, 350);
         };
       });
-      again.onclick = () => { buttons.forEach((b) => b.classList.remove('now')); read(); };
+      again.onclick = () => { armed = -1; buttons.forEach((b) => b.classList.remove('now', 'armed')); read(); };
       read();
     });
   }

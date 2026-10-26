@@ -3,7 +3,7 @@
   "title": "The red truck",
   "icon": "truck",
   "prompt": "a story about handling other kids taking toys",
-  "lesson": "Say, 'Stop, I'm still playing.' If that doesn't work, tell a grown-up.",
+  "lesson": "Say, 'Stop, I'm still playing.' If not, tell a grown-up.",
   "place": "classroom",
   "cast": ["frank", "leo", "msRosa", "maya", "zoe"],
   "props": [
@@ -27,7 +27,7 @@
       { "do": "face", "who": "msRosa", "feel": "happy" },
       { "do": "say", "who": "msRosa", "text": "Good morning, Frank!" },
       { "do": "act", "who": "frank", "anim": "wave" },
-      { "do": "say", "who": "frank", "text": "Good morning, Ms Rosa!", "with": "prev" },
+      { "do": "say", "who": "frank", "text": "Good morning, Ms. Rosa!", "with": "prev" },
       { "do": "look", "who": "msRosa", "at": "maya" },
       { "do": "walk", "who": "frank", "to": "rug.a" },
       { "do": "act", "who": "frank", "anim": "play" },
@@ -49,7 +49,7 @@
       { "do": "say", "who": "leo", "text": "It's my turn now!" },
       { "do": "cam", "shot": "group", "on": ["frank", "leo"] },
       { "do": "face", "who": "frank", "feel": "sad" },
-      { "do": "say", "who": "narrator", "text": "Oh no. Frank feels sad and cross." },
+      { "do": "say", "who": "narrator", "text": "Oh no. Frank feels sad and mad." },
       { "do": "choice", "question": "What should Frank do?", "options": [
         { "id": "cry", "icon": "cry", "say": "Cry", "kind": "feeling", "goto": "cry" },
         { "id": "grab", "icon": "grab", "say": "Grab it back", "kind": "hurtful", "goto": "grab" },
@@ -112,7 +112,7 @@
       { "do": "walk", "who": "frank", "to": { "near": "msRosa" } },
       { "do": "cam", "shot": "group", "on": ["frank", "msRosa"], "with": "prev" },
       { "do": "look", "who": "msRosa", "at": "frank" },
-      { "do": "say", "who": "frank", "text": "Ms Rosa, Leo took the truck. I was playing with it." },
+      { "do": "say", "who": "frank", "text": "Ms. Rosa, Leo took the truck. I was playing with it." },
       { "do": "face", "who": "msRosa", "feel": "happy" },
       { "do": "say", "who": "msRosa", "text": "Thank you for telling me, Frank." },
       { "do": "walk", "who": "msRosa", "to": "rug.c" },
@@ -120,7 +120,7 @@
       { "do": "cam", "shot": "group", "on": ["frank", "leo", "msRosa"], "with": "prev" },
       { "do": "act", "who": "msRosa", "anim": "talk" },
       { "do": "say", "who": "msRosa", "text": "Leo, Frank was playing with the truck. Please give it back." },
-      { "do": "say", "who": "msRosa", "text": "You really want a turn. Next time, ask, 'Can I have a turn?'" },
+      { "do": "say", "who": "msRosa", "text": "You want a turn. Next time, ask, 'Can I have a turn?'" },
       { "do": "act", "who": "msRosa", "anim": "idle" },
       { "do": "give", "who": "leo", "item": "truck", "to": "frank" },
       { "do": "face", "who": "frank", "feel": "happy" },
@@ -139,7 +139,7 @@
       { "do": "cam", "shot": "group", "on": ["frank", "leo", "msRosa"] },
       { "do": "face", "who": "msRosa", "feel": "joy" },
       { "do": "act", "who": "msRosa", "anim": "clap", "with": "prev" },
-      { "do": "say", "who": "msRosa", "text": "Frank, you used your words. Leo, you waited. Well done!", "with": "prev" },
+      { "do": "say", "who": "msRosa", "text": "Frank, you used your words. Leo, you waited. Great job!", "with": "prev" },
       { "do": "act", "who": "msRosa", "anim": "idle" },
       { "do": "walk", "who": "leo", "to": "rug.b" },
       { "do": "walk", "who": "frank", "to": "rug.a", "with": "prev" },
@@ -148,7 +148,7 @@
       { "do": "face", "who": ["frank", "leo"], "feel": "joy", "with": "prev" },
       { "do": "fx", "type": "stars", "on": ["frank", "leo"], "with": "prev" },
       { "do": "say", "who": "narrator", "text": "Now Frank and Leo play together.", "with": "prev" },
-      { "do": "say", "who": "narrator", "text": "Say, 'Stop, I'm still playing.' If that doesn't work, tell a grown-up." },
+      { "do": "say", "who": "narrator", "text": "Say, 'Stop, I'm still playing.' If not, tell a grown-up." },
       { "do": "end" }
     ]
   }

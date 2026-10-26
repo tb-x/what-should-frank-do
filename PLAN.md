@@ -66,6 +66,9 @@ One path is 60–120 s. Lines are at most ~12 words, present tense, simple Engli
   words*, *say stop*, *ask a grown-up*, *take turns*, *trade*, *take a big breath*, *say sorry*, *ask to
   join*, *find another toy*.
 - No brands, no real names except the cast, nothing scary.
+- **Super simple American English** (since 2026-10-26): words a 5-year-old American child already knows,
+  short sentences (aim for 8 words), "pee", "Mom", "pants", "mad", "clean up", "bathroom", "Ms. Rosa".
+  `dev/check_story.py` refuses British and hard words (its `NOT_THESE` list).
 
 Added after the child-development review of the first four stories (2026-10-24):
 
@@ -233,7 +236,7 @@ what-to-do/
   index.html            player: story picker, stage, choice screen, end card
   js/toon.js            shared toon materials, rounded boxes, canvas textures
   js/models/person.js   kids and grown-ups: body rig, faces, hair, clothes, held props, walking
-  js/models/cast.js     the recurring cast (Frank, Leo, Maya, Zoe, Sam, Ola, Ms Rosa, Mr Ben)
+  js/models/cast.js     the recurring cast (Frank, Leo, Maya, Zoe, Sam, Ola, Max, Ms. Rosa, Mr. Ben)
   js/models/props.js    the prop catalogue (truck, blocks, teddy, ball, dino, crayons, book, …)
   js/models/places.js   classroom and playground sets, each with named spots ("marks")
   js/anim.js            procedural body actions (pose functions, blended)

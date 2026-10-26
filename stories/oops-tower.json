@@ -19,7 +19,7 @@
       { "do": "cam", "shot": "wide", "cut": true },
       { "do": "say", "who": "narrator", "text": "This is Frank. Frank is drawing a rocket." },
       { "do": "face", "who": "frank", "feel": "joy" },
-      { "do": "say", "who": "frank", "text": "Done! I want to show Ms Rosa!" },
+      { "do": "say", "who": "frank", "text": "Done! I want to show Ms. Rosa!" },
       { "do": "cam", "shot": "group", "on": ["sam", "leo"] },
       { "do": "say", "who": "narrator", "text": "Sam is building a tall tower." },
       { "do": "say", "who": "sam", "text": "Look how tall it is!" },
@@ -68,7 +68,7 @@
       { "do": "act", "who": "frank", "anim": "idle" },
       { "do": "say", "who": "leo", "text": "No, I didn't! I was sitting here." },
       { "do": "face", "who": "leo", "feel": "angry" },
-      { "do": "say", "who": "narrator", "text": "Now Leo is cross, and Sam is still sad." },
+      { "do": "say", "who": "narrator", "text": "Now Leo is mad, and Sam is still sad." },
       { "do": "say", "who": "narrator", "text": "Leo didn't do it. That isn't fair to Leo." },
       { "do": "face", "who": "frank", "feel": "sad" },
       { "do": "say", "who": "narrator", "text": "And the tower is still broken." },
@@ -114,7 +114,7 @@
       { "do": "fx", "type": "stars", "on": ["frank", "sam"], "with": "prev" },
       { "do": "say", "who": "sam", "text": "Now it's even taller!", "with": "prev" },
       { "do": "look", "who": "frank", "at": "msRosa" },
-      { "do": "say", "who": "frank", "text": "And look, Ms Rosa, my rocket!", "with": "prev" },
+      { "do": "say", "who": "frank", "text": "And look, Ms. Rosa, my rocket!", "with": "prev" },
       { "do": "say", "who": "narrator", "text": "Say sorry, then help fix it." },
       { "do": "end" }
     ]

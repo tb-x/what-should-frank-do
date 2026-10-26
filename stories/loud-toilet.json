@@ -17,7 +17,7 @@
       { "do": "fx", "type": "splash", "on": ["frank", "leo"] },
       { "do": "say", "who": "msRosa", "text": "Rub, rub, rub! Lots of bubbles.", "with": "prev" },
       { "do": "act", "who": "leo", "anim": "idle" },
-      { "do": "say", "who": "leo", "text": "I need a wee." },
+      { "do": "say", "who": "leo", "text": "I need to pee." },
       { "do": "walk", "who": "leo", "to": "cubicle.1" },
       { "do": "door", "at": "cubicle.1", "open": true },
       { "do": "walk", "who": "leo", "to": "inside.1" },
@@ -34,12 +34,12 @@
       { "do": "act", "who": "leo", "anim": "wash" },
       { "do": "act", "who": "frank", "anim": "wriggle" },
       { "do": "face", "who": "frank", "feel": "worried", "with": "prev" },
-      { "do": "say", "who": "narrator", "text": "Frank needs a wee too. But he doesn't want to go.", "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "Frank needs to pee too. But he doesn't want to go.", "with": "prev" },
       { "do": "cam", "shot": "close", "on": "frank" },
       { "do": "say", "who": "frank", "text": "That toilet is too loud. It's not like home." },
       { "do": "choice", "question": "What should Frank do?", "options": [
         { "id": "hold", "icon": "wriggle", "say": "Hold it in", "kind": "avoid", "goto": "hold" },
-        { "id": "tell", "icon": "teacher", "say": "Tell Ms Rosa", "kind": "good", "goto": "tell" },
+        { "id": "tell", "icon": "teacher", "say": "Tell Ms. Rosa", "kind": "good", "goto": "tell" },
         { "id": "cry", "icon": "cry", "say": "Cry and say no", "kind": "feeling", "goto": "cry" }
       ] }
     ],
@@ -47,10 +47,10 @@
     "hold": [
       { "do": "cam", "shot": "group", "on": ["frank", "leo"] },
       { "do": "act", "who": "frank", "anim": "wriggle" },
-      { "do": "say", "who": "narrator", "text": "Frank holds his wee in. He wriggles and jiggles.", "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "Frank holds his pee in. He wiggles and jiggles.", "with": "prev" },
       { "do": "wait", "s": 1 },
       { "do": "face", "who": "frank", "feel": "sad" },
-      { "do": "say", "who": "narrator", "text": "Holding a wee too long can make your tummy hurt." },
+      { "do": "say", "who": "narrator", "text": "Holding your pee too long can hurt your tummy." },
       { "do": "say", "who": "narrator", "text": "And Frank still needs to go." },
       { "do": "goto", "scene": "rewind" }
     ],
@@ -64,8 +64,8 @@
       { "do": "cam", "shot": "group", "on": ["frank", "msRosa"], "with": "prev" },
       { "do": "face", "who": "msRosa", "feel": "worried" },
       { "do": "say", "who": "msRosa", "text": "Oh, Frank. You feel upset. What's wrong?" },
-      { "do": "say", "who": "narrator", "text": "It's OK to cry. But Frank is too upset to say what's wrong." },
-      { "do": "say", "who": "narrator", "text": "And Frank still needs a wee." },
+      { "do": "say", "who": "narrator", "text": "It's OK to cry. But Frank is too upset to talk." },
+      { "do": "say", "who": "narrator", "text": "And Frank still needs to pee." },
       { "do": "goto", "scene": "rewind" }
     ],
 
@@ -83,9 +83,9 @@
       { "do": "say", "who": "narrator", "text": "Frank takes a big breath.", "with": "prev" },
       { "do": "walk", "who": "frank", "to": { "near": "msRosa", "gap": 0.9 } },
       { "do": "look", "who": "msRosa", "at": "frank" },
-      { "do": "say", "who": "frank", "text": "Ms Rosa, the toilet is too loud. It scares me." },
+      { "do": "say", "who": "frank", "text": "Ms. Rosa, the toilet is too loud. It scares me." },
       { "do": "face", "who": "msRosa", "feel": "happy" },
-      { "do": "say", "who": "msRosa", "text": "Thank you for telling me. New toilets can feel scary." },
+      { "do": "say", "who": "msRosa", "text": "Thank you for telling me. A new toilet can feel scary." },
       { "do": "say", "who": "msRosa", "text": "Let's listen to it together first. Cover your ears!" },
       { "do": "walk", "who": "msRosa", "to": "cubicle.1" },
       { "do": "act", "who": "frank", "anim": "ears", "with": "prev" },
@@ -104,7 +104,7 @@
       { "do": "door", "at": "cubicle.2", "open": false },
       { "do": "cam", "shot": "group", "on": ["frank", "msRosa"] },
       { "do": "wait", "s": 1 },
-      { "do": "say", "who": "narrator", "text": "Frank does his wee. Then he flushes, and covers his ears." },
+      { "do": "say", "who": "narrator", "text": "Frank pees. Then he flushes and covers his ears." },
       { "do": "fx", "type": "splash", "on": ["frank"] },
       { "do": "say", "who": "narrator", "text": "Whoosh!", "with": "prev" },
       { "do": "door", "at": "cubicle.2", "open": true },
@@ -127,7 +127,7 @@
       { "do": "act", "who": ["frank", "leo"], "anim": "idle" },
       { "do": "face", "who": ["frank", "leo"], "feel": "joy", "with": "prev" },
       { "do": "fx", "type": "stars", "on": ["frank"], "with": "prev" },
-      { "do": "say", "who": "leo", "text": "Lunch time!", "with": "prev" },
+      { "do": "say", "who": "leo", "text": "Lunchtime!", "with": "prev" },
       { "do": "say", "who": "narrator", "text": "If something scares you, tell a grown-up." },
       { "do": "end" }
     ]

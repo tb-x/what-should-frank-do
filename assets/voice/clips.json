@@ -10,6 +10,17 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
+ "01502968": {
+  "file": "frank-01502968-11e534.mp3",
+  "who": "frank",
+  "text": "Ms. Rosa, I had an accident.",
+  "dur": 2.65,
+  "voice": "af_bella",
+  "speed": 0.88,
+  "pitch": 1.28,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
  "024954cf": {
   "file": "frank-024954cf-11e534.mp3",
   "who": "frank",
@@ -22,54 +33,21 @@
   "made": "2026-10-24"
  },
  "02fede52": {
-  "file": "msRosa-02fede52-b435a2.mp3",
+  "file": "msRosa-02fede52-ad54fe.mp3",
   "who": "msRosa",
   "text": "The game will wait for you.",
-  "dur": 2.18,
-  "voice": "bf_emma",
+  "dur": 2.4,
+  "voice": "af_nicole",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "0357cbc5": {
-  "file": "frank-0357cbc5-11e534.mp3",
-  "who": "frank",
-  "text": "No! We're not finished!",
-  "dur": 2.22,
-  "voice": "af_bella",
-  "speed": 0.88,
-  "pitch": 1.28,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "0389f6fe": {
-  "file": "mrBen-0389f6fe-ad63cd.mp3",
-  "who": "mrBen",
-  "text": "Frank, that was tricky, and you felt cross.",
-  "dur": 3.42,
-  "voice": "am_michael",
-  "speed": 0.85,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "03bbe06f": {
   "file": "narrator-03bbe06f-e1e81b.mp3",
   "who": "narrator",
   "text": "Frank didn't do anything wrong. Zoe didn't ask first.",
   "dur": 4.21,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "047f0050": {
-  "file": "narrator-047f0050-e1e81b.mp3",
-  "who": "narrator",
-  "text": "This is Frank. He's just got to kindergarten.",
-  "dur": 3.65,
   "voice": "af_heart",
   "speed": 0.82,
   "pitch": 1.0,
@@ -109,17 +87,6 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "0586d25a": {
-  "file": "msRosa-0586d25a-b435a2.mp3",
-  "who": "msRosa",
-  "text": "Next time your body says 'wee', go straight away.",
-  "dur": 3.45,
-  "voice": "bf_emma",
-  "speed": 0.85,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
  "059348c2": {
   "file": "frank-059348c2-11e534.mp3",
   "who": "frank",
@@ -154,15 +121,26 @@
   "made": "2026-10-24"
  },
  "07439e34": {
-  "file": "msRosa-07439e34-b435a2.mp3",
+  "file": "msRosa-07439e34-ad54fe.mp3",
   "who": "msRosa",
   "text": "Zoe, are you OK? Frank, stop. Pushing hurts.",
-  "dur": 4.61,
-  "voice": "bf_emma",
+  "dur": 5.89,
+  "voice": "af_nicole",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
+ },
+ "0757008d": {
+  "file": "mrBen-0757008d-ad63cd.mp3",
+  "who": "mrBen",
+  "text": "Frank, please stop. You feel mad. Shouting at Leo isn't kind.",
+  "dur": 5.88,
+  "voice": "am_michael",
+  "speed": 0.85,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
  },
  "078451fe": {
   "file": "mrBen-078451fe-ad63cd.mp3",
@@ -174,6 +152,28 @@
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
+ },
+ "07b40ea7": {
+  "file": "zoe-07b40ea7-713dfa.mp3",
+  "who": "zoe",
+  "text": "I miss my mom.",
+  "dur": 1.63,
+  "voice": "af_aoede",
+  "speed": 0.88,
+  "pitch": 1.4,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
+ "095df81c": {
+  "file": "narrator-095df81c-e1e81b.mp3",
+  "who": "narrator",
+  "text": "Now there's more to clean up, and story time starts late.",
+  "dur": 4.09,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
  },
  "09934cd6": {
   "file": "narrator-09934cd6-e1e81b.mp3",
@@ -205,17 +205,6 @@
   "voice": "af_bella",
   "speed": 0.88,
   "pitch": 1.28,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "0a9c3360": {
-  "file": "ola-0a9c3360-c02051.mp3",
-  "who": "ola",
-  "text": "Then you're not my friend any more!",
-  "dur": 2.4,
-  "voice": "af_heart*0.6+af_nova*0.4",
-  "speed": 0.88,
-  "pitch": 1.32,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
@@ -274,16 +263,16 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "0e12acea": {
-  "file": "narrator-0e12acea-e1e81b.mp3",
-  "who": "narrator",
-  "text": "It's OK to feel cross when things are hard.",
-  "dur": 3.3,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
+ "0ea0403d": {
+  "file": "leo-0ea0403d-468d45.mp3",
+  "who": "leo",
+  "text": "Frank, she's sad. She misses her mom.",
+  "dur": 3.17,
+  "voice": "af_sarah",
+  "speed": 0.88,
+  "pitch": 1.32,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "0f03d87c": {
   "file": "narrator-0f03d87c-e1e81b.mp3",
@@ -295,6 +284,17 @@
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
+ },
+ "0fa0443e": {
+  "file": "narrator-0fa0443e-e1e81b.mp3",
+  "who": "narrator",
+  "text": "This is Frank. He just got to kindergarten.",
+  "dur": 3.55,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
  },
  "10369cad": {
   "file": "narrator-10369cad-e1e81b.mp3",
@@ -314,17 +314,6 @@
   "dur": 1.46,
   "voice": "af_heart",
   "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "108c4bbf": {
-  "file": "mrBen-108c4bbf-ad63cd.mp3",
-  "who": "mrBen",
-  "text": "Ready... steady... go!",
-  "dur": 4.58,
-  "voice": "am_michael",
-  "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
@@ -373,6 +362,17 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
+ "131f6960": {
+  "file": "ola-131f6960-c02051.mp3",
+  "who": "ola",
+  "text": "Then you're not my friend anymore!",
+  "dur": 2.53,
+  "voice": "af_heart*0.6+af_nova*0.4",
+  "speed": 0.88,
+  "pitch": 1.32,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
  "1341f0ac": {
   "file": "frank-1341f0ac-11e534.mp3",
   "who": "frank",
@@ -395,27 +395,16 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "1376ce3f": {
-  "file": "msRosa-1376ce3f-b435a2.mp3",
+ "137046df": {
+  "file": "msRosa-137046df-ad54fe.mp3",
   "who": "msRosa",
-  "text": "Ola, you felt cross because you wanted the dino.",
-  "dur": 3.56,
-  "voice": "bf_emma",
+  "text": "Frank, you felt mad and asked. Maya, you said sorry and helped.",
+  "dur": 7.36,
+  "voice": "af_nicole",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "137a5421": {
-  "file": "narrator-137a5421-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Frank holds his wee in. He wriggles and jiggles.",
-  "dur": 3.92,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "13c52703": {
   "file": "narrator-13c52703-e1e81b.mp3",
@@ -440,26 +429,15 @@
   "made": "2026-10-24"
  },
  "15574202": {
-  "file": "msRosa-15574202-b435a2.mp3",
+  "file": "msRosa-15574202-ad54fe.mp3",
   "who": "msRosa",
   "text": "Let's listen to it together first. Cover your ears!",
-  "dur": 4.1,
-  "voice": "bf_emma",
+  "dur": 5.56,
+  "voice": "af_nicole",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "155a4281": {
-  "file": "zoe-155a4281-713dfa.mp3",
-  "who": "zoe",
-  "text": "I miss my mum.",
-  "dur": 1.62,
-  "voice": "af_aoede",
-  "speed": 0.88,
-  "pitch": 1.4,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "16545584": {
   "file": "sam-16545584-7284f9.mp3",
@@ -472,38 +450,38 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "1808a0a9": {
-  "file": "msRosa-1808a0a9-b435a2.mp3",
-  "who": "msRosa",
-  "text": "Oh, Frank. You feel upset. What's wrong?",
-  "dur": 3.04,
-  "voice": "bf_emma",
-  "speed": 0.85,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "18347f44": {
-  "file": "msRosa-18347f44-b435a2.mp3",
-  "who": "msRosa",
-  "text": "Rub, rub, rub! Lots of bubbles.",
-  "dur": 3.27,
-  "voice": "bf_emma",
-  "speed": 0.85,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "18eb5522": {
-  "file": "narrator-18eb5522-e1e81b.mp3",
+ "16fd993e": {
+  "file": "narrator-16fd993e-e1e81b.mp3",
   "who": "narrator",
-  "text": "Frank has finished his drawing.",
-  "dur": 2.29,
+  "text": "Now Leo feels sad, and the castle is still broken.",
+  "dur": 4.01,
   "voice": "af_heart",
   "speed": 0.82,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
+ },
+ "1808a0a9": {
+  "file": "msRosa-1808a0a9-ad54fe.mp3",
+  "who": "msRosa",
+  "text": "Oh, Frank. You feel upset. What's wrong?",
+  "dur": 4.53,
+  "voice": "af_nicole",
+  "speed": 0.85,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
+ "18347f44": {
+  "file": "msRosa-18347f44-ad54fe.mp3",
+  "who": "msRosa",
+  "text": "Rub, rub, rub! Lots of bubbles.",
+  "dur": 4.46,
+  "voice": "af_nicole",
+  "speed": 0.85,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
  },
  "1a24cf6d": {
   "file": "frank-1a24cf6d-11e534.mp3",
@@ -513,17 +491,6 @@
   "voice": "af_bella",
   "speed": 0.88,
   "pitch": 1.28,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "1b1a206f": {
-  "file": "narrator-1b1a206f-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Frank goes to the book corner on his own.",
-  "dur": 2.93,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
@@ -538,38 +505,16 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "1cbad46d": {
-  "file": "frank-1cbad46d-11e534.mp3",
-  "who": "frank",
-  "text": "Done! I want to show Ms Rosa!",
-  "dur": 2.67,
-  "voice": "af_bella",
-  "speed": 0.88,
-  "pitch": 1.28,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "1ddaf762": {
-  "file": "mrBen-1ddaf762-ad63cd.mp3",
-  "who": "mrBen",
-  "text": "Sam, you told Frank when. That was kind.",
-  "dur": 4.01,
-  "voice": "am_michael",
-  "speed": 0.85,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "1e6aaba0": {
-  "file": "msRosa-1e6aaba0-b435a2.mp3",
+ "1d9df1df": {
+  "file": "msRosa-1d9df1df-ad54fe.mp3",
   "who": "msRosa",
-  "text": "Frank felt squashed. He still likes you!",
-  "dur": 3.4,
-  "voice": "bf_emma",
+  "text": "Your body is yours. Frank's body is his.",
+  "dur": 5.1,
+  "voice": "af_nicole",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "1ee43722": {
   "file": "narrator-1ee43722-e1e81b.mp3",
@@ -582,22 +527,22 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
+ "208376d0": {
+  "file": "maya-208376d0-f7360b.mp3",
+  "who": "maya",
+  "text": "Look! Our tower is all done!",
+  "dur": 2.63,
+  "voice": "af_heart",
+  "speed": 0.88,
+  "pitch": 1.26,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
  "20d7ecf2": {
   "file": "narrator-20d7ecf2-e1e81b.mp3",
   "who": "narrator",
   "text": "Say, 'Stop, I don't like that.' Walk away. Tell a grown-up.",
   "dur": 4.65,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "210f90d2": {
-  "file": "narrator-210f90d2-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Frank shouts unkind words back at Ola.",
-  "dur": 3.3,
   "voice": "af_heart",
   "speed": 0.82,
   "pitch": 1.0,
@@ -681,27 +626,27 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "24340db3": {
-  "file": "frank-24340db3-11e534.mp3",
+ "24388249": {
+  "file": "frank-24388249-11e534.mp3",
   "who": "frank",
-  "text": "I need Ms Rosa.",
-  "dur": 1.67,
+  "text": "Thanks, Leo. I want to try one more time.",
+  "dur": 3.32,
   "voice": "af_bella",
   "speed": 0.88,
   "pitch": 1.28,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "243fc7d6": {
-  "file": "msRosa-243fc7d6-b435a2.mp3",
+  "file": "msRosa-243fc7d6-ad54fe.mp3",
   "who": "msRosa",
   "text": "Story time! Once upon a time...",
-  "dur": 3.43,
-  "voice": "bf_emma",
+  "dur": 5.03,
+  "voice": "af_nicole",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "24541118": {
   "file": "narrator-24541118-e1e81b.mp3",
@@ -713,6 +658,17 @@
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
+ },
+ "262159b3": {
+  "file": "narrator-262159b3-e1e81b.mp3",
+  "who": "narrator",
+  "text": "Frank needs to pee too. But he doesn't want to go.",
+  "dur": 3.9,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
  },
  "268654d9": {
   "file": "narrator-268654d9-e1e81b.mp3",
@@ -769,6 +725,17 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
+ "29283b7d": {
+  "file": "zoe-29283b7d-713dfa.mp3",
+  "who": "zoe",
+  "text": "I want my mom...",
+  "dur": 2.41,
+  "voice": "af_aoede",
+  "speed": 0.88,
+  "pitch": 1.4,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
  "299a9c9d": {
   "file": "narrator-299a9c9d-e1e81b.mp3",
   "who": "narrator",
@@ -780,22 +747,33 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
+ "29a4656d": {
+  "file": "narrator-29a4656d-e1e81b.mp3",
+  "who": "narrator",
+  "text": "Frank cries. He doesn't want to play anymore.",
+  "dur": 3.51,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
+ "29b09b41": {
+  "file": "narrator-29b09b41-e1e81b.mp3",
+  "who": "narrator",
+  "text": "And Frank still needs to pee.",
+  "dur": 2.36,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
  "29fd4824": {
   "file": "narrator-29fd4824-e1e81b.mp3",
   "who": "narrator",
   "text": "Now Frank and Leo are both sad.",
   "dur": 2.56,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "2a70c38d": {
-  "file": "narrator-2a70c38d-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Waiting is hard. Frank feels cross.",
-  "dur": 3.3,
   "voice": "af_heart",
   "speed": 0.82,
   "pitch": 1.0,
@@ -813,27 +791,16 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "2aa86c71": {
-  "file": "narrator-2aa86c71-e1e81b.mp3",
+ "2c9c0775": {
+  "file": "narrator-2c9c0775-e1e81b.mp3",
   "who": "narrator",
-  "text": "Frank feels cross. It's hard to stop when you're having fun.",
-  "dur": 4.22,
+  "text": "But the castle is still broken, and Frank feels worse.",
+  "dur": 3.88,
   "voice": "af_heart",
   "speed": 0.82,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "2c81ab47": {
-  "file": "narrator-2c81ab47-e1e81b.mp3",
-  "who": "narrator",
-  "text": "His trousers are wet. Frank feels embarrassed.",
-  "dur": 3.89,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "2cd2a3a0": {
   "file": "frank-2cd2a3a0-11e534.mp3",
@@ -846,16 +813,16 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "2ede6c4d": {
-  "file": "msRosa-2ede6c4d-b435a2.mp3",
-  "who": "msRosa",
-  "text": "Frank, stop please. You're cross, but Sam didn't want it knocked down.",
-  "dur": 5.13,
-  "voice": "bf_emma",
-  "speed": 0.85,
+ "2e9c725b": {
+  "file": "narrator-2e9c725b-e1e81b.mp3",
+  "who": "narrator",
+  "text": "Everyone else cleans up and sits down.",
+  "dur": 2.81,
+  "voice": "af_heart",
+  "speed": 0.82,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "2f73a088": {
   "file": "narrator-2f73a088-e1e81b.mp3",
@@ -878,6 +845,28 @@
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
+ },
+ "30880707": {
+  "file": "narrator-30880707-e1e81b.mp3",
+  "who": "narrator",
+  "text": "Plop! It falls down again.",
+  "dur": 2.81,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
+ "30c6df68": {
+  "file": "msRosa-30c6df68-ad54fe.mp3",
+  "who": "msRosa",
+  "text": "Friends can feel mad and still be friends.",
+  "dur": 4.51,
+  "voice": "af_nicole",
+  "speed": 0.85,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
  },
  "3134adf0": {
   "file": "narrator-3134adf0-e1e81b.mp3",
@@ -912,23 +901,45 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
+ "3239a3c6": {
+  "file": "msRosa-3239a3c6-ad54fe.mp3",
+  "who": "msRosa",
+  "text": "You feel mad. It's hard to stop when it's fun.",
+  "dur": 4.94,
+  "voice": "af_nicole",
+  "speed": 0.85,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
+ "327f6640": {
+  "file": "frank-327f6640-11e534.mp3",
+  "who": "frank",
+  "text": "Ms. Rosa, Leo took the truck. I was playing with it.",
+  "dur": 4.12,
+  "voice": "af_bella",
+  "speed": 0.88,
+  "pitch": 1.28,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
+ "32ab0edf": {
+  "file": "msRosa-32ab0edf-ad54fe.mp3",
+  "who": "msRosa",
+  "text": "Frank, please stop. You're mad, but Sam didn't want it knocked down.",
+  "dur": 7.59,
+  "voice": "af_nicole",
+  "speed": 0.85,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
  "33808916": {
   "file": "sam-33808916-7284f9.mp3",
   "who": "sam",
   "text": "Ow! You pushed me!",
   "dur": 2.04,
   "voice": "af_bella*0.75+am_puck*0.25",
-  "speed": 0.88,
-  "pitch": 1.32,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "340838a3": {
-  "file": "leo-340838a3-468d45.mp3",
-  "who": "leo",
-  "text": "Lunch time!",
-  "dur": 1.52,
-  "voice": "af_sarah",
   "speed": 0.88,
   "pitch": 1.32,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
@@ -967,17 +978,6 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "365a1ea5": {
-  "file": "narrator-365a1ea5-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Everyone else tidies up and sits down.",
-  "dur": 2.94,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
  "3666c869": {
   "file": "frank-3666c869-11e534.mp3",
   "who": "frank",
@@ -988,6 +988,17 @@
   "pitch": 1.28,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
+ },
+ "38224aab": {
+  "file": "narrator-38224aab-e1e81b.mp3",
+  "who": "narrator",
+  "text": "Frank puts the car away.",
+  "dur": 2.21,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
  },
  "3a432fcd": {
   "file": "narrator-3a432fcd-e1e81b.mp3",
@@ -1011,27 +1022,16 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "3b54268f": {
-  "file": "mrBen-3b54268f-ad63cd.mp3",
-  "who": "mrBen",
-  "text": "Well done, Frank. Losing is hard, but you stayed calm.",
-  "dur": 4.51,
-  "voice": "am_michael",
-  "speed": 0.85,
+ "3c418e94": {
+  "file": "narrator-3c418e94-e1e81b.mp3",
+  "who": "narrator",
+  "text": "Frank doesn't want a hug right now. It's too tight.",
+  "dur": 3.88,
+  "voice": "af_heart",
+  "speed": 0.82,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "3b814cd5": {
-  "file": "msRosa-3b814cd5-b435a2.mp3",
-  "who": "msRosa",
-  "text": "Tidy-up time, everyone! Then it's story time.",
-  "dur": 4.1,
-  "voice": "bf_emma",
-  "speed": 0.85,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "3c5960ea": {
   "file": "narrator-3c5960ea-e1e81b.mp3",
@@ -1044,38 +1044,38 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "3c92009e": {
-  "file": "frank-3c92009e-11e534.mp3",
-  "who": "frank",
-  "text": "Ms Rosa, the toilet is too loud. It scares me.",
-  "dur": 4.0,
-  "voice": "af_bella",
-  "speed": 0.88,
-  "pitch": 1.28,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
  "3c9bdd26": {
-  "file": "msRosa-3c9bdd26-b435a2.mp3",
+  "file": "msRosa-3c9bdd26-ad54fe.mp3",
   "who": "msRosa",
   "text": "Frank, you told me. That was brave.",
-  "dur": 2.76,
-  "voice": "bf_emma",
+  "dur": 4.03,
+  "voice": "af_nicole",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
+ },
+ "3cf030a1": {
+  "file": "leo-3cf030a1-468d45.mp3",
+  "who": "leo",
+  "text": "Lunchtime!",
+  "dur": 1.44,
+  "voice": "af_sarah",
+  "speed": 0.88,
+  "pitch": 1.32,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
  },
  "3d0a9e61": {
-  "file": "msRosa-3d0a9e61-b435a2.mp3",
+  "file": "msRosa-3d0a9e61-ad54fe.mp3",
   "who": "msRosa",
   "text": "Ask before a hug. 'No thank you' means stop.",
-  "dur": 3.75,
-  "voice": "bf_emma",
+  "dur": 5.14,
+  "voice": "af_nicole",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "3d8b031d": {
   "file": "ola-3d8b031d-c02051.mp3",
@@ -1088,27 +1088,27 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "3d9acc4e": {
-  "file": "msRosa-3d9acc4e-b435a2.mp3",
-  "who": "msRosa",
-  "text": "Frank, you told me what was scary. Then you were brave.",
-  "dur": 3.78,
-  "voice": "bf_emma",
-  "speed": 0.85,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "3dc0bc9b": {
-  "file": "narrator-3dc0bc9b-e1e81b.mp3",
+ "3d91fad0": {
+  "file": "narrator-3d91fad0-e1e81b.mp3",
   "who": "narrator",
-  "text": "Tricky? Take a big breath, try again, then ask, 'Can you show me?'",
-  "dur": 5.07,
+  "text": "Ola feels mad. She really wants the dino.",
+  "dur": 3.66,
   "voice": "af_heart",
   "speed": 0.82,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
+ },
+ "3d9acc4e": {
+  "file": "msRosa-3d9acc4e-ad54fe.mp3",
+  "who": "msRosa",
+  "text": "Frank, you told me what was scary. Then you were brave.",
+  "dur": 5.61,
+  "voice": "af_nicole",
+  "speed": 0.85,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
  },
  "3e35c7ed": {
   "file": "narrator-3e35c7ed-e1e81b.mp3",
@@ -1143,6 +1143,39 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
+ "40f9dfbb": {
+  "file": "narrator-40f9dfbb-e1e81b.mp3",
+  "who": "narrator",
+  "text": "Now Zoe is sad, and Frank still feels upset.",
+  "dur": 3.81,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
+ "412ebc1d": {
+  "file": "msRosa-412ebc1d-ad54fe.mp3",
+  "who": "msRosa",
+  "text": "Next time your body says 'pee', go right away.",
+  "dur": 4.58,
+  "voice": "af_nicole",
+  "speed": 0.85,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
+ "41e46a8a": {
+  "file": "narrator-41e46a8a-e1e81b.mp3",
+  "who": "narrator",
+  "text": "Maya starts to clean up.",
+  "dur": 2.16,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
  "42c2e546": {
   "file": "leo-42c2e546-468d45.mp3",
   "who": "leo",
@@ -1175,6 +1208,17 @@
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
+ },
+ "44b9ed19": {
+  "file": "frank-44b9ed19-11e534.mp3",
+  "who": "frank",
+  "text": "Done! I want to show Ms. Rosa!",
+  "dur": 2.67,
+  "voice": "af_bella",
+  "speed": 0.88,
+  "pitch": 1.28,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
  },
  "44f8e94d": {
   "file": "narrator-44f8e94d-e1e81b.mp3",
@@ -1231,38 +1275,16 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "486775f4": {
-  "file": "frank-486775f4-11e534.mp3",
-  "who": "frank",
-  "text": "Ms Rosa, Leo took the truck. I was playing with it.",
-  "dur": 4.11,
-  "voice": "af_bella",
-  "speed": 0.88,
-  "pitch": 1.28,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "48c078fd": {
-  "file": "narrator-48c078fd-e1e81b.mp3",
+ "49588e0c": {
+  "file": "narrator-49588e0c-e1e81b.mp3",
   "who": "narrator",
-  "text": "Frank tidies the car.",
-  "dur": 2.07,
+  "text": "Tricky? Take a big breath, try again, ask, 'Can you show me?'",
+  "dur": 5.14,
   "voice": "af_heart",
   "speed": 0.82,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "4918b00b": {
-  "file": "frank-4918b00b-11e534.mp3",
-  "who": "frank",
-  "text": "Ms Rosa! Zoe is sad.",
-  "dur": 2.7,
-  "voice": "af_bella",
-  "speed": 0.88,
-  "pitch": 1.28,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "49e39667": {
   "file": "narrator-49e39667-e1e81b.mp3",
@@ -1286,38 +1308,16 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "4c18bd33": {
-  "file": "msRosa-4c18bd33-b435a2.mp3",
-  "who": "msRosa",
-  "text": "Waiting is hard. Next time, say, 'I feel cross. I'll wait.'",
-  "dur": 4.87,
-  "voice": "bf_emma",
-  "speed": 0.85,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "4c4c0b73": {
-  "file": "leo-4c4c0b73-468d45.mp3",
-  "who": "leo",
-  "text": "Frank, she's sad. She misses her mum.",
-  "dur": 3.13,
-  "voice": "af_sarah",
-  "speed": 0.88,
-  "pitch": 1.32,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
  "4ccae752": {
-  "file": "msRosa-4ccae752-b435a2.mp3",
+  "file": "msRosa-4ccae752-ad54fe.mp3",
   "who": "msRosa",
   "text": "Leo, Frank was playing with the truck. Please give it back.",
-  "dur": 4.15,
-  "voice": "bf_emma",
+  "dur": 6.1,
+  "voice": "af_nicole",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "4d55f5b7": {
   "file": "ola-4d55f5b7-c02051.mp3",
@@ -1341,17 +1341,6 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "4dc2a590": {
-  "file": "msRosa-4dc2a590-b435a2.mp3",
-  "who": "msRosa",
-  "text": "Frank, you felt cross, and you asked first. Maya, you said sorry and helped.",
-  "dur": 5.09,
-  "voice": "bf_emma",
-  "speed": 0.85,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
  "4dc82e04": {
   "file": "frank-4dc82e04-11e534.mp3",
   "who": "frank",
@@ -1368,17 +1357,6 @@
   "who": "narrator",
   "text": "This is Frank. Frank is drawing a rocket.",
   "dur": 3.49,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "4e82af2f": {
-  "file": "narrator-4e82af2f-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Frank doesn't want a hug right now. He feels squashed.",
-  "dur": 4.0,
   "voice": "af_heart",
   "speed": 0.82,
   "pitch": 1.0,
@@ -1407,27 +1385,27 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "50b45e62": {
-  "file": "msRosa-50b45e62-b435a2.mp3",
+ "5207c86d": {
+  "file": "msRosa-5207c86d-ad54fe.mp3",
   "who": "msRosa",
-  "text": "Frank, you used your words. Leo, you waited. Well done!",
-  "dur": 4.54,
-  "voice": "bf_emma",
+  "text": "Let's get you some dry clothes, Frank.",
+  "dur": 3.64,
+  "voice": "af_nicole",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "52949909": {
-  "file": "msRosa-52949909-b435a2.mp3",
+  "file": "msRosa-52949909-ad54fe.mp3",
   "who": "msRosa",
   "text": "Frank, you said sorry and you helped.",
-  "dur": 2.8,
-  "voice": "bf_emma",
+  "dur": 3.89,
+  "voice": "af_nicole",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "529e0f61": {
   "file": "narrator-529e0f61-e1e81b.mp3",
@@ -1440,6 +1418,50 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
+ "533ce2c7": {
+  "file": "narrator-533ce2c7-e1e81b.mp3",
+  "who": "narrator",
+  "text": "But wet pants feel cold and itchy.",
+  "dur": 2.82,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
+ "5356d940": {
+  "file": "narrator-5356d940-e1e81b.mp3",
+  "who": "narrator",
+  "text": "Frank shouts back at Ola. His words hurt too.",
+  "dur": 3.89,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
+ "53fe70e8": {
+  "file": "mrBen-53fe70e8-ad63cd.mp3",
+  "who": "mrBen",
+  "text": "Frank, that was tricky, and you felt mad.",
+  "dur": 3.37,
+  "voice": "am_michael",
+  "speed": 0.85,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
+ "54701d4b": {
+  "file": "leo-54701d4b-468d45.mp3",
+  "who": "leo",
+  "text": "I need to pee.",
+  "dur": 1.67,
+  "voice": "af_sarah",
+  "speed": 0.88,
+  "pitch": 1.32,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
  "54eda34d": {
   "file": "frank-54eda34d-11e534.mp3",
   "who": "frank",
@@ -1450,6 +1472,17 @@
   "pitch": 1.28,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
+ },
+ "54fb380b": {
+  "file": "narrator-54fb380b-e1e81b.mp3",
+  "who": "narrator",
+  "text": "Frank goes to the book corner by himself.",
+  "dur": 3.01,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
  },
  "56333d30": {
   "file": "zoe-56333d30-713dfa.mp3",
@@ -1472,6 +1505,17 @@
   "pitch": 1.32,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
+ },
+ "5674b3c7": {
+  "file": "mrBen-5674b3c7-ad63cd.mp3",
+  "who": "mrBen",
+  "text": "If saying stop feels scary, come right to me.",
+  "dur": 3.94,
+  "voice": "am_michael",
+  "speed": 0.85,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
  },
  "56abbbfd": {
   "file": "narrator-56abbbfd-e1e81b.mp3",
@@ -1517,16 +1561,16 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "586a806d": {
-  "file": "narrator-586a806d-e1e81b.mp3",
+ "58b3b813": {
+  "file": "narrator-58b3b813-e1e81b.mp3",
   "who": "narrator",
-  "text": "Flump! It's still tricky. Frank stays calm.",
-  "dur": 3.59,
+  "text": "Waiting is hard. Frank feels mad.",
+  "dur": 3.23,
   "voice": "af_heart",
   "speed": 0.82,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "58bc17a2": {
   "file": "zoe-58bc17a2-713dfa.mp3",
@@ -1539,27 +1583,38 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "58dab13f": {
-  "file": "narrator-58dab13f-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Frank feels cross. He wants to do it by himself.",
-  "dur": 3.98,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "598106f1": {
-  "file": "msRosa-598106f1-b435a2.mp3",
+ "596276a2": {
+  "file": "msRosa-596276a2-ad54fe.mp3",
   "who": "msRosa",
-  "text": "Zoe, next time, ask before a hug.",
-  "dur": 3.16,
-  "voice": "bf_emma",
+  "text": "Clean-up time, everyone! Then it's story time.",
+  "dur": 5.52,
+  "voice": "af_nicole",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
+ },
+ "598106f1": {
+  "file": "msRosa-598106f1-ad54fe.mp3",
+  "who": "msRosa",
+  "text": "Zoe, next time, ask before a hug.",
+  "dur": 4.15,
+  "voice": "af_nicole",
+  "speed": 0.85,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
+ "5aef43c4": {
+  "file": "msRosa-5aef43c4-ad54fe.mp3",
+  "who": "msRosa",
+  "text": "If words that hurt don't stop, come and tell me.",
+  "dur": 4.96,
+  "voice": "af_nicole",
+  "speed": 0.85,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
  },
  "5b711a8b": {
   "file": "leo-5b711a8b-468d45.mp3",
@@ -1569,17 +1624,6 @@
   "voice": "af_sarah",
   "speed": 0.88,
   "pitch": 1.32,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "5b728025": {
-  "file": "narrator-5b728025-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Frank still feels sad and lonely.",
-  "dur": 2.74,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
@@ -1595,15 +1639,15 @@
   "made": "2026-10-24"
  },
  "5baea051": {
-  "file": "msRosa-5baea051-b435a2.mp3",
+  "file": "msRosa-5baea051-ad54fe.mp3",
   "who": "msRosa",
   "text": "Sam, you felt sad, and you let Frank help. That was kind.",
-  "dur": 4.32,
-  "voice": "bf_emma",
+  "dur": 6.86,
+  "voice": "af_nicole",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "5c6f5cac": {
   "file": "frank-5c6f5cac-11e534.mp3",
@@ -1613,17 +1657,6 @@
   "voice": "af_bella",
   "speed": 0.88,
   "pitch": 1.28,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "5c715b52": {
-  "file": "narrator-5c715b52-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Now there's more to tidy, and story time starts late.",
-  "dur": 4.18,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
@@ -1649,6 +1682,17 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
+ "5e77f7a7": {
+  "file": "msRosa-5e77f7a7-ad54fe.mp3",
+  "who": "msRosa",
+  "text": "Thank you for telling me. A new toilet can feel scary.",
+  "dur": 5.61,
+  "voice": "af_nicole",
+  "speed": 0.85,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
  "5f038049": {
   "file": "frank-5f038049-11e534.mp3",
   "who": "frank",
@@ -1661,15 +1705,48 @@
   "made": "2026-10-24"
  },
  "5fcc8a27": {
-  "file": "msRosa-5fcc8a27-b435a2.mp3",
+  "file": "msRosa-5fcc8a27-ad54fe.mp3",
   "who": "msRosa",
   "text": "Thank you, Frank. That was very kind.",
-  "dur": 3.27,
-  "voice": "bf_emma",
+  "dur": 4.23,
+  "voice": "af_nicole",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
+ },
+ "60725e1c": {
+  "file": "frank-60725e1c-11e534.mp3",
+  "who": "frank",
+  "text": "Mr. Ben, Max took the ball again. He does it every day.",
+  "dur": 4.38,
+  "voice": "af_bella",
+  "speed": 0.88,
+  "pitch": 1.28,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
+ "60a8fda1": {
+  "file": "frank-60a8fda1-11e534.mp3",
+  "who": "frank",
+  "text": "And look, Ms. Rosa, my rocket!",
+  "dur": 2.56,
+  "voice": "af_bella",
+  "speed": 0.88,
+  "pitch": 1.28,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
+ "60e2d04c": {
+  "file": "msRosa-60e2d04c-ad54fe.mp3",
+  "who": "msRosa",
+  "text": "Maya, are you OK? Frank, pushing hurts.",
+  "dur": 5.14,
+  "voice": "af_nicole",
+  "speed": 0.85,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
  },
  "61674bc4": {
   "file": "narrator-61674bc4-e1e81b.mp3",
@@ -1693,17 +1770,6 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "62353524": {
-  "file": "msRosa-62353524-b435a2.mp3",
-  "who": "msRosa",
-  "text": "Frank, you took a big breath, asked, and helped tidy.",
-  "dur": 4.05,
-  "voice": "bf_emma",
-  "speed": 0.85,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
  "62598cd3": {
   "file": "frank-62598cd3-11e534.mp3",
   "who": "frank",
@@ -1715,27 +1781,16 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "62ab4424": {
-  "file": "msRosa-62ab4424-b435a2.mp3",
+ "641052e0": {
+  "file": "msRosa-641052e0-ad54fe.mp3",
   "who": "msRosa",
-  "text": "Everyone's body belongs to them.",
-  "dur": 2.7,
-  "voice": "bf_emma",
+  "text": "Mom comes back at pick-up time.",
+  "dur": 3.31,
+  "voice": "af_nicole",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "62d8d2aa": {
-  "file": "narrator-62d8d2aa-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Oh no. Frank feels sad and cross.",
-  "dur": 3.24,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "642bc31c": {
   "file": "frank-642bc31c-11e534.mp3",
@@ -1792,6 +1847,17 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
+ "6633d849": {
+  "file": "narrator-6633d849-e1e81b.mp3",
+  "who": "narrator",
+  "text": "Sam puts the letter block away.",
+  "dur": 2.54,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
  "66c15cfa": {
   "file": "narrator-66c15cfa-e1e81b.mp3",
   "who": "narrator",
@@ -1799,17 +1865,6 @@
   "dur": 2.37,
   "voice": "af_heart",
   "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "678e1a3e": {
-  "file": "msRosa-678e1a3e-b435a2.mp3",
-  "who": "msRosa",
-  "text": "Let's check that Maya is OK. Frank, pushing hurts.",
-  "dur": 4.48,
-  "voice": "bf_emma",
-  "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
@@ -1836,27 +1891,16 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "680ac7e0": {
-  "file": "narrator-680ac7e0-e1e81b.mp3",
+ "68737c9a": {
+  "file": "narrator-68737c9a-e1e81b.mp3",
   "who": "narrator",
-  "text": "Push in front",
-  "dur": 1.49,
+  "text": "Then Frank walks away to Mr. Ben.",
+  "dur": 2.79,
   "voice": "af_heart",
   "speed": 0.82,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "683f8f82": {
-  "file": "narrator-683f8f82-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Ola feels cross. She really wants the dino.",
-  "dur": 3.77,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "694de98e": {
   "file": "narrator-694de98e-e1e81b.mp3",
@@ -1914,15 +1958,26 @@
   "made": "2026-10-24"
  },
  "6b513655": {
-  "file": "msRosa-6b513655-b435a2.mp3",
+  "file": "msRosa-6b513655-ad54fe.mp3",
   "who": "msRosa",
   "text": "Thank you for telling me, Frank.",
-  "dur": 2.37,
-  "voice": "bf_emma",
+  "dur": 2.97,
+  "voice": "af_nicole",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
+ },
+ "6bc1ba60": {
+  "file": "narrator-6bc1ba60-e1e81b.mp3",
+  "who": "narrator",
+  "text": "Now Leo is mad, and Sam is still sad.",
+  "dur": 3.39,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
  },
  "6cc25524": {
   "file": "narrator-6cc25524-e1e81b.mp3",
@@ -1935,27 +1990,27 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "6ee6a7e0": {
-  "file": "narrator-6ee6a7e0-e1e81b.mp3",
+ "6f03faf1": {
+  "file": "msRosa-6f03faf1-ad54fe.mp3",
+  "who": "msRosa",
+  "text": "I'll wait right here for you.",
+  "dur": 2.71,
+  "voice": "af_nicole",
+  "speed": 0.85,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
+ "6f3fd7a1": {
+  "file": "narrator-6f3fd7a1-e1e81b.mp3",
   "who": "narrator",
-  "text": "Flump! It falls down again.",
-  "dur": 2.75,
+  "text": "Frank feels mad. He wants to do it by himself.",
+  "dur": 3.89,
   "voice": "af_heart",
   "speed": 0.82,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "6f03faf1": {
-  "file": "msRosa-6f03faf1-b435a2.mp3",
-  "who": "msRosa",
-  "text": "I'll wait right here for you.",
-  "dur": 2.29,
-  "voice": "bf_emma",
-  "speed": 0.85,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "6f5ef034": {
   "file": "narrator-6f5ef034-e1e81b.mp3",
@@ -1990,6 +2045,17 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
+ "7022776a": {
+  "file": "narrator-7022776a-e1e81b.mp3",
+  "who": "narrator",
+  "text": "Frank stays away from Zoe. He still feels funny inside.",
+  "dur": 4.43,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
  "7096a402": {
   "file": "zoe-7096a402-713dfa.mp3",
   "who": "zoe",
@@ -1998,17 +2064,6 @@
   "voice": "af_aoede",
   "speed": 0.88,
   "pitch": 1.4,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "70a50b99": {
-  "file": "narrator-70a50b99-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Frank gives up and walks off.",
-  "dur": 2.35,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
@@ -2023,6 +2078,17 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
+ "7132a785": {
+  "file": "frank-7132a785-11e534.mp3",
+  "who": "frank",
+  "text": "I need Ms. Rosa.",
+  "dur": 1.67,
+  "voice": "af_bella",
+  "speed": 0.88,
+  "pitch": 1.28,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
  "71606011": {
   "file": "frank-71606011-11e534.mp3",
   "who": "frank",
@@ -2031,17 +2097,6 @@
   "voice": "af_bella",
   "speed": 0.88,
   "pitch": 1.28,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "72a9def3": {
-  "file": "zoe-72a9def3-713dfa.mp3",
-  "who": "zoe",
-  "text": "I want my mum...",
-  "dur": 2.33,
-  "voice": "af_aoede",
-  "speed": 0.88,
-  "pitch": 1.4,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
@@ -2078,39 +2133,6 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "76858f56": {
-  "file": "narrator-76858f56-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Frank needs a wee too. But he doesn't want to go.",
-  "dur": 3.74,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "773d1558": {
-  "file": "narrator-773d1558-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Say unkind words back",
-  "dur": 1.95,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "7745402d": {
-  "file": "frank-7745402d-11e534.mp3",
-  "who": "frank",
-  "text": "And look, Ms Rosa, my rocket!",
-  "dur": 2.56,
-  "voice": "af_bella",
-  "speed": 0.88,
-  "pitch": 1.28,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
  "77c55607": {
   "file": "narrator-77c55607-e1e81b.mp3",
   "who": "narrator",
@@ -2140,28 +2162,6 @@
   "dur": 1.31,
   "voice": "af_heart",
   "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "79707bcc": {
-  "file": "narrator-79707bcc-e1e81b.mp3",
-  "who": "narrator",
-  "text": "And his trousers are still wet.",
-  "dur": 2.48,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "7a14659d": {
-  "file": "msRosa-7a14659d-b435a2.mp3",
-  "who": "msRosa",
-  "text": "Let's get your spare clothes, Frank.",
-  "dur": 2.69,
-  "voice": "bf_emma",
-  "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
@@ -2221,6 +2221,17 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
+ "7e3e97dc": {
+  "file": "narrator-7e3e97dc-e1e81b.mp3",
+  "who": "narrator",
+  "text": "Holding your pee too long can hurt your tummy.",
+  "dur": 3.2,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
  "7e9ebcbb": {
   "file": "frank-7e9ebcbb-11e534.mp3",
   "who": "frank",
@@ -2254,6 +2265,17 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
+ "7fcb0e1d": {
+  "file": "narrator-7fcb0e1d-e1e81b.mp3",
+  "who": "narrator",
+  "text": "Say, 'Stop, I'm still playing.' If not, tell a grown-up.",
+  "dur": 4.73,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
  "80a6c83d": {
   "file": "narrator-80a6c83d-e1e81b.mp3",
   "who": "narrator",
@@ -2265,16 +2287,16 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "81e3491b": {
-  "file": "frank-81e3491b-11e534.mp3",
-  "who": "frank",
-  "text": "Thanks, Leo. I'll try once more first.",
-  "dur": 3.25,
-  "voice": "af_bella",
-  "speed": 0.88,
-  "pitch": 1.28,
+ "81923dda": {
+  "file": "narrator-81923dda-e1e81b.mp3",
+  "who": "narrator",
+  "text": "It's hard to say no. Frank can tell Ms. Rosa anytime.",
+  "dur": 4.43,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "821958e2": {
   "file": "narrator-821958e2-e1e81b.mp3",
@@ -2288,15 +2310,15 @@
   "made": "2026-10-24"
  },
  "8267a19a": {
-  "file": "msRosa-8267a19a-b435a2.mp3",
+  "file": "msRosa-8267a19a-ad54fe.mp3",
   "who": "msRosa",
   "text": "Frank, come and join us. It's story time.",
-  "dur": 3.74,
-  "voice": "bf_emma",
+  "dur": 5.3,
+  "voice": "af_nicole",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "833799c3": {
   "file": "maya-833799c3-f7360b.mp3",
@@ -2320,6 +2342,17 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
+ "846a8736": {
+  "file": "msRosa-846a8736-ad54fe.mp3",
+  "who": "msRosa",
+  "text": "Frank, you said no with kind words. Zoe, you stopped right away.",
+  "dur": 7.6,
+  "voice": "af_nicole",
+  "speed": 0.85,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
  "84755d49": {
   "file": "narrator-84755d49-e1e81b.mp3",
   "who": "narrator",
@@ -2330,6 +2363,17 @@
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
+ },
+ "84c7930c": {
+  "file": "narrator-84c7930c-e1e81b.mp3",
+  "who": "narrator",
+  "text": "It's OK to feel mad when things are hard.",
+  "dur": 3.29,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
  },
  "85ad2f41": {
   "file": "mrBen-85ad2f41-ad63cd.mp3",
@@ -2353,6 +2397,17 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
+ "864ce485": {
+  "file": "mrBen-864ce485-ad63cd.mp3",
+  "who": "mrBen",
+  "text": "Ready... set... go!",
+  "dur": 3.24,
+  "voice": "am_michael",
+  "speed": 0.85,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
  "866beae8": {
   "file": "narrator-866beae8-e1e81b.mp3",
   "who": "narrator",
@@ -2364,16 +2419,16 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "87288dec": {
-  "file": "frank-87288dec-11e534.mp3",
+ "86b477cf": {
+  "file": "frank-86b477cf-11e534.mp3",
   "who": "frank",
-  "text": "Ms Rosa, I had an accident.",
-  "dur": 2.65,
+  "text": "Ms. Rosa! Zoe is sad.",
+  "dur": 2.69,
   "voice": "af_bella",
   "speed": 0.88,
   "pitch": 1.28,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "8810509f": {
   "file": "frank-8810509f-11e534.mp3",
@@ -2419,16 +2474,38 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "8a715ac6": {
-  "file": "frank-8a715ac6-11e534.mp3",
-  "who": "frank",
-  "text": "Good morning, Ms Rosa!",
-  "dur": 2.06,
-  "voice": "af_bella",
-  "speed": 0.88,
-  "pitch": 1.28,
+ "8a26c987": {
+  "file": "narrator-8a26c987-e1e81b.mp3",
+  "who": "narrator",
+  "text": "Frank pees. Then he flushes and covers his ears.",
+  "dur": 4.14,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
+ },
+ "8b196f5b": {
+  "file": "mrBen-8b196f5b-ad63cd.mp3",
+  "who": "mrBen",
+  "text": "Good job, Frank. Losing is hard, but you stayed calm.",
+  "dur": 4.55,
+  "voice": "am_michael",
+  "speed": 0.85,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
+ "8b23bc00": {
+  "file": "msRosa-8b23bc00-ad54fe.mp3",
+  "who": "msRosa",
+  "text": "Frank didn't want a hug. He still likes you!",
+  "dur": 4.83,
+  "voice": "af_nicole",
+  "speed": 0.85,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
  },
  "8c3a0303": {
   "file": "max-8c3a0303-1b5ecf.mp3",
@@ -2485,33 +2562,11 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "8e65be84": {
-  "file": "narrator-8e65be84-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Flump! The castle falls down.",
-  "dur": 2.89,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
  "8e6c53df": {
   "file": "narrator-8e6c53df-e1e81b.mp3",
   "who": "narrator",
   "text": "This is Frank. Frank loves the big slide.",
   "dur": 3.49,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "8e96e927": {
-  "file": "narrator-8e96e927-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Sam tidies the letter block.",
-  "dur": 2.37,
   "voice": "af_heart",
   "speed": 0.82,
   "pitch": 1.0,
@@ -2562,17 +2617,6 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "9100d0d6": {
-  "file": "narrator-9100d0d6-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Now Zoe is sad, and Frank still feels squashed.",
-  "dur": 3.82,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
  "910375fb": {
   "file": "narrator-910375fb-e1e81b.mp3",
   "who": "narrator",
@@ -2583,6 +2627,17 @@
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
+ },
+ "91e3b330": {
+  "file": "narrator-91e3b330-e1e81b.mp3",
+  "who": "narrator",
+  "text": "Go away sad",
+  "dur": 1.49,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
  },
  "92165822": {
   "file": "frank-92165822-11e534.mp3",
@@ -2607,15 +2662,15 @@
   "made": "2026-10-24"
  },
  "92c8da45": {
-  "file": "msRosa-92c8da45-b435a2.mp3",
+  "file": "msRosa-92c8da45-ad54fe.mp3",
   "who": "msRosa",
   "text": "You feel embarrassed. That's OK. Accidents happen to everyone.",
-  "dur": 5.08,
-  "voice": "bf_emma",
+  "dur": 7.01,
+  "voice": "af_nicole",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "938e4888": {
   "file": "narrator-938e4888-e1e81b.mp3",
@@ -2661,17 +2716,6 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "9484ed24": {
-  "file": "narrator-9484ed24-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Say, 'Stop, I'm still playing.' If that doesn't work, tell a grown-up.",
-  "dur": 5.2,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
  "9571aa57": {
   "file": "mrBen-9571aa57-ad63cd.mp3",
   "who": "mrBen",
@@ -2682,6 +2726,28 @@
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
+ },
+ "95da1da3": {
+  "file": "narrator-95da1da3-e1e81b.mp3",
+  "who": "narrator",
+  "text": "Frank feels mad. It's hard to stop when you're having fun.",
+  "dur": 4.16,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
+ "96b75318": {
+  "file": "narrator-96b75318-e1e81b.mp3",
+  "who": "narrator",
+  "text": "You tried every choice. Great job!",
+  "dur": 3.38,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
  },
  "9714368a": {
   "file": "frank-9714368a-11e534.mp3",
@@ -2694,16 +2760,27 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
+ "976af4ff": {
+  "file": "narrator-976af4ff-e1e81b.mp3",
+  "who": "narrator",
+  "text": "And his pants are still wet.",
+  "dur": 2.27,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
  "97b3ff32": {
-  "file": "msRosa-97b3ff32-b435a2.mp3",
+  "file": "msRosa-97b3ff32-ad54fe.mp3",
   "who": "msRosa",
   "text": "Sometimes we can't. Today, yes. The tower can stay.",
-  "dur": 4.52,
-  "voice": "bf_emma",
+  "dur": 6.7,
+  "voice": "af_nicole",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "991c5169": {
   "file": "narrator-991c5169-e1e81b.mp3",
@@ -2738,16 +2815,16 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "9a77cfe6": {
-  "file": "narrator-9a77cfe6-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Ola wins. Frank feels cross.",
-  "dur": 3.12,
-  "voice": "af_heart",
-  "speed": 0.82,
+ "9a080c24": {
+  "file": "msRosa-9a080c24-ad54fe.mp3",
+  "who": "msRosa",
+  "text": "Frank, you used your words. Leo, you waited. Great job!",
+  "dur": 6.81,
+  "voice": "af_nicole",
+  "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "9b04fd67": {
   "file": "narrator-9b04fd67-e1e81b.mp3",
@@ -2782,49 +2859,38 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "9d4da02a": {
-  "file": "msRosa-9d4da02a-b435a2.mp3",
-  "who": "msRosa",
-  "text": "Accidents happen. Let's get Frank some more juice.",
-  "dur": 3.99,
-  "voice": "bf_emma",
-  "speed": 0.85,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "9e5f1ae6": {
-  "file": "msRosa-9e5f1ae6-b435a2.mp3",
-  "who": "msRosa",
-  "text": "Friends can feel cross and still be friends.",
-  "dur": 3.24,
-  "voice": "bf_emma",
-  "speed": 0.85,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "9f69d4e8": {
-  "file": "narrator-9f69d4e8-e1e81b.mp3",
+ "9cf83190": {
+  "file": "narrator-9cf83190-e1e81b.mp3",
   "who": "narrator",
-  "text": "Now Leo feels sad, and the castle is still a heap.",
-  "dur": 3.88,
+  "text": "Ola wins. Frank feels mad.",
+  "dur": 3.05,
   "voice": "af_heart",
   "speed": 0.82,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
- "9fb7963a": {
-  "file": "msRosa-9fb7963a-b435a2.mp3",
+ "9d4da02a": {
+  "file": "msRosa-9d4da02a-ad54fe.mp3",
   "who": "msRosa",
-  "text": "Now let's tidy the rest, please.",
-  "dur": 2.85,
-  "voice": "bf_emma",
+  "text": "Accidents happen. Let's get Frank some more juice.",
+  "dur": 5.48,
+  "voice": "af_nicole",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
+ },
+ "a07dd67c": {
+  "file": "narrator-a07dd67c-e1e81b.mp3",
+  "who": "narrator",
+  "text": "Frank feels mad. Did Maya do it on purpose?",
+  "dur": 3.72,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
  },
  "a08a7a1b": {
   "file": "narrator-a08a7a1b-e1e81b.mp3",
@@ -2847,6 +2913,28 @@
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
+ },
+ "a1fbac84": {
+  "file": "frank-a1fbac84-11e534.mp3",
+  "who": "frank",
+  "text": "Good morning, Ms. Rosa!",
+  "dur": 2.06,
+  "voice": "af_bella",
+  "speed": 0.88,
+  "pitch": 1.28,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
+ "a2193fe0": {
+  "file": "narrator-a2193fe0-e1e81b.mp3",
+  "who": "narrator",
+  "text": "Say mean words back",
+  "dur": 1.57,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
  },
  "a27010f2": {
   "file": "zoe-a27010f2-713dfa.mp3",
@@ -2881,6 +2969,17 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
+ "a2bc6500": {
+  "file": "narrator-a2bc6500-e1e81b.mp3",
+  "who": "narrator",
+  "text": "Frank is done with his drawing.",
+  "dur": 2.36,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
  "a2eaad65": {
   "file": "zoe-a2eaad65-713dfa.mp3",
   "who": "zoe",
@@ -2903,6 +3002,17 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
+ "a5c609c9": {
+  "file": "msRosa-a5c609c9-ad54fe.mp3",
+  "who": "msRosa",
+  "text": "Ola, you felt mad because you wanted the dino.",
+  "dur": 4.49,
+  "voice": "af_nicole",
+  "speed": 0.85,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
  "a61fd611": {
   "file": "narrator-a61fd611-e1e81b.mp3",
   "who": "narrator",
@@ -2914,16 +3024,16 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "a6514626": {
-  "file": "narrator-a6514626-e1e81b.mp3",
-  "who": "narrator",
-  "text": "You tried every choice. Well done!",
-  "dur": 3.16,
-  "voice": "af_heart",
-  "speed": 0.82,
+ "a6386f3c": {
+  "file": "msRosa-a6386f3c-ad54fe.mp3",
+  "who": "msRosa",
+  "text": "Now let's clean up the rest, please.",
+  "dur": 3.72,
+  "voice": "af_nicole",
+  "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "a67f4a33": {
   "file": "narrator-a67f4a33-e1e81b.mp3",
@@ -2992,15 +3102,15 @@
   "made": "2026-10-24"
  },
  "a9294749": {
-  "file": "msRosa-a9294749-b435a2.mp3",
+  "file": "msRosa-a9294749-ad54fe.mp3",
   "who": "msRosa",
   "text": "Zoe, you asked if Frank was OK. That was kind.",
-  "dur": 4.07,
-  "voice": "bf_emma",
+  "dur": 6.16,
+  "voice": "af_nicole",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "a969d971": {
   "file": "narrator-a969d971-e1e81b.mp3",
@@ -3024,16 +3134,16 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "a9fee0eb": {
-  "file": "mrBen-a9fee0eb-ad63cd.mp3",
-  "who": "mrBen",
-  "text": "If saying stop feels scary, come straight to me.",
-  "dur": 3.95,
-  "voice": "am_michael",
-  "speed": 0.85,
+ "ab3557cf": {
+  "file": "narrator-ab3557cf-e1e81b.mp3",
+  "who": "narrator",
+  "text": "They go to the bathroom to change.",
+  "dur": 2.55,
+  "voice": "af_heart",
+  "speed": 0.82,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "abea67fb": {
   "file": "narrator-abea67fb-e1e81b.mp3",
@@ -3068,6 +3178,17 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
+ "ad5ef73a": {
+  "file": "narrator-ad5ef73a-e1e81b.mp3",
+  "who": "narrator",
+  "text": "Oh no. Frank can't hold it. He has a pee accident.",
+  "dur": 4.64,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
  "ad68f2ee": {
   "file": "frank-ad68f2ee-11e534.mp3",
   "who": "frank",
@@ -3080,32 +3201,21 @@
   "made": "2026-10-24"
  },
  "ae8bfe64": {
-  "file": "msRosa-ae8bfe64-b435a2.mp3",
+  "file": "msRosa-ae8bfe64-ad54fe.mp3",
   "who": "msRosa",
   "text": "Frank, when you finish, Leo can have a turn.",
-  "dur": 3.51,
-  "voice": "bf_emma",
+  "dur": 4.77,
+  "voice": "af_nicole",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "aeba6d48": {
   "file": "narrator-aeba6d48-e1e81b.mp3",
   "who": "narrator",
   "text": "Frank pulls. Leo pulls.",
   "dur": 2.87,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "af01e4f8": {
-  "file": "narrator-af01e4f8-e1e81b.mp3",
-  "who": "narrator",
-  "text": "And Frank still needs a wee.",
-  "dur": 2.31,
   "voice": "af_heart",
   "speed": 0.82,
   "pitch": 1.0,
@@ -3134,27 +3244,38 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "afcd50e4": {
-  "file": "narrator-afcd50e4-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Then Frank walks away, to Mr Ben.",
-  "dur": 2.99,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "aff73bfc": {
-  "file": "msRosa-aff73bfc-b435a2.mp3",
+ "afeae3bc": {
+  "file": "msRosa-afeae3bc-ad54fe.mp3",
   "who": "msRosa",
-  "text": "Frank, you said how you feel. Ola, you said sorry.",
-  "dur": 3.93,
-  "voice": "bf_emma",
+  "text": "Ola, Frank, please stop. I hear words that hurt.",
+  "dur": 5.99,
+  "voice": "af_nicole",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
+ },
+ "aff73bfc": {
+  "file": "msRosa-aff73bfc-ad54fe.mp3",
+  "who": "msRosa",
+  "text": "Frank, you said how you feel. Ola, you said sorry.",
+  "dur": 5.92,
+  "voice": "af_nicole",
+  "speed": 0.85,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
+ "b097015a": {
+  "file": "frank-b097015a-11e534.mp3",
+  "who": "frank",
+  "text": "Ms. Rosa, the toilet is too loud. It scares me.",
+  "dur": 4.0,
+  "voice": "af_bella",
+  "speed": 0.88,
+  "pitch": 1.28,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
  },
  "b10393ce": {
   "file": "frank-b10393ce-11e534.mp3",
@@ -3233,17 +3354,6 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "b4e6e83f": {
-  "file": "mrBen-b4e6e83f-ad63cd.mp3",
-  "who": "mrBen",
-  "text": "Frank, stop please. You feel cross. Shouting at Leo isn't kind.",
-  "dur": 6.14,
-  "voice": "am_michael",
-  "speed": 0.85,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
  "b4f6632a": {
   "file": "mrBen-b4f6632a-ad63cd.mp3",
   "who": "mrBen",
@@ -3277,28 +3387,6 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "b5262b67": {
-  "file": "ola-b5262b67-c02051.mp3",
-  "who": "ola",
-  "text": "Sorry, Frank. I said unkind words. You are my friend.",
-  "dur": 4.75,
-  "voice": "af_heart*0.6+af_nova*0.4",
-  "speed": 0.88,
-  "pitch": 1.32,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "b6237740": {
-  "file": "msRosa-b6237740-b435a2.mp3",
-  "who": "msRosa",
-  "text": "Unkind words hurt, and now you both feel sad.",
-  "dur": 3.81,
-  "voice": "bf_emma",
-  "speed": 0.85,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
  "b6e79c01": {
   "file": "narrator-b6e79c01-e1e81b.mp3",
   "who": "narrator",
@@ -3311,48 +3399,26 @@
   "made": "2026-10-24"
  },
  "b7a0953e": {
-  "file": "msRosa-b7a0953e-b435a2.mp3",
+  "file": "msRosa-b7a0953e-ad54fe.mp3",
   "who": "msRosa",
   "text": "It's loud, but it can't hurt you.",
-  "dur": 2.66,
-  "voice": "bf_emma",
+  "dur": 3.41,
+  "voice": "af_nicole",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
- "b7e80214": {
-  "file": "narrator-b7e80214-e1e81b.mp3",
+ "b804cab6": {
+  "file": "narrator-b804cab6-e1e81b.mp3",
   "who": "narrator",
-  "text": "Tell Ms Rosa",
-  "dur": 1.57,
+  "text": "Plop! It's still tricky. Frank stays calm.",
+  "dur": 3.61,
   "voice": "af_heart",
   "speed": 0.82,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "b81b5242": {
-  "file": "narrator-b81b5242-e1e81b.mp3",
-  "who": "narrator",
-  "text": "It's OK to feel cross when you wait.",
-  "dur": 2.78,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "b83a3db3": {
-  "file": "msRosa-b83a3db3-b435a2.mp3",
-  "who": "msRosa",
-  "text": "Thank you for telling me. New toilets can feel scary.",
-  "dur": 4.01,
-  "voice": "bf_emma",
-  "speed": 0.85,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "b85a0ccb": {
   "file": "narrator-b85a0ccb-e1e81b.mp3",
@@ -3364,6 +3430,17 @@
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
+ },
+ "b86e5aeb": {
+  "file": "narrator-b86e5aeb-e1e81b.mp3",
+  "who": "narrator",
+  "text": "Frank still feels sad and left out.",
+  "dur": 2.82,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
  },
  "b89c48f2": {
   "file": "narrator-b89c48f2-e1e81b.mp3",
@@ -3387,38 +3464,27 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "ba66cacb": {
-  "file": "msRosa-ba66cacb-b435a2.mp3",
+ "ba5c31a2": {
+  "file": "msRosa-ba5c31a2-ad54fe.mp3",
   "who": "msRosa",
-  "text": "Sam, you helped tidy up.",
-  "dur": 2.45,
-  "voice": "bf_emma",
+  "text": "Frank, you took a big breath, asked, and helped clean up.",
+  "dur": 5.45,
+  "voice": "af_nicole",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "bac3076c": {
-  "file": "msRosa-bac3076c-b435a2.mp3",
-  "who": "msRosa",
-  "text": "Mum comes back at home time.",
-  "dur": 2.52,
-  "voice": "bf_emma",
-  "speed": 0.85,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "bb2f7162": {
-  "file": "msRosa-bb2f7162-b435a2.mp3",
+  "file": "msRosa-bb2f7162-ad54fe.mp3",
   "who": "msRosa",
   "text": "Sam feels sad. He built it too.",
-  "dur": 2.86,
-  "voice": "bf_emma",
+  "dur": 4.03,
+  "voice": "af_nicole",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "bc306e42": {
   "file": "narrator-bc306e42-e1e81b.mp3",
@@ -3431,27 +3497,16 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "bc935e95": {
-  "file": "narrator-bc935e95-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Give up and walk off",
-  "dur": 1.53,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
  "bd7cf4ba": {
-  "file": "msRosa-bd7cf4ba-b435a2.mp3",
+  "file": "msRosa-bd7cf4ba-ad54fe.mp3",
   "who": "msRosa",
   "text": "Zoe, you love hugs. You felt sad when Frank said no.",
-  "dur": 4.26,
-  "voice": "bf_emma",
+  "dur": 5.99,
+  "voice": "af_nicole",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "bdc929a0": {
   "file": "narrator-bdc929a0-e1e81b.mp3",
@@ -3464,33 +3519,11 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "be7f9343": {
-  "file": "msRosa-be7f9343-b435a2.mp3",
-  "who": "msRosa",
-  "text": "Ola, Frank, stop please. I hear unkind words.",
-  "dur": 4.4,
-  "voice": "bf_emma",
-  "speed": 0.85,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
  "befad79e": {
   "file": "narrator-befad79e-e1e81b.mp3",
   "who": "narrator",
   "text": "Shout at Leo",
   "dur": 1.44,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "bf19763c": {
-  "file": "narrator-bf19763c-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Oh no. Frank can't hold it. He has an accident.",
-  "dur": 4.34,
   "voice": "af_heart",
   "speed": 0.82,
   "pitch": 1.0,
@@ -3508,16 +3541,16 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "c2d4dbae": {
-  "file": "narrator-c2d4dbae-e1e81b.mp3",
+ "c22d4d24": {
+  "file": "narrator-c22d4d24-e1e81b.mp3",
   "who": "narrator",
-  "text": "Frank does his wee. Then he flushes, and covers his ears.",
-  "dur": 4.57,
+  "text": "It's OK to feel mad when you wait.",
+  "dur": 2.64,
   "voice": "af_heart",
   "speed": 0.82,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "c2e78223": {
   "file": "frank-c2e78223-11e534.mp3",
@@ -3541,38 +3574,38 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
+ "c3bb37b7": {
+  "file": "narrator-c3bb37b7-e1e81b.mp3",
+  "who": "narrator",
+  "text": "His pants are wet. Frank feels embarrassed. He wants to hide.",
+  "dur": 5.09,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
  "c3f43c2c": {
-  "file": "msRosa-c3f43c2c-b435a2.mp3",
+  "file": "msRosa-c3f43c2c-ad54fe.mp3",
   "who": "msRosa",
   "text": "Good morning, Frank!",
   "dur": 2.09,
-  "voice": "bf_emma",
+  "voice": "af_nicole",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
- "c5173c5e": {
-  "file": "narrator-c5173c5e-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Frank feels cross. Did Maya do it on purpose?",
-  "dur": 3.85,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
+ "c519714b": {
+  "file": "frank-c519714b-11e534.mp3",
+  "who": "frank",
+  "text": "No! We're not done!",
+  "dur": 2.12,
+  "voice": "af_bella",
+  "speed": 0.88,
+  "pitch": 1.28,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "c5bc28a4": {
-  "file": "narrator-c5bc28a4-e1e81b.mp3",
-  "who": "narrator",
-  "text": "But wet trousers feel cold and itchy.",
-  "dur": 2.96,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "c640122c": {
   "file": "narrator-c640122c-e1e81b.mp3",
@@ -3630,15 +3663,26 @@
   "made": "2026-10-24"
  },
  "c9e84182": {
-  "file": "msRosa-c9e84182-b435a2.mp3",
+  "file": "msRosa-c9e84182-ad54fe.mp3",
   "who": "msRosa",
   "text": "You didn't want a hug, and that's OK.",
-  "dur": 3.2,
-  "voice": "bf_emma",
+  "dur": 4.07,
+  "voice": "af_nicole",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
+ },
+ "ca3eee5e": {
+  "file": "msRosa-ca3eee5e-ad54fe.mp3",
+  "who": "msRosa",
+  "text": "Words like that hurt. Now you both feel sad.",
+  "dur": 5.31,
+  "voice": "af_nicole",
+  "speed": 0.85,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
  },
  "cc462393": {
   "file": "frank-cc462393-11e534.mp3",
@@ -3662,6 +3706,28 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
+ "cca0022b": {
+  "file": "narrator-cca0022b-e1e81b.mp3",
+  "who": "narrator",
+  "text": "It's OK to cry. But Frank is too upset to talk.",
+  "dur": 4.18,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
+ "cec7c389": {
+  "file": "narrator-cec7c389-e1e81b.mp3",
+  "who": "narrator",
+  "text": "Frank needs to pee. But he doesn't want to stop playing.",
+  "dur": 4.05,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
  "d09e8626": {
   "file": "narrator-d09e8626-e1e81b.mp3",
   "who": "narrator",
@@ -3672,6 +3738,39 @@
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
+ },
+ "d1280d6e": {
+  "file": "msRosa-d1280d6e-ad54fe.mp3",
+  "who": "msRosa",
+  "text": "Sam, you helped clean up.",
+  "dur": 2.53,
+  "voice": "af_nicole",
+  "speed": 0.85,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
+ "d23a0ccc": {
+  "file": "frank-d23a0ccc-11e534.mp3",
+  "who": "frank",
+  "text": "Ms. Rosa, I don't want to stop. Can we finish later?",
+  "dur": 4.07,
+  "voice": "af_bella",
+  "speed": 0.88,
+  "pitch": 1.28,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
+ "d24d2c8c": {
+  "file": "ola-d24d2c8c-c02051.mp3",
+  "who": "ola",
+  "text": "Sorry, Frank. I said words that hurt. You are my friend.",
+  "dur": 4.61,
+  "voice": "af_heart*0.6+af_nova*0.4",
+  "speed": 0.88,
+  "pitch": 1.32,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
  },
  "d2ca6434": {
   "file": "leo-d2ca6434-468d45.mp3",
@@ -3706,17 +3805,6 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "d47b8ae0": {
-  "file": "narrator-d47b8ae0-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Zoe lets go straight away.",
-  "dur": 2.4,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
  "d5d74c2a": {
   "file": "narrator-d5d74c2a-e1e81b.mp3",
   "who": "narrator",
@@ -3736,28 +3824,6 @@
   "voice": "af_heart*0.6+af_nova*0.4",
   "speed": 0.88,
   "pitch": 1.32,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "d6c9d5ec": {
-  "file": "narrator-d6c9d5ec-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Frank needs a wee. But he doesn't want to stop playing.",
-  "dur": 3.97,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "d7522a78": {
-  "file": "frank-d7522a78-11e534.mp3",
-  "who": "frank",
-  "text": "Ms Rosa, I don't want to stop. Can we finish later?",
-  "dur": 4.08,
-  "voice": "af_bella",
-  "speed": 0.88,
-  "pitch": 1.28,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
@@ -3794,17 +3860,6 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "d927bd54": {
-  "file": "narrator-d927bd54-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Hard to stop? Take a big breath, ask, then help tidy.",
-  "dur": 4.69,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
  "d939411c": {
   "file": "narrator-d939411c-e1e81b.mp3",
   "who": "narrator",
@@ -3838,6 +3893,17 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
+ "d9b62be1": {
+  "file": "msRosa-d9b62be1-ad54fe.mp3",
+  "who": "msRosa",
+  "text": "Waiting is hard. Next time, say, 'I feel mad. I'll wait.'",
+  "dur": 7.08,
+  "voice": "af_nicole",
+  "speed": 0.85,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
  "d9bd6133": {
   "file": "narrator-d9bd6133-e1e81b.mp3",
   "who": "narrator",
@@ -3860,16 +3926,16 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "db689077": {
-  "file": "msRosa-db689077-b435a2.mp3",
-  "who": "msRosa",
-  "text": "You miss your mum, Zoe. That's a big feeling.",
-  "dur": 3.5,
-  "voice": "bf_emma",
+ "dac90060": {
+  "file": "mrBen-dac90060-ad63cd.mp3",
+  "who": "mrBen",
+  "text": "Sam, you told Frank when it's his turn. That was kind.",
+  "dur": 4.5,
+  "voice": "am_michael",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "db736f6e": {
   "file": "narrator-db736f6e-e1e81b.mp3",
@@ -3878,17 +3944,6 @@
   "dur": 3.44,
   "voice": "af_heart",
   "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "dc5bc57a": {
-  "file": "msRosa-dc5bc57a-b435a2.mp3",
-  "who": "msRosa",
-  "text": "Frank, you said no with kind words. Zoe, you stopped straight away.",
-  "dur": 4.85,
-  "voice": "bf_emma",
-  "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
@@ -3904,49 +3959,38 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "de321fcd": {
-  "file": "narrator-de321fcd-e1e81b.mp3",
+ "dcdc739f": {
+  "file": "narrator-dcdc739f-e1e81b.mp3",
   "who": "narrator",
-  "text": "Frank cries. He doesn't want to play any more.",
-  "dur": 3.5,
+  "text": "Push Sam",
+  "dur": 1.34,
   "voice": "af_heart",
   "speed": 0.82,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "de37b03d": {
-  "file": "msRosa-de37b03d-b435a2.mp3",
+  "file": "msRosa-de37b03d-ad54fe.mp3",
   "who": "msRosa",
   "text": "When you're done, flush, then cover your ears.",
-  "dur": 3.34,
-  "voice": "bf_emma",
+  "dur": 4.59,
+  "voice": "af_nicole",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
- "df5fb3fa": {
-  "file": "narrator-df5fb3fa-e1e81b.mp3",
+ "dfddcbd4": {
+  "file": "narrator-dfddcbd4-e1e81b.mp3",
   "who": "narrator",
-  "text": "Frank tells Ms Rosa quietly.",
-  "dur": 2.62,
+  "text": "Zoe lets go right away.",
+  "dur": 2.31,
   "voice": "af_heart",
   "speed": 0.82,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "df7ff5ff": {
-  "file": "narrator-df7ff5ff-e1e81b.mp3",
-  "who": "narrator",
-  "text": "They go to the toilets to change.",
-  "dur": 2.5,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "e039655f": {
   "file": "leo-e039655f-468d45.mp3",
@@ -3959,33 +4003,22 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "e176c611": {
-  "file": "maya-e176c611-f7360b.mp3",
-  "who": "maya",
-  "text": "Look! Our tower is finished!",
-  "dur": 2.58,
+ "e0a5db0f": {
+  "file": "narrator-e0a5db0f-e1e81b.mp3",
+  "who": "narrator",
+  "text": "Plop! The castle falls down.",
+  "dur": 2.9,
   "voice": "af_heart",
-  "speed": 0.88,
-  "pitch": 1.26,
+  "speed": 0.82,
+  "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "e1ab97b5": {
   "file": "narrator-e1ab97b5-e1e81b.mp3",
   "who": "narrator",
   "text": "This is Frank. He's playing dinosaurs with Ola.",
   "dur": 3.83,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "e1f997a2": {
-  "file": "narrator-e1f997a2-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Now Leo is cross, and Sam is still sad.",
-  "dur": 3.42,
   "voice": "af_heart",
   "speed": 0.82,
   "pitch": 1.0,
@@ -4014,17 +4047,6 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "e3227451": {
-  "file": "narrator-e3227451-e1e81b.mp3",
-  "who": "narrator",
-  "text": "But Zoe is sad. She misses her mum.",
-  "dur": 3.3,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
  "e33a99a7": {
   "file": "leo-e33a99a7-468d45.mp3",
   "who": "leo",
@@ -4046,6 +4068,17 @@
   "pitch": 1.32,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
+ },
+ "e416126c": {
+  "file": "narrator-e416126c-e1e81b.mp3",
+  "who": "narrator",
+  "text": "Oh no. Frank feels sad and mad.",
+  "dur": 3.23,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
  },
  "e522b7fc": {
   "file": "zoe-e522b7fc-713dfa.mp3",
@@ -4069,6 +4102,17 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
+ "e6c8fd12": {
+  "file": "narrator-e6c8fd12-e1e81b.mp3",
+  "who": "narrator",
+  "text": "Hard to stop? Take a big breath, ask, then help clean up.",
+  "dur": 4.77,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
  "e75148b9": {
   "file": "frank-e75148b9-11e534.mp3",
   "who": "frank",
@@ -4077,17 +4121,6 @@
   "voice": "af_bella",
   "speed": 0.88,
   "pitch": 1.28,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "e771c32a": {
-  "file": "narrator-e771c32a-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Frank keeps away from Zoe. He still feels funny inside.",
-  "dur": 4.35,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
@@ -4124,17 +4157,6 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "e8501a19": {
-  "file": "narrator-e8501a19-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Maya starts tidying.",
-  "dur": 2.04,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
  "e8b0452a": {
   "file": "frank-e8b0452a-11e534.mp3",
   "who": "frank",
@@ -4151,17 +4173,6 @@
   "who": "frank",
   "text": "Can I play too? I can help.",
   "dur": 2.63,
-  "voice": "af_bella",
-  "speed": 0.88,
-  "pitch": 1.28,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "e96849ca": {
-  "file": "frank-e96849ca-11e534.mp3",
-  "who": "frank",
-  "text": "Mr Ben, Max took the ball again. He does it every day.",
-  "dur": 4.38,
   "voice": "af_bella",
   "speed": 0.88,
   "pitch": 1.28,
@@ -4201,17 +4212,6 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "e9ff69d5": {
-  "file": "msRosa-e9ff69d5-b435a2.mp3",
-  "who": "msRosa",
-  "text": "If unkind words don't stop, come and tell me.",
-  "dur": 3.5,
-  "voice": "bf_emma",
-  "speed": 0.85,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
  "ea71bd1e": {
   "file": "sam-ea71bd1e-7284f9.mp3",
   "who": "sam",
@@ -4223,27 +4223,16 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "eb036c6d": {
-  "file": "narrator-eb036c6d-e1e81b.mp3",
-  "who": "narrator",
-  "text": "It's OK to cry. But Frank is too upset to say what's wrong.",
-  "dur": 4.62,
-  "voice": "af_heart",
-  "speed": 0.82,
+ "ebe7755c": {
+  "file": "msRosa-ebe7755c-ad54fe.mp3",
+  "who": "msRosa",
+  "text": "You want a turn. Next time, ask, 'Can I have a turn?'",
+  "dur": 6.5,
+  "voice": "af_nicole",
+  "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "eb0fddab": {
-  "file": "narrator-eb0fddab-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Holding a wee too long can make your tummy hurt.",
-  "dur": 3.55,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "ec066808": {
   "file": "narrator-ec066808-e1e81b.mp3",
@@ -4267,6 +4256,17 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
+ "eca45680": {
+  "file": "narrator-eca45680-e1e81b.mp3",
+  "who": "narrator",
+  "text": "Tell Ms. Rosa",
+  "dur": 1.57,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
  "eccd4485": {
   "file": "narrator-eccd4485-e1e81b.mp3",
   "who": "narrator",
@@ -4289,16 +4289,16 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "ee398269": {
-  "file": "msRosa-ee398269-b435a2.mp3",
-  "who": "msRosa",
-  "text": "You really want a turn. Next time, ask, 'Can I have a turn?'",
-  "dur": 4.54,
-  "voice": "bf_emma",
-  "speed": 0.85,
+ "ee9b7117": {
+  "file": "narrator-ee9b7117-e1e81b.mp3",
+  "who": "narrator",
+  "text": "But Zoe is sad. She misses her mom.",
+  "dur": 3.33,
+  "voice": "af_heart",
+  "speed": 0.82,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "eeb4b489": {
   "file": "narrator-eeb4b489-e1e81b.mp3",
@@ -4333,28 +4333,6 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "f01eaede": {
-  "file": "leo-f01eaede-468d45.mp3",
-  "who": "leo",
-  "text": "I need a wee.",
-  "dur": 1.57,
-  "voice": "af_sarah",
-  "speed": 0.88,
-  "pitch": 1.32,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "f0b44496": {
-  "file": "narrator-f0b44496-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Do you want to try a different choice?",
-  "dur": 2.58,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
  "f12df495": {
   "file": "mrBen-f12df495-ad63cd.mp3",
   "who": "mrBen",
@@ -4365,6 +4343,17 @@
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
+ },
+ "f15608b5": {
+  "file": "msRosa-f15608b5-ad54fe.mp3",
+  "who": "msRosa",
+  "text": "You miss your mom, Zoe. That's a big feeling.",
+  "dur": 5.03,
+  "voice": "af_nicole",
+  "speed": 0.85,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
  },
  "f18efd43": {
   "file": "narrator-f18efd43-e1e81b.mp3",
@@ -4399,16 +4388,16 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "f3b94494": {
-  "file": "msRosa-f3b94494-b435a2.mp3",
-  "who": "msRosa",
-  "text": "You feel cross. It's hard to stop when it's fun.",
-  "dur": 3.71,
-  "voice": "bf_emma",
-  "speed": 0.85,
+ "f1ef3203": {
+  "file": "narrator-f1ef3203-e1e81b.mp3",
+  "who": "narrator",
+  "text": "Do you want to try another choice?",
+  "dur": 2.51,
+  "voice": "af_heart",
+  "speed": 0.82,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "f3cdbf7f": {
   "file": "frank-f3cdbf7f-11e534.mp3",
@@ -4432,6 +4421,17 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
+ "f455edbe": {
+  "file": "narrator-f455edbe-e1e81b.mp3",
+  "who": "narrator",
+  "text": "Frank holds his pee in. He wiggles and jiggles.",
+  "dur": 3.91,
+  "voice": "af_heart",
+  "speed": 0.82,
+  "pitch": 1.0,
+  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
+  "made": "2026-10-26"
+ },
  "f4f35fcd": {
   "file": "frank-f4f35fcd-11e534.mp3",
   "who": "frank",
@@ -4454,17 +4454,6 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "f767b59f": {
-  "file": "narrator-f767b59f-e1e81b.mp3",
-  "who": "narrator",
-  "text": "But the castle is still a heap, and Frank feels worse.",
-  "dur": 3.75,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
  "f8d7a342": {
   "file": "narrator-f8d7a342-e1e81b.mp3",
   "who": "narrator",
@@ -4477,15 +4466,15 @@
   "made": "2026-10-24"
  },
  "f91711b5": {
-  "file": "msRosa-f91711b5-b435a2.mp3",
+  "file": "msRosa-f91711b5-ad54fe.mp3",
   "who": "msRosa",
   "text": "Say no with words, or come to me.",
-  "dur": 2.88,
-  "voice": "bf_emma",
+  "dur": 4.03,
+  "voice": "af_nicole",
   "speed": 0.85,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "f990ba42": {
   "file": "narrator-f990ba42-e1e81b.mp3",
@@ -4498,16 +4487,16 @@
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },
- "fa18f9a0": {
-  "file": "narrator-fa18f9a0-e1e81b.mp3",
+ "fb265bc4": {
+  "file": "narrator-fb265bc4-e1e81b.mp3",
   "who": "narrator",
-  "text": "It's hard to say no. Frank can tell Ms Rosa, any time.",
-  "dur": 4.66,
+  "text": "Frank tells Ms. Rosa quietly.",
+  "dur": 2.62,
   "voice": "af_heart",
   "speed": 0.82,
   "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
+  "made": "2026-10-26"
  },
  "fb4a3c9e": {
   "file": "narrator-fb4a3c9e-e1e81b.mp3",
@@ -4550,17 +4539,6 @@
   "voice": "af_aoede",
   "speed": 0.88,
   "pitch": 1.4,
-  "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
-  "made": "2026-10-24"
- },
- "fd90e667": {
-  "file": "narrator-fd90e667-e1e81b.mp3",
-  "who": "narrator",
-  "text": "Go off and sulk",
-  "dur": 1.4,
-  "voice": "af_heart",
-  "speed": 0.82,
-  "pitch": 1.0,
   "tool": "Kokoro-82M v1.0 (kokoro-onnx)",
   "made": "2026-10-24"
  },

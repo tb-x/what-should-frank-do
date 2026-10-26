@@ -29,11 +29,11 @@
       { "do": "act", "who": "frank", "anim": "angry", "with": "prev" },
       { "do": "say", "who": "frank", "text": "Hurry up, Sam! I want a turn now!", "with": "prev" },
       { "do": "act", "who": "frank", "anim": "idle" },
-      { "do": "say", "who": "narrator", "text": "Waiting is hard. Frank feels cross." },
+      { "do": "say", "who": "narrator", "text": "Waiting is hard. Frank feels mad." },
       { "do": "choice", "question": "What should Frank do?", "options": [
         { "id": "giveup", "icon": "sulk", "say": "Give up and walk away", "kind": "feeling", "goto": "giveup" },
         { "id": "wait", "icon": "wait", "say": "Ask, then wait", "kind": "good", "goto": "wait" },
-        { "id": "push", "icon": "push", "say": "Push in front", "kind": "hurtful", "goto": "push" }
+        { "id": "push", "icon": "push", "say": "Push Sam", "kind": "hurtful", "goto": "push" }
       ] }
     ],
 
@@ -44,7 +44,7 @@
       { "do": "say", "who": "narrator", "text": "Frank gives up and walks away.", "with": "prev" },
       { "do": "act", "who": "frank", "anim": "sit" },
       { "do": "slide", "who": "sam" },
-      { "do": "say", "who": "narrator", "text": "It's OK to feel cross when you wait.", "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "It's OK to feel mad when you wait.", "with": "prev" },
       { "do": "say", "who": "narrator", "text": "But now Frank doesn't get a turn at all." },
       { "do": "goto", "scene": "rewind" }
     ],
@@ -100,7 +100,7 @@
       { "do": "cam", "shot": "group", "on": ["frank", "sam", "mrBen"], "with": "prev" },
       { "do": "face", "who": "mrBen", "feel": "happy" },
       { "do": "say", "who": "mrBen", "text": "Frank, you asked and you waited. That was hard!" },
-      { "do": "say", "who": "mrBen", "text": "Sam, you told Frank when. That was kind." },
+      { "do": "say", "who": "mrBen", "text": "Sam, you told Frank when it's his turn. That was kind." },
       { "do": "goto", "scene": "end" }
     ],
 

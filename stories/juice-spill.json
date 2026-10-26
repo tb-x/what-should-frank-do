@@ -30,7 +30,7 @@
       { "do": "cam", "shot": "close", "on": "frank" },
       { "do": "face", "who": "frank", "feel": "angry" },
       { "do": "say", "who": "frank", "text": "Hey! You spilled my juice!" },
-      { "do": "say", "who": "narrator", "text": "Frank feels cross. Did Maya do it on purpose?" },
+      { "do": "say", "who": "narrator", "text": "Frank feels mad. Did Maya do it on purpose?" },
       { "do": "choice", "question": "What should Frank do?", "options": [
         { "id": "ask", "icon": "ask", "say": "Ask, 'Was it an accident?'", "kind": "good", "goto": "ask" },
         { "id": "cry", "icon": "cry", "say": "Cry", "kind": "feeling", "goto": "cry" },
@@ -65,7 +65,7 @@
       { "do": "walk", "who": "msRosa", "to": { "near": "maya", "gap": 0.9 } },
       { "do": "cam", "shot": "group", "on": ["frank", "maya", "msRosa"], "with": "prev" },
       { "do": "face", "who": "msRosa", "feel": "worried" },
-      { "do": "say", "who": "msRosa", "text": "Let's check that Maya is OK. Frank, pushing hurts." },
+      { "do": "say", "who": "msRosa", "text": "Maya, are you OK? Frank, pushing hurts." },
       { "do": "say", "who": "narrator", "text": "Now two friends are sad, and the table is still wet." },
       { "do": "goto", "scene": "rewind" }
     ],
@@ -95,7 +95,7 @@
       { "do": "walk", "who": "msRosa", "to": { "near": "maya", "gap": 1.0 } },
       { "do": "cam", "shot": "group", "on": ["frank", "maya", "msRosa"], "with": "prev" },
       { "do": "face", "who": "msRosa", "feel": "happy" },
-      { "do": "say", "who": "msRosa", "text": "Frank, you felt cross, and you asked first. Maya, you said sorry and helped." },
+      { "do": "say", "who": "msRosa", "text": "Frank, you felt mad and asked. Maya, you said sorry and helped." },
       { "do": "say", "who": "msRosa", "text": "Accidents happen. Let's get Frank some more juice." },
       { "do": "goto", "scene": "end" }
     ],

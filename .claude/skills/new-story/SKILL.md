@@ -58,7 +58,9 @@ Decide, and say in a few lines:
   your words"), never a bare "Well done"; end with `goto end`.
 - **end**: everyone happy together, `fx stars` or `hearts`, the lesson said by the narrator **word for
   word**, then `end`.
-- Lines: present tense, at most 12 words (14 hard limit), words a 5-year-old knows, British English,
+- Lines: present tense, at most 12 words (14 hard limit, aim for 8), super simple American English that a
+  5-year-old already knows (pee, Mom, pants, mad, clean up, bathroom, Ms. Rosa; the checker refuses
+  British and hard words),
   classroom toys are "the truck", not "my truck". Each path 35-130 s (aim for 50-90).
 - Use `"with": "prev"` to run a beat during the one before (a line while someone walks).
 
@@ -92,7 +94,8 @@ for (let opt = 0; opt < 3; opt++) {
   document.getElementById('start').hidden = true; w.ui.cancel();
   w.director.load(story); w.director.play();
   let t = 0; while (document.querySelector('.choice').hidden && t < 300) { await w.fastForward(1); t++; }
-  document.querySelectorAll('.opt')[opt].click(); await new Promise((r) => setTimeout(r, 450));
+  const b = document.querySelectorAll('.opt')[opt]; b.click(); b.click();   // choices need two taps
+  await new Promise((r) => setTimeout(r, 500));
   while (w.ui.endEl.hidden && t < 500) { await w.fastForward(1); t++; }
   out[w.director.path.join('>')] = t + ' s';
 }
@@ -127,7 +130,7 @@ Spawn a reviewer agent (Agent tool, general-purpose, read-only) with this brief,
 > copy), consequences mild and natural, nobody shamed; grown-ups and the other children respond as a
 > good kindergarten teacher would (naming feelings, coaching, labelled praise), the other child treated
 > fairly; the lesson accurate, positive, short and repeatable, matching the words used; language
-> simple, present tense, British English. Answer with a one-line verdict, then numbered issues, each
+> simple, present tense, American English. Answer with a one-line verdict, then numbered issues, each
 > with severity (must fix / should fix / nice to have), a brief reason, and the exact fix as
 > replacement text for a specific line or beat (scene and position). Only flag what you'd genuinely
 > change. Under 800 words.

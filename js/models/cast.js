@@ -42,13 +42,13 @@ export const CAST = {
     shirt: 0x7a8494, sleeves: 'long', pants: 0x2f3f60, bottom: 'trousers', shoes: 0xe8433f,
   },
   msRosa: {
-    name: 'Ms Rosa', role: 'teacher', adult: true,
+    name: 'Ms. Rosa', role: 'teacher', adult: true,
     skin: SKIN.peach, hair: 0x5a3220, hairStyle: 'bun',
     shirt: 0x8fd3c8, sleeves: 'long', necklace: 0xff7a5a, bottom: 'skirt', pants: 0x6a4a8a, shoes: 0x6a3a2a,
     glasses: 0x3a2a40,
   },
   mrBen: {
-    name: 'Mr Ben', role: 'teacher', adult: true, height: 1.04,
+    name: 'Mr. Ben', role: 'teacher', adult: true, height: 1.04,
     skin: SKIN.brown, hair: 0x22160f, hairStyle: 'buzz',
     shirt: 0xf2a541, sleeves: 'long', pants: 0x384860, bottom: 'trousers', shoes: 0x2a2a2a,
   },

@@ -3,7 +3,7 @@
   "title": "The tricky castle",
   "icon": "castle",
   "prompt": "a story about getting frustrated when something is hard",
-  "lesson": "Tricky? Take a big breath, try again, then ask, 'Can you show me?'",
+  "lesson": "Tricky? Take a big breath, try again, ask, 'Can you show me?'",
   "place": "playground",
   "cast": ["frank", "leo", "sam", "mrBen"],
   "props": [
@@ -24,12 +24,12 @@
       { "do": "say", "who": "frank", "text": "Look, Leo! A big castle!" },
       { "do": "knock", "item": "castle" },
       { "do": "face", "who": "frank", "feel": "surprised", "with": "prev" },
-      { "do": "say", "who": "narrator", "text": "Flump! The castle falls down." },
+      { "do": "say", "who": "narrator", "text": "Plop! The castle falls down." },
       { "do": "face", "who": "frank", "feel": "worried" },
       { "do": "say", "who": "frank", "text": "Oh no. I'll try again." },
       { "do": "rebuild", "who": ["frank"], "item": "castle" },
       { "do": "knock", "item": "castle" },
-      { "do": "say", "who": "narrator", "text": "Flump! It falls down again.", "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "Plop! It falls down again.", "with": "prev" },
       { "do": "face", "who": "frank", "feel": "angry" },
       { "do": "act", "who": "frank", "anim": "angry", "with": "prev" },
       { "do": "say", "who": "frank", "text": "It's too hard! I can't do it!", "with": "prev" },
@@ -37,10 +37,10 @@
       { "do": "walk", "who": "leo", "to": { "near": "frank", "gap": 0.9 } },
       { "do": "say", "who": "leo", "text": "Frank, do you want some help?" },
       { "do": "cam", "shot": "close", "on": "frank" },
-      { "do": "say", "who": "narrator", "text": "Frank feels cross. He wants to do it by himself." },
+      { "do": "say", "who": "narrator", "text": "Frank feels mad. He wants to do it by himself." },
       { "do": "choice", "question": "What should Frank do?", "options": [
         { "id": "try", "icon": "breathe", "say": "Breathe and try again", "kind": "good", "goto": "try" },
-        { "id": "give", "icon": "sulk", "say": "Give up and walk off", "kind": "feeling", "goto": "give" },
+        { "id": "give", "icon": "sulk", "say": "Give up and walk away", "kind": "feeling", "goto": "give" },
         { "id": "shout", "icon": "shout", "say": "Shout at Leo", "kind": "hurtful", "goto": "shout" }
       ] }
     ],
@@ -49,11 +49,11 @@
       { "do": "cam", "shot": "wide" },
       { "do": "act", "who": "frank", "anim": "idle" },
       { "do": "walk", "who": "frank", "to": { "near": "mrBen", "gap": 1.0 } },
-      { "do": "say", "who": "narrator", "text": "Frank gives up and walks off.", "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "Frank gives up and walks away.", "with": "prev" },
       { "do": "act", "who": "frank", "anim": "sit" },
       { "do": "face", "who": "frank", "feel": "sad", "with": "prev" },
-      { "do": "say", "who": "narrator", "text": "It's OK to feel cross when things are hard." },
-      { "do": "say", "who": "narrator", "text": "But the castle is still a heap, and Frank feels worse." },
+      { "do": "say", "who": "narrator", "text": "It's OK to feel mad when things are hard." },
+      { "do": "say", "who": "narrator", "text": "But the castle is still broken, and Frank feels worse." },
       { "do": "goto", "scene": "rewind" }
     ],
 
@@ -69,9 +69,9 @@
       { "do": "walk", "who": "mrBen", "to": { "near": "frank", "gap": 0.9 } },
       { "do": "cam", "shot": "group", "on": ["frank", "leo", "mrBen"], "with": "prev" },
       { "do": "face", "who": "mrBen", "feel": "worried" },
-      { "do": "say", "who": "mrBen", "text": "Frank, stop please. You feel cross. Shouting at Leo isn't kind." },
+      { "do": "say", "who": "mrBen", "text": "Frank, please stop. You feel mad. Shouting at Leo isn't kind." },
       { "do": "say", "who": "mrBen", "text": "You can say, 'No thanks, I want to try first.'" },
-      { "do": "say", "who": "narrator", "text": "Now Leo feels sad, and the castle is still a heap." },
+      { "do": "say", "who": "narrator", "text": "Now Leo feels sad, and the castle is still broken." },
       { "do": "goto", "scene": "rewind" }
     ],
 
@@ -87,10 +87,10 @@
       { "do": "act", "who": "frank", "anim": "breathe" },
       { "do": "say", "who": "narrator", "text": "Frank takes a big breath.", "with": "prev" },
       { "do": "face", "who": "frank", "feel": "neutral" },
-      { "do": "say", "who": "frank", "text": "Thanks, Leo. I'll try once more first." },
+      { "do": "say", "who": "frank", "text": "Thanks, Leo. I want to try one more time." },
       { "do": "rebuild", "who": ["frank"], "item": "castle" },
       { "do": "knock", "item": "castle" },
-      { "do": "say", "who": "narrator", "text": "Flump! It's still tricky. Frank stays calm.", "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "Plop! It's still tricky. Frank stays calm.", "with": "prev" },
       { "do": "say", "who": "frank", "text": "Leo, can you show me?" },
       { "do": "face", "who": "leo", "feel": "happy" },
       { "do": "say", "who": "leo", "text": "Yes! Wet sand sticks. Pat it down hard, like this." },
@@ -103,7 +103,7 @@
       { "do": "walk", "who": "mrBen", "to": { "near": "frank", "gap": 1.0 } },
       { "do": "cam", "shot": "group", "on": ["frank", "leo", "mrBen"], "with": "prev" },
       { "do": "face", "who": "mrBen", "feel": "happy" },
-      { "do": "say", "who": "mrBen", "text": "Frank, that was tricky, and you felt cross." },
+      { "do": "say", "who": "mrBen", "text": "Frank, that was tricky, and you felt mad." },
       { "do": "say", "who": "mrBen", "text": "You took a big breath, tried again, and asked." },
       { "do": "say", "who": "mrBen", "text": "Leo, you showed Frank how. That was kind." },
       { "do": "goto", "scene": "end" }
@@ -114,7 +114,7 @@
       { "do": "face", "who": ["frank", "leo"], "feel": "joy" },
       { "do": "fx", "type": "stars", "on": ["frank", "leo"], "with": "prev" },
       { "do": "say", "who": "leo", "text": "Let's build a whole town!", "with": "prev" },
-      { "do": "say", "who": "narrator", "text": "Tricky? Take a big breath, try again, then ask, 'Can you show me?'" },
+      { "do": "say", "who": "narrator", "text": "Tricky? Take a big breath, try again, ask, 'Can you show me?'" },
       { "do": "end" }
     ]
   }

@@ -18,7 +18,7 @@
       { "do": "place", "who": "frank", "at": "table.1.seat1", "act": "sitChair", "feel": "happy" },
       { "do": "cam", "shot": "wide", "cut": true },
       { "do": "say", "who": "narrator", "text": "This is Frank. Frank is five." },
-      { "do": "say", "who": "narrator", "text": "Frank has finished his drawing." },
+      { "do": "say", "who": "narrator", "text": "Frank is done with his drawing." },
       { "do": "cam", "shot": "group", "on": ["maya", "zoe"] },
       { "do": "say", "who": "narrator", "text": "Maya and Zoe are building a tall tower." },
       { "do": "say", "who": "zoe", "text": "One more block! It's so tall!" },
@@ -44,8 +44,8 @@
       { "do": "act", "who": "frank", "anim": "sit" },
       { "do": "say", "who": "narrator", "text": "Maya and Zoe don't know he wants to play." },
       { "do": "act", "who": "maya", "anim": "jump" },
-      { "do": "say", "who": "maya", "text": "Look! Our tower is finished!", "with": "prev" },
-      { "do": "say", "who": "narrator", "text": "Frank still feels sad and lonely." },
+      { "do": "say", "who": "maya", "text": "Look! Our tower is all done!", "with": "prev" },
+      { "do": "say", "who": "narrator", "text": "Frank still feels sad and left out." },
       { "do": "goto", "scene": "rewind" }
     ],
 
